@@ -1,0 +1,34 @@
+{
+  "version": "0.8.37",
+  "technicalGate": "BLOCKED",
+  "steps": [
+    {
+      "name": "Dependency readiness",
+      "status": "BLOCKED",
+      "detail": "Thiếu package-lock.json thật do npm tạo; không được tự tạo giả"
+    },
+    {
+      "name": "Expo SDK dependency check",
+      "status": "NOT_RUN",
+      "detail": "Thiếu bộ dependencies/lockfile; không thể xác minh"
+    },
+    {
+      "name": "Expo Doctor",
+      "status": "NOT_RUN",
+      "detail": "Thiếu bộ dependencies/lockfile; không thể xác minh"
+    },
+    {
+      "name": "TypeScript semantic check",
+      "status": "NOT_RUN",
+      "detail": "Thiếu bộ dependencies/lockfile; không thể xác minh"
+    },
+    {
+      "name": "Native config declaration",
+      "status": "WARN",
+      "detail": "android-id: android đang dùng ID minh họa; phải đổi sang ID sở hữu trước khi ký build | ios-id: ios đang dùng ID minh họa; phải đổi sang ID sở hữu trước khi ký build | lockfile: Chưa có mobile/package-lock.json: build giữa các máy chưa tái lập được; tạo bằng npm install sau khi giải quyết dependency | dependencies: Chưa cài node_modules mobile: cần npm install, expo-doctor và tsc trên máy phát triển | api-url: Chưa đặt EXPO_PUBLIC_TUTTT_API_URL (không có API để thử trên điện thoại) | lock-integrity: Chưa có lockfile hợp lệ; cần npm install --strict-peer-deps trên máy có registry"
+    }
+  ],
+  "deviceMedia": "NOT_RUN",
+  "nativeBuild": "NOT_RUN",
+  "caveat": "Peer validation chỉ được xác nhận khi npm strict install, expo-doctor và typecheck đều PASS. Chưa kiểm thử thiết bị thật."
+}

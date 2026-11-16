@@ -1,0 +1,57 @@
+/* Túttt v0.5.6 — single Live canvas, floating readable chat; audience belongs to viewers button */
+.cam-page.cam-mode-unified .cam-stage-metrics{display:flex;align-items:center;gap:6px}
+
+
+.cam-page.cam-mode-unified .cam-stage-caption{padding:5px 1px 9px}
+.cam-page.cam-mode-unified .cam-stage-count{background:transparent;border:0;font-size:10px;padding:4px;color:var(--muted)}
+.cam-page.cam-mode-unified .cam-visual-helper{color:var(--muted);font-size:10px;line-height:1.4;margin:4px 2px 1px;text-align:center}
+.cam-page.cam-mode-unified .cam-status-line{border:0;background:transparent;padding:3px 2px 6px;margin:1px 0 0;color:var(--muted);font-size:10px}
+.cam-page.cam-mode-unified .cam-status-dot{width:6px;height:6px;margin-top:5px}
+.cam-page.cam-mode-unified .cam-content{isolation:isolate;overflow:hidden;padding-bottom:0}
+.cam-page.cam-mode-unified .cam-interaction.cam-chat-float{
+ position:relative;flex:1 1 auto;min-height:135px;margin:-1px -4px 0;
+ border:0;border-radius:0;background:linear-gradient(180deg,transparent 0%,color-mix(in srgb,var(--bg) 30%,transparent) 20%,color-mix(in srgb,var(--bg) 66%,transparent) 56%,color-mix(in srgb,var(--bg) 86%,transparent) 100%);
+ box-shadow:none;overflow:hidden;padding:15px 5px 0;display:flex;flex-direction:column;
+}
+.cam-page.cam-mode-unified .cam-chat-label{flex:0 0 auto;font-size:11px;letter-spacing:.02em;font-weight:800;color:var(--muted);display:flex;align-items:center;gap:7px;padding:2px 6px 8px}
+.cam-page.cam-mode-unified .cam-live-chat-dot{width:7px;height:7px;border-radius:50%;background:var(--brand-ruby)}
+.cam-page.cam-mode-unified .cam-interaction .cam-panel-body{flex:1;min-height:0;padding:0 4px 3px;overflow:hidden}
+.cam-page.cam-mode-unified .cam-chat-history{min-height:0!important;max-height:none!important;height:100%;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:2px 3px 7px;scrollbar-width:thin}
+.cam-page.cam-mode-unified .cam-chat-entry{
+ display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:4px 7px;width:fit-content;max-width:96%;font-size:12.5px!important;line-height:1.45!important;
+ margin:0;padding:7px 11px!important;border:0!important;border-radius:15px 15px 15px 5px;
+ background:color-mix(in srgb,var(--surface) 85%,transparent);color:var(--ink);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px);
+ box-shadow:0 1px 6px #2518170B;
+}
+.cam-page.cam-mode-unified .cam-chat-entry strong{font-size:12px;font-weight:850;color:var(--brand-ruby)}
+.cam-page.cam-mode-unified .cam-chat-entry span{overflow-wrap:anywhere;min-width:0}
+.cam-page.cam-mode-unified .cam-compose{border:0!important;margin:0!important;position:relative;padding:6px 13px 7px!important;background:color-mix(in srgb,var(--surface) 91%,transparent);box-shadow:0 -8px 22px #2114140C}
+.cam-page.cam-mode-unified .cam-compose input{background:color-mix(in srgb,var(--bg) 72%,transparent);border-radius:22px;border-color:color-mix(in srgb,var(--line) 56%,transparent);font-size:16px}
+.cam-page.cam-mode-unified .cam-compose button{border-radius:50%}
+.cam-page.cam-mode-unified .cam-actions{border-color:color-mix(in srgb,var(--line) 50%,transparent);background:var(--surface)}
+.cam-page.cam-mode-unified .cam-sheet-body{max-height:58dvh;overflow:auto;overscroll-behavior:contain;padding:4px 1px 12px}
+.cam-page.cam-mode-unified .cam-panel-tabs{display:none!important}
+.cam-sheet-hint{font-size:12px;color:var(--muted);line-height:1.5;margin:4px 0 12px}
+.sheet .cam-sheet-body{max-height:min(61dvh,540px);overflow-y:auto;scrollbar-width:thin}
+.sheet .cam-person-row{display:flex;align-items:center;gap:9px;padding:11px 1px;border-bottom:1px solid var(--line);min-height:56px}
+.sheet .cam-person-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;background:var(--surface2);color:var(--ink);font-weight:800}
+.sheet .cam-person-name{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.sheet .cam-person-name strong{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sheet .cam-person-name small{font-size:11px;color:var(--muted)}
+.sheet .cam-member-actions{display:flex;align-items:center;gap:5px}
+.sheet .cam-invite-button{font-size:11px;border-radius:12px;padding:8px 9px;min-height:40px;background:var(--surface2);border:1px solid var(--line);color:var(--ink)}
+.sheet .cam-person-menu{width:42px;height:42px;border-radius:12px;background:var(--surface2);color:var(--ink);border:1px solid var(--line)}
+.sheet .cam-person-menu svg{stroke:currentColor;fill:none;width:17px;height:17px}
+.sheet .cam-queue-title{margin:15px 0 9px;font-size:13px;font-weight:850;display:flex;justify-content:space-between}
+.sheet .cam-room-settings{padding:12px 0;border-top:1px solid var(--line);display:grid;gap:6px}
+.sheet .cam-room-settings>strong{font-size:13px}
+.sheet .cam-setting-row{display:flex;align-items:center;justify-content:space-between;gap:8px;background:transparent;color:var(--ink);min-height:44px}
+.sheet .cam-setting-row span{display:flex;align-items:center;gap:7px}
+.sheet .cam-setting-row svg{width:16px;height:16px;stroke:currentColor;fill:none}
+.sheet .cam-setting-row b{color:var(--brand-ruby);font-size:11px}
+@media(max-width:360px){.cam-page.cam-mode-unified .cam-stage-count{display:none}.cam-page.cam-mode-unified .cam-chat-entry{font-size:12px!important}.cam-page.cam-mode-unified .cam-interaction.cam-chat-float{min-height:112px;padding-top:9px}.cam-page.cam-mode-unified .cam-visual-helper{display:none}}
+@media(prefers-reduced-motion:reduce){.cam-page.cam-mode-unified .cam-chat-entry{backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+/* Float the newest lines near the composer, without adding a box around chat. */
+.cam-page.cam-mode-unified .cam-chat-history::before{content:"";display:block;flex:1 0 0px;min-height:0}
+.cam-page.cam-mode-unified .cam-viewers{min-height:44px;padding-inline:12px}

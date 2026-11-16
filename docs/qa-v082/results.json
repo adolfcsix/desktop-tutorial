@@ -1,0 +1,98 @@
+[
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "light",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "dark",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "light",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "dark",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "light",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "dark",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "composer_shift": 0
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "dark",
+    "composer_shift": 0
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "light",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "dark",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "light",
+    "composer_shift": 0
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "dark",
+    "composer_shift": 0
+  },
+  {
+    "width": 768,
+    "mode": "cam",
+    "theme": "light",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 768,
+    "mode": "cam",
+    "theme": "dark",
+    "composer_shift": 0.0
+  },
+  {
+    "width": 768,
+    "mode": "voice",
+    "theme": "light",
+    "composer_shift": 0
+  },
+  {
+    "width": 768,
+    "mode": "voice",
+    "theme": "dark",
+    "composer_shift": 0
+  }
+]

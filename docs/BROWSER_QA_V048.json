@@ -1,0 +1,47 @@
+[
+  {
+    "width": 320,
+    "logo": {
+      "width": 115.1875,
+      "height": 72,
+      "natural": 1197,
+      "complete": true
+    },
+    "darkModeClass": "",
+    "pageErrors": [],
+    "overflow": {
+      "scrollWidth": 320,
+      "clientWidth": 320
+    }
+  },
+  {
+    "width": 390,
+    "logo": {
+      "width": 133,
+      "height": 77,
+      "natural": 1197,
+      "complete": true
+    },
+    "darkModeClass": "",
+    "pageErrors": [],
+    "overflow": {
+      "scrollWidth": 390,
+      "clientWidth": 390
+    }
+  },
+  {
+    "width": 430,
+    "logo": {
+      "width": 133,
+      "height": 77,
+      "natural": 1197,
+      "complete": true
+    },
+    "darkModeClass": "",
+    "pageErrors": [],
+    "overflow": {
+      "scrollWidth": 430,
+      "clientWidth": 430
+    }
+  }
+]

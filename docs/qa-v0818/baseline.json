@@ -1,0 +1,814 @@
+{
+  "voice-light-pk": {
+    "body": {
+      "bg": "rgb(234, 224, 215)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "radial-gradient(at 12% 8%, rgb(255, 247, 238) 0px, rgba(0, 0, 0, 0) 43%), none",
+      "border": "rgb(36, 27, 28)"
+    },
+    "#app": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-topbar": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".room-chatbox": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.1)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.883451 0.844588 0.809255)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.16)"
+    },
+    ".room-controls": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.09)"
+    },
+    ".circle-icon": {
+      "bg": "color(srgb 0.141176 0.105882 0.109804 / 0.06)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.19)"
+    },
+    ".voice-summary": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(102, 86, 79)",
+      "bgImage": "none",
+      "border": "rgb(102, 86, 79)"
+    },
+    ".pk-broadcast-voice": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "linear-gradient(164deg, rgb(237, 220, 208) 0%, rgb(240, 222, 211) 48%, rgb(235, 212, 200) 100%)",
+      "border": "rgb(75, 48, 42)"
+    },
+    ".pk-broadcast-voice .pk-duel": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "linear-gradient(90deg, rgb(240, 215, 205) 0%, rgb(240, 215, 205) 49.9%, rgb(239, 221, 194) 50.1",
+      "border": "rgba(116, 75, 58, 0.15)"
+    },
+    ".pk-broadcast-voice .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "radial-gradient(95% 60% at 50% 26%, rgba(255, 255, 255, 0.19), rgba(0, 0, 0, 0) 84%)",
+      "border": "rgb(75, 48, 42)"
+    },
+    ".pk-broadcast-voice .pk-balance-legends": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(107, 87, 83)",
+      "bgImage": "none",
+      "border": "rgb(107, 87, 83)"
+    },
+    ".pk-broadcast-cam": null,
+    ".pk-broadcast-cam .pk-duel-side": null,
+    ".cam-topbar": null,
+    ".cam-compose": null,
+    ".cam-compose input": null,
+    ".sheet": null,
+    ".sheet-head": null,
+    ".close-btn": null,
+    ".audience-panel-summary": null,
+    ".cam-person-row": null,
+    ".cam-person-avatar": null
+  },
+  "voice-light-sheet": {
+    "body": {
+      "bg": "rgb(234, 224, 215)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "radial-gradient(at 12% 8%, rgb(255, 247, 238) 0px, rgba(0, 0, 0, 0) 43%), none",
+      "border": "rgb(36, 27, 28)"
+    },
+    "#app": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-topbar": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".room-chatbox": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.1)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.883451 0.844588 0.809255)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.16)"
+    },
+    ".room-controls": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.09)"
+    },
+    ".circle-icon": {
+      "bg": "color(srgb 0.141176 0.105882 0.109804 / 0.06)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "color(srgb 0.141176 0.105882 0.109804 / 0.19)"
+    },
+    ".voice-summary": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(102, 86, 79)",
+      "bgImage": "none",
+      "border": "rgb(102, 86, 79)"
+    },
+    ".pk-broadcast-voice": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "linear-gradient(164deg, rgb(237, 220, 208) 0%, rgb(240, 222, 211) 48%, rgb(235, 212, 200) 100%)",
+      "border": "rgb(75, 48, 42)"
+    },
+    ".pk-broadcast-voice .pk-duel": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "linear-gradient(90deg, rgb(240, 215, 205) 0%, rgb(240, 215, 205) 49.9%, rgb(239, 221, 194) 50.1",
+      "border": "rgba(116, 75, 58, 0.15)"
+    },
+    ".pk-broadcast-voice .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(75, 48, 42)",
+      "bgImage": "radial-gradient(95% 60% at 50% 26%, rgba(255, 255, 255, 0.19), rgba(0, 0, 0, 0) 84%)",
+      "border": "rgb(75, 48, 42)"
+    },
+    ".pk-broadcast-voice .pk-balance-legends": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(107, 87, 83)",
+      "bgImage": "none",
+      "border": "rgb(107, 87, 83)"
+    },
+    ".pk-broadcast-cam": null,
+    ".pk-broadcast-cam .pk-duel-side": null,
+    ".cam-topbar": null,
+    ".cam-compose": null,
+    ".cam-compose input": null,
+    ".sheet": {
+      "bg": "rgb(255, 249, 241)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(228, 208, 189)"
+    },
+    ".sheet-head": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(40, 31, 27)"
+    },
+    ".close-btn": {
+      "bg": "rgb(242, 229, 217)",
+      "color": "rgb(66, 44, 39)",
+      "bgImage": "none",
+      "border": "rgb(66, 44, 39)"
+    },
+    ".audience-panel-summary": {
+      "bg": "color(srgb 0.970353 0.937725 0.895451)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "color(srgb 0.133333 0.101961 0.0901961 / 0.12)"
+    },
+    ".cam-person-row": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(40, 31, 27)"
+    },
+    ".cam-person-avatar": {
+      "bg": "color(srgb 0.943922 0.879294 0.851843)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "color(srgb 0.568627 0.176471 0.14902 / 0.25)"
+    }
+  },
+  "voice-dark-pk": {
+    "body": {
+      "bg": "rgb(21, 16, 17)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    "#app": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-topbar": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".room-chatbox": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.1)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.200627 0.171059 0.170392)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".room-controls": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".circle-icon": {
+      "bg": "color(srgb 1 0.94902 0.901961 / 0.06)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.19)"
+    },
+    ".voice-summary": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(212, 189, 177)",
+      "bgImage": "none",
+      "border": "rgb(212, 189, 177)"
+    },
+    ".pk-broadcast-voice": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "linear-gradient(160deg, rgb(53, 39, 45) 0%, rgb(65, 48, 56) 53%, rgb(56, 45, 49) 100%)",
+      "border": "rgb(247, 229, 215)"
+    },
+    ".pk-broadcast-voice .pk-duel": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "linear-gradient(90deg, rgb(82, 60, 64) 0%, rgb(82, 60, 64) 49.9%, rgb(82, 68, 62) 50.1%, rgb(82",
+      "border": "rgba(239, 213, 190, 0.15)"
+    },
+    ".pk-broadcast-voice .pk-duel-side": {
+      "bg": "rgb(82, 60, 64)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "radial-gradient(88% 74% at 50% 22%, rgba(231, 146, 123, 0.12), rgba(0, 0, 0, 0) 84%), none",
+      "border": "rgb(247, 229, 215)"
+    },
+    ".pk-broadcast-voice .pk-balance-legends": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(212, 189, 177)",
+      "bgImage": "none",
+      "border": "rgb(212, 189, 177)"
+    },
+    ".pk-broadcast-cam": null,
+    ".pk-broadcast-cam .pk-duel-side": null,
+    ".cam-topbar": null,
+    ".cam-compose": null,
+    ".cam-compose input": null,
+    ".sheet": null,
+    ".sheet-head": null,
+    ".close-btn": null,
+    ".audience-panel-summary": null,
+    ".cam-person-row": null,
+    ".cam-person-avatar": null
+  },
+  "voice-dark-sheet": {
+    "body": {
+      "bg": "rgb(21, 16, 17)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    "#app": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-topbar": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".room-chatbox": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.1)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.200627 0.171059 0.170392)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".room-controls": {
+      "bg": "rgb(31, 24, 25)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".circle-icon": {
+      "bg": "color(srgb 1 0.94902 0.901961 / 0.06)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.19)"
+    },
+    ".voice-summary": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(212, 189, 177)",
+      "bgImage": "none",
+      "border": "rgb(212, 189, 177)"
+    },
+    ".pk-broadcast-voice": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "linear-gradient(160deg, rgb(53, 39, 45) 0%, rgb(65, 48, 56) 53%, rgb(56, 45, 49) 100%)",
+      "border": "rgb(247, 229, 215)"
+    },
+    ".pk-broadcast-voice .pk-duel": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "linear-gradient(90deg, rgb(82, 60, 64) 0%, rgb(82, 60, 64) 49.9%, rgb(82, 68, 62) 50.1%, rgb(82",
+      "border": "rgba(239, 213, 190, 0.15)"
+    },
+    ".pk-broadcast-voice .pk-duel-side": {
+      "bg": "rgb(82, 60, 64)",
+      "color": "rgb(247, 229, 215)",
+      "bgImage": "radial-gradient(88% 74% at 50% 22%, rgba(231, 146, 123, 0.12), rgba(0, 0, 0, 0) 84%), none",
+      "border": "rgb(247, 229, 215)"
+    },
+    ".pk-broadcast-voice .pk-balance-legends": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(212, 189, 177)",
+      "bgImage": "none",
+      "border": "rgb(212, 189, 177)"
+    },
+    ".pk-broadcast-cam": null,
+    ".pk-broadcast-cam .pk-duel-side": null,
+    ".cam-topbar": null,
+    ".cam-compose": null,
+    ".cam-compose input": null,
+    ".sheet": {
+      "bg": "rgb(43, 34, 35)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(255, 227, 207, 0.18)"
+    },
+    ".sheet-head": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".close-btn": {
+      "bg": "rgb(57, 44, 45)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".audience-panel-summary": {
+      "bg": "color(srgb 0.198275 0.15451 0.158431)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.12)"
+    },
+    ".cam-person-row": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".cam-person-avatar": {
+      "bg": "color(srgb 0.276706 0.191451 0.183647)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.580392 0.494118 / 0.25)"
+    }
+  },
+  "cam-light-pk": {
+    "body": {
+      "bg": "rgb(234, 224, 215)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "radial-gradient(at 12% 8%, rgb(255, 247, 238) 0px, rgba(0, 0, 0, 0) 43%), none",
+      "border": "rgb(36, 27, 28)"
+    },
+    "#app": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": null,
+    ".room-topbar": null,
+    ".room-chatbox": null,
+    ".room-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose input": {
+      "bg": "rgb(255, 251, 244)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "rgba(72, 43, 31, 0.15)"
+    },
+    ".room-controls": null,
+    ".circle-icon": null,
+    ".voice-summary": null,
+    ".pk-broadcast-voice": null,
+    ".pk-broadcast-voice .pk-duel": null,
+    ".pk-broadcast-voice .pk-duel-side": null,
+    ".pk-broadcast-voice .pk-balance-legends": null,
+    ".pk-broadcast-cam": {
+      "bg": "rgb(186, 165, 151)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "none",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".pk-broadcast-cam .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "linear-gradient(164deg, rgb(202, 183, 168) 0%, rgb(178, 155, 142) 49%, rgb(129, 103, 96) 100%)",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".cam-topbar": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".cam-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".cam-compose input": {
+      "bg": "rgb(255, 251, 244)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "rgba(72, 43, 31, 0.15)"
+    },
+    ".sheet": null,
+    ".sheet-head": null,
+    ".close-btn": null,
+    ".audience-panel-summary": null,
+    ".cam-person-row": null,
+    ".cam-person-avatar": null
+  },
+  "cam-light-sheet": {
+    "body": {
+      "bg": "rgb(234, 224, 215)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "radial-gradient(at 12% 8%, rgb(255, 247, 238) 0px, rgba(0, 0, 0, 0) 43%), none",
+      "border": "rgb(36, 27, 28)"
+    },
+    "#app": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgb(36, 27, 28)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": null,
+    ".room-topbar": null,
+    ".room-chatbox": null,
+    ".room-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".room-compose input": {
+      "bg": "rgb(255, 251, 244)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "rgba(72, 43, 31, 0.15)"
+    },
+    ".room-controls": null,
+    ".circle-icon": null,
+    ".voice-summary": null,
+    ".pk-broadcast-voice": null,
+    ".pk-broadcast-voice .pk-duel": null,
+    ".pk-broadcast-voice .pk-duel-side": null,
+    ".pk-broadcast-voice .pk-balance-legends": null,
+    ".pk-broadcast-cam": {
+      "bg": "rgb(186, 165, 151)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "none",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".pk-broadcast-cam .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "linear-gradient(164deg, rgb(202, 183, 168) 0%, rgb(178, 155, 142) 49%, rgb(129, 103, 96) 100%)",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".cam-topbar": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".cam-compose": {
+      "bg": "rgb(244, 234, 224)",
+      "color": "rgb(36, 27, 28)",
+      "bgImage": "none",
+      "border": "rgba(0, 0, 0, 0)"
+    },
+    ".cam-compose input": {
+      "bg": "rgb(255, 251, 244)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "rgba(72, 43, 31, 0.15)"
+    },
+    ".sheet": {
+      "bg": "rgb(255, 249, 241)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(228, 208, 189)"
+    },
+    ".sheet-head": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(40, 31, 27)"
+    },
+    ".close-btn": {
+      "bg": "rgb(242, 229, 217)",
+      "color": "rgb(66, 44, 39)",
+      "bgImage": "none",
+      "border": "rgb(66, 44, 39)"
+    },
+    ".audience-panel-summary": {
+      "bg": "color(srgb 0.970353 0.937725 0.895451)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "color(srgb 0.133333 0.101961 0.0901961 / 0.12)"
+    },
+    ".cam-person-row": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(40, 31, 27)",
+      "bgImage": "none",
+      "border": "rgb(40, 31, 27)"
+    },
+    ".cam-person-avatar": {
+      "bg": "color(srgb 0.943922 0.879294 0.851843)",
+      "color": "rgb(34, 26, 23)",
+      "bgImage": "none",
+      "border": "color(srgb 0.568627 0.176471 0.14902 / 0.25)"
+    }
+  },
+  "cam-dark-pk": {
+    "body": {
+      "bg": "rgb(21, 16, 17)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    "#app": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": null,
+    ".room-topbar": null,
+    ".room-chatbox": null,
+    ".room-compose": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.229176 0.188902 0.191804)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".room-controls": null,
+    ".circle-icon": null,
+    ".voice-summary": null,
+    ".pk-broadcast-voice": null,
+    ".pk-broadcast-voice .pk-duel": null,
+    ".pk-broadcast-voice .pk-duel-side": null,
+    ".pk-broadcast-voice .pk-balance-legends": null,
+    ".pk-broadcast-cam": {
+      "bg": "rgb(39, 31, 32)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "none",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".pk-broadcast-cam .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "linear-gradient(168deg, rgb(83, 64, 68) 0%, rgb(52, 37, 40) 55%, rgb(32, 24, 27) 100%)",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".cam-topbar": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".cam-compose": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".cam-compose input": {
+      "bg": "color(srgb 0.229176 0.188902 0.191804)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".sheet": null,
+    ".sheet-head": null,
+    ".close-btn": null,
+    ".audience-panel-summary": null,
+    ".cam-person-row": null,
+    ".cam-person-avatar": null
+  },
+  "cam-dark-sheet": {
+    "body": {
+      "bg": "rgb(21, 16, 17)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    "#app": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".app-header": null,
+    ".nav": null,
+    ".room-top": null,
+    ".room-topbar": null,
+    ".room-chatbox": null,
+    ".room-compose": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".room-compose input": {
+      "bg": "color(srgb 0.229176 0.188902 0.191804)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".room-controls": null,
+    ".circle-icon": null,
+    ".voice-summary": null,
+    ".pk-broadcast-voice": null,
+    ".pk-broadcast-voice .pk-duel": null,
+    ".pk-broadcast-voice .pk-duel-side": null,
+    ".pk-broadcast-voice .pk-balance-legends": null,
+    ".pk-broadcast-cam": {
+      "bg": "rgb(39, 31, 32)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "none",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".pk-broadcast-cam .pk-duel-side": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 243, 233)",
+      "bgImage": "linear-gradient(168deg, rgb(83, 64, 68) 0%, rgb(52, 37, 40) 55%, rgb(32, 24, 27) 100%)",
+      "border": "rgb(255, 243, 233)"
+    },
+    ".cam-topbar": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".cam-compose": {
+      "bg": "rgb(39, 29, 31)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.09)"
+    },
+    ".cam-compose input": {
+      "bg": "color(srgb 0.229176 0.188902 0.191804)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.16)"
+    },
+    ".sheet": {
+      "bg": "rgb(43, 34, 35)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgba(255, 227, 207, 0.18)"
+    },
+    ".sheet-head": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".close-btn": {
+      "bg": "rgb(57, 44, 45)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".audience-panel-summary": {
+      "bg": "color(srgb 0.198275 0.15451 0.158431)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.94902 0.901961 / 0.12)"
+    },
+    ".cam-person-row": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "rgb(255, 242, 230)"
+    },
+    ".cam-person-avatar": {
+      "bg": "color(srgb 0.276706 0.191451 0.183647)",
+      "color": "rgb(255, 242, 230)",
+      "bgImage": "none",
+      "border": "color(srgb 1 0.580392 0.494118 / 0.25)"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "header": "rgb(247, 241, 229)",
+    "discoverHero": "linear-gradient(135deg, rgb(255, 248, 239) 0%, rgb(234, 210, 192) 100%)",
+    "chatRow": "rgb(255, 251, 244)",
+    "conversation": "rgb(255, 251, 245)",
+    "sheet": "rgb(255, 249, 241)"
+  },
+  {
+    "width": 320,
+    "theme": "dark",
+    "header": "rgb(31, 24, 25)",
+    "discoverHero": "linear-gradient(135deg, rgb(78, 44, 39), rgb(44, 34, 32))",
+    "chatRow": "rgb(43, 34, 35)",
+    "conversation": "rgb(41, 35, 34)",
+    "sheet": "rgb(43, 34, 35)"
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "header": "rgb(247, 241, 229)",
+    "discoverHero": "linear-gradient(135deg, rgb(255, 248, 239) 0%, rgb(234, 210, 192) 100%)",
+    "chatRow": "rgb(255, 251, 244)",
+    "conversation": "rgb(255, 251, 245)",
+    "sheet": "rgb(255, 249, 241)"
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "header": "rgb(31, 24, 25)",
+    "discoverHero": "linear-gradient(135deg, rgb(78, 44, 39), rgb(44, 34, 32))",
+    "chatRow": "rgb(43, 34, 35)",
+    "conversation": "rgb(41, 35, 34)",
+    "sheet": "rgb(43, 34, 35)"
+  },
+  {
+    "width": 430,
+    "theme": "light",
+    "header": "rgb(247, 241, 229)",
+    "discoverHero": "linear-gradient(135deg, rgb(255, 248, 239) 0%, rgb(234, 210, 192) 100%)",
+    "chatRow": "rgb(255, 251, 244)",
+    "conversation": "rgb(255, 251, 245)",
+    "sheet": "rgb(255, 249, 241)"
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "header": "rgb(31, 24, 25)",
+    "discoverHero": "linear-gradient(135deg, rgb(78, 44, 39), rgb(44, 34, 32))",
+    "chatRow": "rgb(43, 34, 35)",
+    "conversation": "rgb(41, 35, 34)",
+    "sheet": "rgb(43, 34, 35)"
+  }
+]

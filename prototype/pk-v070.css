@@ -1,0 +1,16 @@
+/* v0.7.0 — media-aware PK states. A green ring requires a real active-speaker event. */
+#app .pk-battle-scene .pk-person-ring.pk-host-speaking{
+ border-color:#70C9A7!important;
+ box-shadow:0 0 0 4px rgba(112,201,167,.20);
+ transition:border-color 160ms ease,box-shadow 160ms ease;
+}
+#app .pk-battle-scene .pk-duel-side .pk-media-label{
+ text-wrap:balance;max-width:160px;text-align:center;
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-battle-scene .pk-person-ring.pk-host-speaking{transition:none;}
+}
+
+#app .pk-network-status{font:600 11px/1.5 system-ui,sans-serif;text-align:center;padding:5px 10px;color:var(--pk-ink);background:var(--pk-clock-bg);margin:0 14px;border-radius:10px}
+#app .pk-network-status[hidden]{display:none!important}
+#app .pk-battle-scene .pk-cheer-button:disabled{opacity:.48;cursor:wait;transform:none!important}

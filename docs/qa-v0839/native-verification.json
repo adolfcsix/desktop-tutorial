@@ -1,0 +1,44 @@
+{
+  "version": "0.8.39",
+  "technicalGate": "BLOCKED",
+  "steps": [
+    {
+      "name": "Resolved npm lockfile",
+      "status": "BLOCKED",
+      "detail": "Chưa có package-lock.json do npm tạo"
+    },
+    {
+      "name": "Installed dependency tree",
+      "status": "BLOCKED",
+      "detail": "Thiếu node_modules/expo"
+    },
+    {
+      "name": "npm ls direct dependencies",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Expo SDK dependency check",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Expo Doctor",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "TypeScript semantic check",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Native config declaration",
+      "status": "WARN",
+      "detail": "android-id: android đang dùng ID minh họa; phải đổi sang ID sở hữu trước khi ký build | ios-id: ios đang dùng ID minh họa; phải đổi sang ID sở hữu trước khi ký build | lockfile: Chưa có mobile/package-lock.json: build giữa các máy chưa tái lập được; tạo bằng npm install sau khi giải quyết dependency | dependencies: Chưa cài node_modules mobile: cần npm install, expo-doctor và tsc trên máy phát triển | api-url: Chưa đặt EXPO_PUBLIC_TUTTT_API_URL (không có API để thử trên điện thoại) | lock-integrity: Chưa có lockfile hợp lệ; cần npm install --strict-peer-deps trên máy có registry | resolved-lock: Chưa có package-lock.json do npm tạo | installed-tree: Thiếu node_modules/expo"
+    }
+  ],
+  "deviceMedia": "NOT_RUN",
+  "nativeBuild": "NOT_RUN",
+  "caveat": "Chỉ đạt khi npm ci --strict-peer-deps, npm ls, expo install --check, expo-doctor và tsc đều đạt; chưa chứng nhận APK/IPA hoặc media hai thiết bị."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "permissionFeedback": true,
+    "draftPreserved": true,
+    "lateGrantStopped": true
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "permissionFeedback": true,
+    "draftPreserved": true,
+    "lateGrantStopped": true
+  }
+]

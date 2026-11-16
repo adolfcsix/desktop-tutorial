@@ -1,0 +1,132 @@
+/* Túttt v0.7.6 — Rivalry meter.
+   Score share is the only animated dimension, and changes only when confirmed
+   points change. A/B retain the approved warm scarlet / champagne identity. */
+#app .pk-arena-v3{
+  --pk-meter-scarlet-deep:#A83C32;
+  --pk-meter-scarlet-light:#E47D63;
+  --pk-meter-gold-deep:#A78155;
+  --pk-meter-gold-light:#E4C293;
+  --pk-meter-edge:rgba(92,52,42,.22);
+  --pk-meter-face:#FFF1E3;
+}
+body:not(.light-mode) #app .pk-arena-v3{
+  --pk-meter-scarlet-deep:#BD5645;
+  --pk-meter-scarlet-light:#F49A79;
+  --pk-meter-gold-deep:#C7A06B;
+  --pk-meter-gold-light:#F2D6A7;
+  --pk-meter-edge:rgba(255,223,193,.24);
+  --pk-meter-face:#FFF2E5;
+}
+#app .pk-arena-v3 .pk-balance-legends{
+  display:flex!important;justify-content:space-between;align-items:center;
+  gap:12px;min-height:15px;margin-bottom:7px;padding:0 2px;
+  color:var(--pk-muted);font-size:9.5px;font-weight:760;
+  font-variant-numeric:tabular-nums;letter-spacing:.02em;opacity:.92;
+}
+#app .pk-arena-v3 .pk-balance-legends>span{display:flex;align-items:center;gap:6px;white-space:nowrap;}
+#app .pk-arena-v3 .pk-balance-legends i{width:6px;height:6px;border-radius:50%;background:var(--pk-meter-scarlet-deep);flex-shrink:0}
+#app .pk-arena-v3 .pk-balance-legends .pk-legend-b i{background:var(--pk-meter-gold-deep)}
+#app .pk-arena-v3 .pk-balance-legends b{color:var(--pk-ink);font-size:11px;font-weight:860;letter-spacing:-.03em}
+#app .pk-arena-v3 .pk-balance-bar{
+  box-sizing:border-box;position:relative;isolation:isolate;overflow:visible!important;
+  height:16px!important;border-radius:999px!important;margin:0 5px!important;
+  border:1px solid var(--pk-meter-edge)!important;
+  background:linear-gradient(90deg,var(--pk-meter-gold-deep),var(--pk-meter-gold-light))!important;
+  box-shadow:0 2px 7px rgba(77,42,33,.12),inset 0 1px 2px rgba(55,29,23,.2)!important;
+}
+#app .pk-arena-v3 .pk-balance-bar:before{
+  content:"";position:absolute;inset:1px 0 auto;height:4px;z-index:2;
+  border-radius:999px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.28),transparent);
+}
+#app .pk-arena-v3 .pk-balance-a{
+  display:block!important;box-sizing:border-box;height:100%!important;
+  border-radius:999px 3px 3px 999px!important;
+  background:linear-gradient(90deg,var(--pk-meter-scarlet-deep),var(--pk-meter-scarlet-light))!important;
+  box-shadow:inset 0 1px 1px rgba(255,236,220,.32)!important;
+}
+#app .pk-arena-v3 .pk-balance-ticks{
+  position:absolute;inset:0;z-index:3;pointer-events:none;
+  border-radius:inherit;
+  background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,242,226,.44) 22px 23px);
+  opacity:.45;
+}
+#app .pk-arena-v3 .pk-balance-pin{
+  position:absolute;z-index:5;top:50%!important;
+  box-sizing:border-box;width:22px!important;height:22px!important;
+  display:grid;place-items:center;
+  border:2px solid var(--pk-meter-face)!important;
+  border-radius:7px!important;
+  background:linear-gradient(140deg,#3F2925,#775148)!important;
+  box-shadow:0 2px 6px rgba(38,18,18,.28),0 0 0 1px rgba(46,25,22,.20)!important;
+  transform:translate(-50%,-50%) rotate(45deg)!important;
+  pointer-events:none;
+}
+#app .pk-arena-v3 .pk-balance-pin span{
+  display:block;transform:rotate(-45deg);font-size:12px;line-height:1;
+  color:var(--pk-meter-face);font-weight:800;
+}
+#app .pk-arena-v3 .pk-score-caption{
+  display:flex!important;align-items:center;justify-content:center;flex-wrap:wrap;
+  column-gap:5px;row-gap:1px;margin-top:8px!important;
+  font-size:10px!important;letter-spacing:0!important;font-weight:650!important;
+  color:var(--pk-muted)!important;line-height:14px;
+}
+#app .pk-arena-v3 .pk-score-caption strong{color:var(--pk-ink)!important;font-weight:850!important}
+#app .pk-arena-v3 .pk-gap-copy{color:var(--pk-muted)}
+/* Cam: the meter acts as a broadcast top line; its labels are already placed
+   on the opposing video columns. Do not obstruct media with a second legend. */
+#app .pk-arena-v3.pk-broadcast-cam .pk-scoreboard{
+  top:50px!important;left:14px!important;right:14px!important;
+  padding:0!important;
+}
+#app .pk-arena-v3.pk-broadcast-cam .pk-balance-legends,
+#app .pk-arena-v3.pk-broadcast-cam .pk-score-caption{display:none!important}
+#app .pk-arena-v3.pk-broadcast-cam .pk-balance-bar{
+  height:14px!important;margin:0 2px!important;
+  box-shadow:0 2px 8px rgba(25,17,19,.23),inset 0 1px 2px rgba(55,29,23,.24)!important;
+}
+#app .pk-arena-v3.pk-broadcast-cam .pk-balance-pin{width:20px!important;height:20px!important;border-radius:6px!important}
+#app .pk-arena-v3.pk-broadcast-cam .pk-balance-pin span{font-size:11px}
+@media(max-width:350px){
+ #app .pk-arena-v3 .pk-balance-legends{font-size:9px;min-height:13px;margin-bottom:6px;gap:5px}
+ #app .pk-arena-v3 .pk-balance-legends b{font-size:10px}
+ #app .pk-arena-v3 .pk-balance-bar{height:14px!important}
+ #app .pk-arena-v3 .pk-score-caption{margin-top:8px!important;font-size:9px!important}
+ #app .pk-arena-v3.pk-broadcast-cam .pk-balance-bar{height:13px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-arena-v3 .pk-balance-a,#app .pk-arena-v3 .pk-balance-pin{transition:none!important}
+}
+/* Clear the Cam lower-third labels from the raised, larger moving marker. */
+#app .pk-arena-v3.pk-broadcast-cam .pk-side-top{top:76px!important}
+#app .pk-arena-v3.pk-broadcast-cam .pk-side-score{top:98px!important}
+body.light-mode #app .pk-arena-v3.pk-broadcast-cam .pk-balance-bar,
+body:not(.light-mode) #app .pk-arena-v3.pk-broadcast-cam .pk-balance-bar{
+ background:linear-gradient(90deg,var(--pk-meter-gold-deep),var(--pk-meter-gold-light))!important;
+}
+/* Small iPhones: preserve the floating chat line while the meter gets its labels. */
+@media(max-width:350px) and (max-height:760px){
+ #app .pk-broadcast-voice.pk-battle-scene{padding-bottom:8px!important}
+ #app .pk-broadcast-voice .pk-score-caption{margin-top:6px!important}
+ #app:has(.room-top .pk-broadcast-voice) .room-chatbox{min-height:99px!important}
+}
+
+/* v0.8.6 — one short response when the lead actually changes; no idle glow. */
+#app .pk-arena-v3.pk-lead-switch .pk-balance-pin{
+ animation:tutttPkTakeoverV086 540ms cubic-bezier(.22,.75,.28,1) 1!important;
+}
+#app .pk-arena-v3.pk-lead-switch .pk-balance-bar{
+ animation:tutttPkBarLiftV086 540ms ease-out 1!important;
+}
+@keyframes tutttPkTakeoverV086{
+ 0%,100%{filter:brightness(1);box-shadow:0 2px 6px rgba(38,18,18,.28),0 0 0 1px rgba(46,25,22,.20)}
+ 43%{filter:brightness(1.22);box-shadow:0 2px 7px rgba(38,18,18,.30),0 0 0 5px rgba(252,233,195,.34)}
+}
+@keyframes tutttPkBarLiftV086{
+ 0%,100%{filter:brightness(1)}45%{filter:brightness(1.13)}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-arena-v3.pk-lead-switch .pk-balance-pin,
+ #app .pk-arena-v3.pk-lead-switch .pk-balance-bar{animation:none!important}
+}

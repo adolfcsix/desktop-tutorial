@@ -1,0 +1,29 @@
+{
+  "name": "tuttt",
+  "private": true,
+  "version": "0.8.50",
+  "description": "Túttt - social audio application proof of concept",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test server/test/*.test.js tests/*.test.js",
+    "check:web": "node --check prototype/audience-presence.js && node --check prototype/pk-visual-ux.js && node --check prototype/speaker-status.js && node --check prototype/stage-layout.js && node --check prototype/app.js && node --check prototype/network.js && node --check prototype/ux-core.js && node --check prototype/voice.js && node --check server/stage.js && node --check server/voice.js && node --check server/index.js && node --check server/livekit.js && node --check server/pk.js",
+    "preflight:live": "node scripts/preflight_livekit.mjs",
+    "prepare:livekit:local": "node scripts/prepare_local_livekit.mjs",
+    "dev:api:local": "node scripts/run_local_api.mjs",
+    "verify:livekit:sfu": "node scripts/verify_livekit_sfu.mjs",
+    "setup:livekit": "npm install --prefix server && npm install --prefix mobile",
+    "qa:release": "node scripts/qa_release.mjs",
+    "preflight:staging": "node scripts/preflight_staging.mjs",
+    "doctor:native": "node scripts/doctor_native.mjs",
+    "typecheck:native": "npm --prefix mobile run typecheck",
+    "verify:native": "node scripts/verify_native.mjs",
+    "verify:livekit:admin": "node scripts/verify_livekit_admin.mjs --run"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "typescript": "5.9.3"
+  }
+}

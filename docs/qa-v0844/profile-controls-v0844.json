@@ -1,0 +1,36 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "profile_saved": true,
+    "no_fake_stats": true
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "profile_saved": true,
+    "no_fake_stats": true
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "profile_saved": true,
+    "no_fake_stats": true
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "profile_saved": true,
+    "no_fake_stats": true
+  },
+  {
+    "mode": "voice",
+    "no_fake_controls": true,
+    "pk_cheer_kept": true
+  },
+  {
+    "mode": "cam",
+    "no_fake_controls": true,
+    "pk_cheer_kept": true
+  }
+]

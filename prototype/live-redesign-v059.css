@@ -1,0 +1,147 @@
+/* Túttt v0.5.9 — Live visual overhaul.
+   One visual hierarchy: room identity > people/video > floating chat > controls.
+   The approved graffiti mark, light/dark brand tokens, and control semantics stay intact. */
+:root{--live-round:22px;--live-signal:#36c99a}
+#app:has(.cam-page),#app:has(.room-top){background:var(--bg)}
+/* A calmer, deliberate top bar. */
+.cam-page .cam-topbar{min-height:70px;height:auto;padding:9px 16px 10px;border:0;background:var(--bg);gap:10px}
+.cam-page .cam-topbar .back-btn,.cam-page .cam-header-more{min-width:42px;min-height:42px;width:42px;height:42px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--ink)}
+.cam-page .cam-title{min-width:0;flex:1}
+.cam-page .cam-title-line{gap:7px;margin:0 0 3px}
+.cam-page .cam-title strong{font-size:16px;line-height:1.3;letter-spacing:-.035em;font-weight:850;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.cam-page .cam-live-pill{padding:5px 8px;font-size:10px;border-radius:10px;letter-spacing:.025em}
+.cam-page .cam-privacy{font-size:10px;font-weight:600;color:var(--muted)}
+/* Cam now has a spacious stage and a chat that behaves as the second layer rather than another card. */
+.cam-page.cam-mode-unified .cam-content{position:relative;padding:8px 17px 0;display:flex;flex-direction:column;gap:0;min-height:0;flex:1;background:
+ radial-gradient(ellipse 230px 185px at 50% 23%,color-mix(in srgb,var(--brand-accent) 9%,transparent),transparent 84%),
+ linear-gradient(180deg,color-mix(in srgb,var(--surface) 17%,var(--bg)),var(--bg) 74%)}
+.cam-page.cam-mode-unified .cam-stage-caption{order:1;display:flex;align-items:center;min-height:45px;padding:0 0 5px;margin:0;gap:8px}
+.cam-page.cam-mode-unified .cam-stage-caption>div:first-child>strong{font-size:12px;letter-spacing:-.02em;color:var(--muted);font-weight:750}
+.cam-page.cam-mode-unified .cam-stage-metrics{margin-left:auto;gap:5px}
+.cam-page.cam-mode-unified .cam-stage-count{display:none}
+.cam-page.cam-mode-unified .cam-viewers{min-width:68px;height:40px;padding:0 10px;border:1px solid color-mix(in srgb,var(--line) 68%,transparent);background:var(--surface);border-radius:14px;color:var(--ink);font-size:12px;font-weight:800}
+
+/* Top supporters is a quiet short button, not a second permanent banner. */
+.cam-page.cam-mode-unified .cam-supporter-row{order:2;align-self:flex-start;width:100%;min-height:0;padding:0 0 12px;margin:0;justify-content:flex-start}
+.cam-page.cam-mode-unified .cam-supporter-label{display:none}
+.cam-page.cam-mode-unified .cam-supporter-button{min-height:33px;height:34px;padding:0 10px;gap:5px;border-radius:99px;border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:none;background:color-mix(in srgb,var(--surface) 75%,transparent);font-size:11px}
+.cam-page.cam-mode-unified .cam-supporter-button strong{font-size:11px}
+.cam-page.cam-mode-unified .cam-supporter-stack i{width:19px;height:19px;font-size:9px}
+/* Avatar gallery: soft ambient focus and distinct identity, no harsh tiles around turned-off cameras. */
+.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{order:3;flex:0 0 auto;position:relative;align-items:start;justify-content:center;gap:16px 9px;padding:10px 4px 13px;margin:0 0 5px;max-height:min(34dvh,290px);overflow-y:auto;scrollbar-width:none}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive::-webkit-scrollbar{display:none}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only,
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.occupied{min-height:103px;padding:3px 0 4px;gap:7px;background:none!important;border:0!important;box-shadow:none!important;border-radius:20px}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-avatar-wrap{width:max-content;max-width:100%;margin:0 auto;position:relative}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:68px;height:68px;border:3px solid color-mix(in srgb,var(--surface) 85%,white);border-radius:50%;background:linear-gradient(140deg,#F9DAC7 0%,#EAB8A7 57%,#C98E82 100%);box-shadow:0 5px 16px #55312322,0 0 0 1px color-mix(in srgb,var(--brand-ruby) 20%,transparent);font-size:26px;font-weight:850;color:#56342D;transition:box-shadow .22s ease,transform .22s ease}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.pinned .cam-stage-avatar{width:94px;height:94px;font-size:34px;border-color:color-mix(in srgb,var(--brand-ruby) 50%,var(--surface))}
+.cam-page.cam-mode-unified .cam-avatar-meta{gap:5px;line-height:1.12}
+.cam-page.cam-mode-unified .cam-avatar-meta strong{font-size:12px;font-weight:800;letter-spacing:-.012em}
+.cam-page.cam-mode-unified .cam-avatar-meta small{font-size:11px;opacity:.88}
+.cam-page.cam-mode-unified .cam-focus-indicator{font-size:10px;padding:3px 7px;letter-spacing:0}
+.cam-page.cam-mode-unified .cam-visual-helper{display:none}
+.cam-page.cam-mode-unified .cam-status-line{order:4;min-height:0;margin:0;padding:0 5px 7px;background:transparent!important;border:0;font-size:10px;line-height:1.35;color:var(--muted)}
+.cam-page.cam-mode-unified .cam-status-dot{width:5px;height:5px;flex:0 0 5px;margin-top:5px}
+/* Chat floats into the lower half, growing naturally on smaller screens. */
+.cam-page.cam-mode-unified .cam-interaction.cam-chat-float{order:5;display:flex;flex-direction:column;flex:1 1 auto;min-height:150px;overflow:hidden;margin:0 -17px;padding:19px 18px 4px;border:0;border-radius:0;box-shadow:none;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--bg) 40%,transparent) 22%,color-mix(in srgb,var(--bg) 88%,transparent) 80%)}
+.cam-page.cam-mode-unified .cam-chat-label{padding:0 4px 9px;font-size:11px;font-weight:800;letter-spacing:.015em;opacity:.9}
+.cam-page.cam-mode-unified .cam-chat-history{gap:8px;padding:0 2px 10px}
+.cam-page.cam-mode-unified .cam-chat-entry{max-width:94%;padding:8px 12px!important;border-radius:16px 16px 16px 5px;background:color-mix(in srgb,var(--surface) 84%,transparent);box-shadow:0 2px 10px #4730250C;border:1px solid color-mix(in srgb,var(--line) 40%,transparent)!important;line-height:1.5!important;font-size:13px!important;backdrop-filter:blur(12px)}
+.cam-page.cam-mode-unified .cam-chat-entry strong{font-size:12px;color:var(--brand-ruby)}
+.cam-page.cam-mode-unified .cam-panel-empty{font-size:12px;line-height:1.55;color:var(--muted);padding:10px 0}
+/* Composer / bottom action dock: one continuous visual zone, no nested boxes. */
+.cam-page.cam-mode-unified .cam-compose{background:var(--bg)!important;border:0!important;box-shadow:none!important;padding:8px 13px 10px!important;gap:9px}
+.cam-page.cam-mode-unified .cam-compose input{height:48px;min-height:48px;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding-inline:17px;color:var(--ink)}
+.cam-page.cam-mode-unified .cam-compose button{min-width:47px;width:47px;height:47px;border-radius:50%;background:var(--brand-ruby);color:#fff}
+.cam-page.cam-mode-unified .cam-actions{background:var(--bg);border-top:0;gap:0;padding:2px 10px max(11px,env(safe-area-inset-bottom,11px))}
+.cam-page.cam-mode-unified .cam-action{flex:1;min-width:0;min-height:65px;gap:5px;padding:3px 0}
+.cam-page.cam-mode-unified .cam-action span{width:42px;height:42px;border-radius:16px;background:transparent!important;border:1px solid color-mix(in srgb,var(--line) 68%,transparent);box-shadow:none;color:var(--ink)}
+.cam-page.cam-mode-unified .cam-action.danger span{background:color-mix(in srgb,var(--brand-ruby) 10%,transparent)!important;border-color:color-mix(in srgb,var(--brand-ruby) 30%,transparent);color:var(--brand-ruby)}
+.cam-page.cam-mode-unified .cam-action small{font-size:10px;line-height:1.15;font-weight:700}
+/* Voice: no unrelated banner, no three large technical cards. Sane room hierarchy. */
+#app:has(.room-top) .room-top{padding:0 17px 8px;position:relative;background:radial-gradient(ellipse 210px 180px at 52% 55%,color-mix(in srgb,var(--brand-ruby) 9%,transparent),transparent 90%)}
+#app .room-topbar{min-height:62px;gap:8px}
+#app .room-topbar .back-btn,#app .room-topbar .icon-btn{width:43px;height:43px;min-width:43px;min-height:43px;border-radius:15px;background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+#app .room-topbar .live-tag{padding:7px 11px;border-radius:12px;letter-spacing:.035em;font-size:10px}
+#app .room-topbar .voice-audience{display:inline-flex;align-items:center;justify-content:center;gap:5px;font-size:12px;font-weight:750;color:var(--muted);margin-left:auto}
+#app .room-topbar .voice-audience svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7}
+#app .room-live-hero{display:none}
+#app .voice-title-row{margin:9px 0 0;align-items:center;gap:9px}
+#app .voice-title-row .section-title{font-size:22px;letter-spacing:-.045em;line-height:1.25;font-weight:880;color:var(--ink)}
+#app .voice-top3-button{height:38px;min-height:38px;min-width:75px;background:var(--surface);border:1px solid var(--line);border-radius:99px;font-size:11px;box-shadow:none}
+#app .room-subtitle{font-size:12px;line-height:1.5;color:var(--muted);margin:4px 0 9px}
+#app .room-top>.notice{display:none}
+#app .voice-summary{display:flex;align-items:center;justify-content:space-between;gap:7px;flex-wrap:nowrap;margin:8px 0 12px;padding:0;background:transparent;border:0;border-radius:0;font-size:10px;color:var(--muted)}
+#app .voice-summary>span:nth-child(2){display:none}
+#app .voice-status{font-size:11px;font-weight:750}
+#app .voice-unlock{min-height:38px;padding:7px 11px;border-radius:99px;font-size:11px;background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+#app .voice-unlock svg{width:15px;height:15px}
+#app .seat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 4px;align-items:start;margin:7px 0 8px;padding:25px 8px 20px;border-radius:27px;background:linear-gradient(155deg,color-mix(in srgb,var(--surface) 86%,var(--bg)),color-mix(in srgb,var(--bg) 85%,var(--surface)));border:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+#app .seat{gap:8px;min-height:90px;padding:0 2px;background:none;color:var(--ink)}
+#app .seat .voice-avatar-wrap{width:64px;height:64px}
+#app .seat .avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(140deg,#F7D7C4,#E8B59C);color:#52342A;border:3px solid color-mix(in srgb,var(--surface) 80%,white);box-shadow:0 3px 12px #38211C18;font-size:21px;font-weight:820}
+#app .seat.empty .avatar{background:transparent;border:1.5px dashed color-mix(in srgb,var(--ink) 27%,transparent);box-shadow:none;color:var(--muted)}
+#app .seat.empty .avatar svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5}
+#app .seat-name{font-size:11px;line-height:1.2;font-weight:720;color:var(--ink);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#app .seat.empty .seat-name{color:var(--muted);font-weight:550}
+/* Voice chat joins the page visually; the technical connection state is still available above. */
+#app>.room-chatbox,#app .room-chatbox{flex:1 1 auto!important;min-height:88px;padding:15px 19px 6px!important;margin:0;overflow-y:auto;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--bg) 68%,transparent))!important;border:0!important;display:flex;flex-direction:column;gap:6px;justify-content:flex-end}
+#app .room-chatbox .room-log{background:color-mix(in srgb,var(--surface) 85%,transparent);border:1px solid color-mix(in srgb,var(--line) 40%,transparent);display:table;align-self:flex-start;width:max-content;max-width:97%;border-radius:16px 16px 16px 5px;color:var(--ink);padding:8px 12px;margin:0;font-size:13px;line-height:1.5;backdrop-filter:blur(8px)}
+#app .room-compose{background:var(--bg)!important;padding:9px 13px!important;gap:9px;border:0}
+#app .room-compose input{height:48px;border-radius:99px;background:var(--surface)!important;border:1px solid var(--line)!important;color:var(--ink);font-size:15px;padding:0 17px}
+#app .room-compose button{width:47px;height:47px;min-width:47px;min-height:47px;border-radius:50%;background:var(--brand-ruby);color:#fff}
+#app .room-controls{padding:5px 12px max(11px,env(safe-area-inset-bottom,11px));margin:0;background:var(--bg)!important;border:0;gap:0;justify-content:space-between}
+#app .room-controls .circle-action{flex:1;min-width:0;gap:5px;padding:3px 0;font-size:10px;font-weight:700;color:var(--ink)}
+#app .room-controls .circle-icon{width:42px;height:42px;border-radius:16px;background:transparent!important;border:1px solid var(--line);box-shadow:none;color:var(--ink)}
+#app .room-controls .circle-action.danger .circle-icon{background:color-mix(in srgb,var(--brand-ruby) 12%,transparent)!important;color:var(--brand-ruby)}
+/* Responsive and accessibility. */
+@media(max-width:360px){
+ .cam-page.cam-mode-unified .cam-content{padding-inline:13px}
+ .cam-page.cam-mode-unified .cam-interaction.cam-chat-float{margin-inline:-13px;padding-inline:14px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:59px;height:59px}
+ .cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{gap:10px 4px;padding-top:6px;padding-bottom:8px}
+ #app .room-top{padding-inline:13px}
+ #app .seat-grid{padding-inline:3px}
+ #app .seat .voice-avatar-wrap,#app .seat .avatar{width:54px;height:54px}
+ #app .voice-title-row .section-title{font-size:20px}
+}
+@media(max-height:680px){
+ .cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{max-height:26dvh;padding-top:6px;padding-bottom:4px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:55px;height:55px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only{min-height:86px}
+ #app .seat-grid{padding-block:14px 10px}
+ #app .seat .voice-avatar-wrap,#app .seat .avatar{width:54px;height:54px}
+}
+@media(prefers-reduced-motion:reduce){.cam-page.cam-mode-unified .cam-stage-avatar,#app .seat .avatar{transition:none!important}}
+/* Stage balance refinement after actual 320px screenshot review. */
+#app .seat-grid{position:relative;isolation:isolate;min-height:clamp(206px,32dvh,280px);align-content:center;overflow:hidden;background:
+ radial-gradient(circle at 52% 47%,color-mix(in srgb,var(--brand-ruby) 14%,transparent),transparent 55%),
+ linear-gradient(155deg,color-mix(in srgb,var(--surface) 86%,var(--bg)),color-mix(in srgb,var(--bg) 83%,var(--surface)))}
+#app .seat-grid::before{content:"";position:absolute;z-index:-1;width:182px;height:182px;border:1px solid color-mix(in srgb,var(--brand-ruby) 13%,transparent);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 35px color-mix(in srgb,var(--brand-ruby) 3%,transparent);pointer-events:none}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{min-height:clamp(179px,24dvh,235px);align-content:center}
+@media(max-height:680px){#app .seat-grid{min-height:190px}.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{min-height:145px}}
+/* Final art-direction pass: an ink-and-ruby voice stage, inspired by the approved handset logo.
+   Strong color belongs to the stage, not every control on screen. */
+#app .seat-grid{border-color:color-mix(in srgb,var(--brand-ruby) 25%,transparent);background:
+ radial-gradient(circle at 47% 43%,#A44B4640 0%,transparent 51%),
+ linear-gradient(145deg,#533033 2%,#372227 60%,#241A1F 100%);box-shadow:inset 0 1px 0 #FFFFFF20,0 13px 27px #51262212}
+#app .seat-grid::before{border-color:#F6CFB52B;box-shadow:0 0 0 36px #ECC0A00C}
+#app .seat .avatar{border-color:#FFF3E5;border-width:3px;box-shadow:0 3px 15px #150E103B;background:linear-gradient(142deg,#FAE0C9,#DE9F95);color:#5A2E2D}
+#app .seat.empty .avatar{border:1px dashed #E7BDAA88;background:#FFFFFF0B;color:#F2D7C9}
+#app .seat-name{color:#FFF3EB}
+#app .seat.empty .seat-name{color:#D0B3AF}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{border:1px solid #F6D6BB25;border-radius:27px;background:
+ radial-gradient(ellipse 195px 130px at 50% 25%,#A8534E4A,transparent 83%),
+ linear-gradient(150deg,#533034 0%,#332329 60%,#251B22 100%);
+ padding:19px 12px 15px;min-height:clamp(196px,26dvh,248px);margin:1px 0 10px;box-shadow:inset 0 1px 0 #FFFFFF16,0 14px 27px #53231B13}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:76px;height:76px;font-size:28px;border-color:#FFF4E8;box-shadow:0 6px 16px #100A093F}
+.cam-page.cam-mode-unified .cam-avatar-meta strong{color:#FFF2EA;font-size:12px}
+.cam-page.cam-mode-unified .cam-avatar-meta small{color:#EDD2C7;font-size:11px}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.pinned .cam-stage-avatar{width:94px;height:94px}
+.cam-page.cam-mode-unified .cam-focus-indicator{color:#5B282A;background:#F0D0BF}
+.cam-page.cam-mode-unified .cam-supporter-row{justify-content:flex-end}
+.cam-page.cam-mode-unified .cam-supporter-button{background:color-mix(in srgb,var(--brand-ruby) 9%,var(--surface));border-color:color-mix(in srgb,var(--brand-ruby) 17%,var(--line))}
+@media(max-width:360px){.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{min-height:190px;padding:14px 8px 12px}.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:63px;height:63px}}
+/* Keep older chat history scrollable instead of clipping it at the top. */
+#app .room-chatbox{justify-content:flex-start}
+#app .room-chatbox::before{content:"";display:block;flex:1 0 0px;min-height:0}

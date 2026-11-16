@@ -1,0 +1,103 @@
+/* Túttt v0.8.18 | Consistent Ivory broadcast chrome & intentional PK touch rail.
+   Night is deliberately retained. Do not introduce new hues or fake live media. */
+
+/* Light mode uses the SAME ivory shell as other pages; only the video surface
+   receives its own tonal scrims, because white scores must stay readable. */
+body.light-mode #app:has(.pk-broadcast-cam),
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam){--pk-stage:#F4EAE0;--pk-ink:#241B1C;--pk-muted:#6B5753;}
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam),
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam) .cam-topbar,
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam) .cam-content,
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam) .cam-compose,
+body.light-mode #app .cam-page.cam-mode-unified:has(.pk-broadcast-cam) .cam-actions{
+ background:var(--pk-stage)!important;color:var(--pk-ink)!important;background-image:none!important;border-color:transparent!important;
+}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-title strong,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-privacy,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-action small,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-topbar .back-btn,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-header-more{color:var(--pk-ink)!important}
+body.light-mode #app .cam-page.cam-mode-unified .cam-content>.pk-broadcast-cam.pk-battle-scene{background:#BAA597!important}
+body.light-mode #app .pk-broadcast-cam .pk-duel{background:#8E7C70!important}
+body.light-mode #app .pk-broadcast-cam .pk-duel-side{background:linear-gradient(164deg,#CAB7A8 0%,#B29B8E 49%,#816760 100%)!important}
+body.light-mode #app .pk-broadcast-cam .pk-duel-side.pk-side-champagne{background:linear-gradient(164deg,#DAC9B3 0%,#BBA895 49%,#8B7468 100%)!important}
+body.light-mode #app .pk-broadcast-cam .pk-duel-side:after{background:linear-gradient(180deg,#382623A3 0%,#38262351 19%,transparent 41%,transparent 55%,#24161998 82%,#211519D9 100%)!important}
+body.light-mode #app .pk-broadcast-cam .pk-scene-head{background:linear-gradient(180deg,#3B292966,transparent)!important}
+body.light-mode #app .pk-broadcast-cam .pk-camera-symbol{background:#FFF4E42D;border-color:#FFF4E463;color:#FFF4E9!important}
+body.light-mode #app .pk-broadcast-cam .pk-camera-backdrop{color:#FFF5EC!important;text-shadow:0 1px 4px #28161580}
+body.light-mode #app .pk-broadcast-cam .pk-side-top,
+body.light-mode #app .pk-broadcast-cam .pk-side-champagne .pk-side-top,
+body.light-mode #app .pk-broadcast-cam .pk-side-score strong{color:#FFF6EE!important}
+body.light-mode #app .pk-broadcast-cam .pk-side-score span{color:#F9EADF!important}
+body.light-mode #app .pk-broadcast-cam .pk-balance-bar{background:#DDBE93!important}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-compose input{
+ background:var(--surface)!important;color:var(--ink)!important;border:1px solid var(--line)!important;
+}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-compose input::placeholder{color:var(--muted)!important}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-compose button{background:#934233!important;color:#FFF5EA!important}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-action span{
+ border-color:var(--line)!important;color:var(--ink)!important;background:var(--surface)!important;
+}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-action.danger span{color:#85392E!important;background:transparent!important}
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-interaction.cam-chat-float{background:linear-gradient(180deg,transparent 0%,#39242345 38%,#28191C9A 100%)!important}
+/* Both themes use one deliberate control rail. The main cheer replaces the generic heart;
+   it is no longer a pill pasted over the video and chat. */
+#app .pk-broadcast-cam .pk-scene-footer{display:none!important}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions{
+ display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;align-items:center!important;gap:0!important;
+ padding:2px 8px 7px!important;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .cam-action{min-width:0!important;width:100%!important;min-height:61px!important;gap:4px!important;justify-content:center}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .cam-action span{width:40px!important;height:40px!important;border-radius:18px!important;display:flex;justify-content:center;align-items:center}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .cam-action small{font-size:9px!important;letter-spacing:-.015em;white-space:nowrap}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer{
+ display:flex!important;flex-direction:column!important;min-width:0!important;max-width:none!important;
+ padding:0!important;margin:0!important;border:0!important;background:none!important;
+ box-shadow:none!important;border-radius:16px!important;transform:none;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon{
+ box-sizing:border-box;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;
+ background:#984234!important;border:1px solid #A95A4A!important;border-radius:18px!important;
+ box-shadow:0 3px 8px #492F2829!important;color:#FFF4E9!important;
+ transition:transform 190ms cubic-bezier(.2,1,.3,1),box-shadow 190ms ease!important;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon svg{
+ width:21px;height:21px;stroke:#FFF4E9!important;fill:#FFF4E9!important;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-copy{
+ color:var(--pk-ink)!important;font-size:10px!important;font-weight:850!important;letter-spacing:-.025em;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer:active .pk-cheer-icon{
+ transform:scale(.92)!important;box-shadow:0 1px 3px #492F281C!important;
+}
+body:not(.light-mode) #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon{
+ background:#F1D0B2!important;border-color:#F1D0B2!important;
+}
+body:not(.light-mode) #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon svg{stroke:#4B2D28!important;fill:#4B2D28!important}
+/* 'See result' is contextual to the match, not a second dominant CTA over the video. */
+#app .pk-broadcast-cam .pk-header-result{
+ display:inline-flex;align-items:center;justify-content:center;flex:0 0 40px;
+ width:40px;min-width:40px;min-height:44px;height:44px;border:0!important;border-radius:16px!important;
+ background:#FFF3E71C!important;color:#FFF3E9!important;cursor:pointer;
+ transition:background 180ms ease,transform 180ms cubic-bezier(.2,1,.3,1);
+}
+#app .pk-broadcast-cam .pk-header-result svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+#app .pk-broadcast-cam .pk-header-result:hover{background:#FFF3E73B!important}
+#app .pk-broadcast-cam .pk-header-result:active{transform:scale(.94)}
+#app .pk-broadcast-cam .pk-header-result:focus-visible,
+#app .cam-page:has(.pk-broadcast-cam) .pk-rail-cheer:focus-visible{outline:2px solid var(--pk-focus)!important;outline-offset:2px!important}
+@media(max-width:350px){
+ #app .pk-broadcast-cam .pk-head-actions{gap:1px!important}
+ #app .pk-broadcast-cam .pk-header-result{flex-basis:36px;min-width:36px;width:36px}
+ #app .cam-page:has(.pk-broadcast-cam) .cam-actions{padding-inline:4px!important}
+ #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon{width:41px!important;height:41px!important;min-width:41px!important;min-height:41px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon,
+ #app .pk-broadcast-cam .pk-header-result{transition:none!important;animation:none!important}
+}
+
+/* Result control has a short but readable text label at every device width. */
+#app .pk-broadcast-cam .pk-header-result{flex-basis:62px;min-width:62px;width:62px;font-size:11px;font-weight:800;letter-spacing:-.02em}
+#app .pk-broadcast-cam .pk-result-short{display:none}
+@media(max-width:350px){#app .pk-broadcast-cam .pk-header-result{flex-basis:36px;min-width:36px;width:36px;font-size:10px}#app .pk-broadcast-cam .pk-result-word{display:none}#app .pk-broadcast-cam .pk-result-short{display:inline}}

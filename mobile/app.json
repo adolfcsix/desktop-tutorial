@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Túttt",
+    "slug": "tuttt",
+    "scheme": "tuttt",
+    "version": "0.8.50",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.tuttt.preview",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Túttt chỉ sử dụng microphone khi bạn chủ động bật mic trong phòng Live.",
+        "NSCameraUsageDescription": "Túttt chỉ truy cập camera khi bạn chủ động bật camera trong phòng Live Cam."
+      }
+    },
+    "android": {
+      "package": "com.example.tuttt.preview",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.CAMERA"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1F1819"
+      }
+    },
+    "web": {
+      "name": "Túttt",
+      "favicon": "./assets/app-icon.png"
+    },
+    "plugins": [
+      "@livekit/react-native-expo-plugin",
+      "@config-plugins/react-native-webrtc"
+    ],
+    "icon": "./assets/app-icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1F1819"
+    }
+  },
+  "version": null
+}

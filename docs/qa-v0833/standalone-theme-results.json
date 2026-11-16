@@ -1,0 +1,22 @@
+[
+  {
+    "mode": "voice",
+    "theme": "light",
+    "app_bg": "rgb(244, 234, 224)"
+  },
+  {
+    "mode": "voice",
+    "theme": "dark",
+    "app_bg": "rgb(31, 24, 25)"
+  },
+  {
+    "mode": "cam",
+    "theme": "light",
+    "app_bg": "rgb(244, 234, 224)"
+  },
+  {
+    "mode": "cam",
+    "theme": "dark",
+    "app_bg": "rgb(39, 29, 31)"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 768,
+    "mode": "voice",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 768,
+    "mode": "voice",
+    "theme": "dark",
+    "btnHeight": 44
+  },
+  {
+    "width": 768,
+    "mode": "cam",
+    "theme": "light",
+    "btnHeight": 44
+  },
+  {
+    "width": 768,
+    "mode": "cam",
+    "theme": "dark",
+    "btnHeight": 44
+  }
+]

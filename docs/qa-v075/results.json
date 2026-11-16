@@ -1,0 +1,381 @@
+{
+  "count": 16,
+  "cases": [
+    {
+      "viewport": "320x740",
+      "theme": "light",
+      "mode": "cam",
+      "gaps": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "320x740",
+      "theme": "light",
+      "mode": "voice",
+      "gaps": [
+        10.0,
+        10,
+        10.0
+      ],
+      "icons": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "chat": {
+        "x": 0,
+        "y": 471.5,
+        "width": 320,
+        "height": 108.5,
+        "right": 320,
+        "bottom": 580
+      },
+      "errors": []
+    },
+    {
+      "viewport": "320x740",
+      "theme": "dark",
+      "mode": "cam",
+      "gaps": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "320x740",
+      "theme": "dark",
+      "mode": "voice",
+      "gaps": [
+        10.0,
+        10,
+        10.0
+      ],
+      "icons": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "chat": {
+        "x": 0,
+        "y": 471.5,
+        "width": 320,
+        "height": 108.5,
+        "right": 320,
+        "bottom": 580
+      },
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "theme": "light",
+      "mode": "cam",
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "theme": "light",
+      "mode": "voice",
+      "gaps": [
+        10,
+        10,
+        10
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 0,
+        "y": 559,
+        "width": 390,
+        "height": 122,
+        "right": 390,
+        "bottom": 681
+      },
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "theme": "dark",
+      "mode": "cam",
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "theme": "dark",
+      "mode": "voice",
+      "gaps": [
+        10,
+        10,
+        10
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 0,
+        "y": 559,
+        "width": 390,
+        "height": 122,
+        "right": 390,
+        "bottom": 681
+      },
+      "errors": []
+    },
+    {
+      "viewport": "430x932",
+      "theme": "light",
+      "mode": "cam",
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "430x932",
+      "theme": "light",
+      "mode": "voice",
+      "gaps": [
+        10,
+        10,
+        10
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 0,
+        "y": 559,
+        "width": 430,
+        "height": 210,
+        "right": 430,
+        "bottom": 769
+      },
+      "errors": []
+    },
+    {
+      "viewport": "430x932",
+      "theme": "dark",
+      "mode": "cam",
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "430x932",
+      "theme": "dark",
+      "mode": "voice",
+      "gaps": [
+        10,
+        10,
+        10
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 0,
+        "y": 559,
+        "width": 430,
+        "height": 210,
+        "right": 430,
+        "bottom": 769
+      },
+      "errors": []
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "light",
+      "mode": "cam",
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "light",
+      "mode": "voice",
+      "gaps": [
+        10.0,
+        10,
+        10.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 104,
+        "y": 608,
+        "width": 560,
+        "height": 243,
+        "right": 664,
+        "bottom": 851
+      },
+      "errors": []
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "dark",
+      "mode": "cam",
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": null,
+      "errors": []
+    },
+    {
+      "viewport": "768x1024",
+      "theme": "dark",
+      "mode": "voice",
+      "gaps": [
+        10.0,
+        10,
+        10.0
+      ],
+      "icons": [
+        42,
+        42,
+        42,
+        42
+      ],
+      "chat": {
+        "x": 104,
+        "y": 608,
+        "width": 560,
+        "height": 243,
+        "right": 664,
+        "bottom": 851
+      },
+      "errors": []
+    }
+  ]
+}

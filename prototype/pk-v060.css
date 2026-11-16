@@ -1,0 +1,73 @@
+/* Túttt v0.6.0 — compact, opt-in PK interaction and voice-stage hierarchy.
+   Bordered metadata no longer competes with the actual speakers. */
+.pk-launcher{display:inline-flex;align-items:center;justify-content:center;min-width:64px;min-height:35px;border-radius:999px;background:var(--pk-launcher-bg);color:var(--pk-launcher-ink);border:1px solid var(--pk-stage-border);font-weight:850;font-size:12px;letter-spacing:.03em;box-shadow:0 5px 14px #AD29272B;cursor:pointer;touch-action:manipulation;flex:none}
+.pk-launcher:focus-visible,.pk-cheer-button:focus-visible,.pk-target:focus-visible{outline:3px solid #FFE1C6;outline-offset:3px}
+.cam-page.cam-mode-unified .cam-content>.pk-launcher{order:2;align-self:flex-start;margin:0 0 -36px 4px;position:relative;z-index:1;min-height:33px}
+.cam-page.cam-mode-unified .cam-supporter-row{order:2;margin-left:auto;width:auto;min-height:35px;padding-right:4px}
+.cam-page.cam-mode-unified .cam-content>.pk-showdown{order:3;margin:3px 0 10px}
+.cam-page.cam-mode-unified .cam-content>.pk-showdown~.cam-stage-grid{order:4}
+.cam-page.cam-mode-unified .cam-content>.pk-showdown~.cam-status-line{order:5}
+.cam-page.cam-mode-unified .cam-content>.pk-showdown~.cam-interaction{order:6}
+.voice-pk-row{display:flex;align-items:center;justify-content:flex-end;margin-top:-9px;margin-bottom:7px}
+.pk-showdown{position:relative;isolation:isolate;border:1px solid #F3BEB058;background:linear-gradient(135deg,#45262F,#271E27);color:#FFF0E5;box-shadow:0 10px 22px #28111918;border-radius:22px;padding:12px 14px 11px;min-height:142px;flex:none}
+.pk-arena-heading,.pk-arena-footer{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pk-arena-heading{font-size:11px;font-weight:850}
+.pk-arena-tag{color:#FFC0A7;letter-spacing:.05em}
+.pk-arena-heading>strong{color:#FFF9EB;font-variant-numeric:tabular-nums;background:#FFFFFF14;border-radius:9px;padding:5px 8px;min-width:54px;text-align:center}
+.pk-contestants{display:grid;grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr);align-items:center;justify-items:center;margin:7px 0 10px}
+.pk-contestant{display:grid;grid-template-columns:32px 1fr;grid-template-rows:1fr 1fr;align-items:center;gap:0 7px;width:100%;min-width:0}
+.pk-avatar{grid-row:span 2;background:linear-gradient(135deg,#F2D1B7,#E09B8D);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#53232E;font-size:15px;font-weight:900;border:2px solid #FFF0E5}
+.pk-avatar.challenger{background:linear-gradient(145deg,#F5DFC3,#D8B58B)}
+.pk-contestant strong{font-size:11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0;width:100%}
+.pk-contestant span{font-size:10px;color:#F4BEAE;font-variant-numeric:tabular-nums}
+.pk-versus{color:#FFE5D1;font-size:11px;font-weight:900;letter-spacing:.09em}
+.pk-progress{height:7px;border-radius:99px;background:#D8B58B;overflow:hidden;margin-top:3px}
+.pk-progress>div{height:100%;background:linear-gradient(90deg,#EE7465,#FFBB9D);transition:width .3s ease;border-radius:99px}
+.pk-arena-footer{margin-top:8px}
+.pk-arena-footer span{font-size:10px;color:#E1C3B7;line-height:1.35}
+.pk-cheer-button{min-height:34px;padding:6px 11px;border:0;color:#3E232C;background:#FFE0B8;border-radius:99px;cursor:pointer;font-weight:850;font-size:11px}
+.pk-demo{border-style:dashed}
+.pk-sheet-subhead{margin:22px 0 7px;font-size:13px;font-weight:850;color:var(--ink)}
+.pk-target{display:flex;align-items:center;gap:11px;text-align:left;width:100%;min-height:59px;padding:10px 6px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.pk-target span:nth-child(2){display:flex;flex:1;flex-direction:column;gap:4px;min-width:0}
+.pk-target strong{font-size:13px}.pk-target small{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk-target-avatar{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#F1C7B5;color:#43272A;font-weight:900}
+.pk-sheet-entry{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:13px 14px;margin:12px 0;display:flex;flex-direction:column;gap:8px}
+.pk-sheet-entry>strong{font-size:13px;color:var(--ink)}.pk-sheet-entry>small{font-size:11px;color:var(--muted)}
+.pk-sheet-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:5px}
+.pk-sheet-actions>button{border:1px solid var(--line);padding:10px 12px;min-height:43px;border-radius:12px;background:var(--surface);color:var(--ink);font-weight:700}
+.pk-sheet-actions>button.primary{background:var(--brand-ruby);color:#FFF;border-color:transparent}
+.pk-end-link{background:transparent;color:var(--brand-ruby);border:0;min-height:34px;text-decoration:underline;align-self:flex-start}
+.pk-recent{font-size:12px;color:var(--muted)}
+/* Voice is now a deliberate focal composition — one hero circle + a supporting row. */
+#app .room-top{padding-bottom:2px}
+#app .room-top .room-subtitle{line-height:1.4;margin-bottom:0}
+#app .room-top .seat-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;justify-items:center;gap:12px 5px;min-height:clamp(185px,30dvh,250px);padding:18px 10px 12px;margin:6px 0 2px;border-radius:29px}
+#app .room-top .seat-grid .seat:first-child{grid-column:1/-1;min-height:94px;width:max-content;min-width:94px}
+#app .room-top .seat-grid .seat:first-child .voice-avatar-wrap,#app .room-top .seat-grid .seat:first-child .avatar{width:85px;height:85px}
+#app .room-top .seat-grid .seat:first-child .avatar{font-size:29px;border-width:4px;box-shadow:0 5px 17px #0D090949,0 0 0 7px #FAD4BD19}
+#app .room-top .seat-grid .seat:first-child .seat-name{font-size:13px;font-weight:850}
+#app .room-top .seat-grid .seat:nth-child(2):last-child{grid-column:2}
+#app .room-top .seat-grid .seat:not(:first-child){min-height:75px}
+#app .room-top .seat-grid .seat:not(:first-child) .voice-avatar-wrap,#app .room-top .seat-grid .seat:not(:first-child) .avatar{width:54px;height:54px;font-size:18px}
+#app .room-top .seat-grid .seat.empty .seat-name{font-size:10px}
+#app .room-top .voice-summary{margin:2px 0 8px;font-size:11px}
+#app .room-top .voice-status{color:var(--muted)}
+#app .voice-pk-row:has(+.pk-showdown){margin-bottom:6px}
+#app .room-top:has(.pk-showdown) .seat-grid{min-height:154px;padding-block:9px}
+#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child .voice-avatar-wrap,#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child .avatar{width:65px;height:65px}
+@media(max-width:350px){.pk-showdown{padding:10px}.pk-contestants{grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr)}.pk-avatar{width:27px;height:27px}.pk-contestant strong{font-size:10px}#app .room-top .seat-grid{min-height:170px}}
+@media(max-height:700px){#app .room-top .seat-grid{min-height:161px;padding-block:9px}#app .room-top .seat-grid .seat:first-child .voice-avatar-wrap,#app .room-top .seat-grid .seat:first-child .avatar{width:67px;height:67px}.pk-showdown{min-height:118px;padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.pk-progress>div{transition:none!important}}
+/* Eliminate the dead space between voice stage and live chat on tall phones. */
+#app:has(.room-top) .room-top{display:flex;flex:1 1 auto;min-height:0;flex-direction:column}
+#app:has(.room-top) .room-top .seat-grid{flex:1 1 auto;max-height:none;min-height:150px;align-content:center;row-gap:20px}
+#app:has(.room-top) .room-chatbox{flex:0 0 auto!important;height:clamp(125px,19dvh,198px);max-height:24dvh;min-height:90px;overscroll-behavior:contain}
+@media(max-height:700px){#app:has(.room-top) .room-chatbox{height:108px;max-height:108px}#app:has(.room-top) .room-top .seat-grid{min-height:124px;row-gap:8px}}
+/* During PK, Voice switches to a compact, non-clipping host stage. */
+#app .room-top:has(.pk-showdown) .seat-grid{flex:0 0 126px!important;min-height:126px!important;max-height:126px!important;padding:9px 12px!important;margin:2px 0 4px;display:flex!important;justify-content:center;align-items:center;overflow:hidden;}
+#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child{grid-column:auto;min-height:90px}
+#app .room-top:has(.pk-showdown) .seat-grid .seat:not(:first-child){display:none}
+#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child .avatar,#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child .voice-avatar-wrap{width:64px!important;height:64px!important}
+#app .room-top:has(.pk-showdown) .seat-grid .seat:first-child .seat-name{font-size:12px}
+#app .room-top:has(.pk-showdown) .seat-grid::before{width:105px;height:105px;box-shadow:0 0 0 18px #ECC0A00C}

@@ -1,0 +1,109 @@
+{
+  "version": "0.8.43",
+  "startedAt": "2026-11-13T01:10:05.396Z",
+  "finishedAt": "2026-11-13T01:11:05.100Z",
+  "status": "PASS",
+  "automatedChecks": [
+    {
+      "name": "Backend/API + unit tests",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "  ...\n1..408\n# tests 408\n# suites 0\n# pass 408\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4546.53159"
+    },
+    {
+      "name": "Web/Node syntax",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "> tuttt@0.8.43 check:web\n> node --check prototype/audience-presence.js && node --check prototype/pk-visual-ux.js && node --check prototype/speaker-status.js && node --check prototype/stage-layout.js && node --check prototype/app.js && node --check prototype/network.js && node --check prototype/ux-core.js && node --check prototype/voice.js && node --check server/stage.js && node --check server/voice.js && node --check server/index.js && node --check server/livekit.js && node --check server/pk.js"
+    },
+    {
+      "name": "Native config static audit (warnings reported)",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "ectionUi.ts: Không thấy API React Native bị xóa trong các nguồn đã quét\nPASS sdk58-source:src/voice/livePermissionPolicy.ts: Không thấy API React Native bị xóa trong các nguồn đã quét\nPASS sdk58-source:src/voice/useLiveVoice.ts: Không thấy API React Native bị xóa trong các nguồn đã quét\nGiới hạn: Không chạy npm peer resolution hoặc TypeScript semantic check; Không tạo native build; Không kiểm tra tài khoản Apple/Expo/Android signing; Không kiểm tra SFU, âm thanh, camera hoặc kết nối hai thiết bị"
+    },
+    {
+      "name": "Single-file export",
+      "status": "PASS",
+      "seconds": 1,
+      "code": 0,
+      "error": null,
+      "excerpt": "/mnt/data/TUTTT_V0_8_43_PREVIEW.html 3089902"
+    },
+    {
+      "name": "Youth design cross-screen audit",
+      "status": "PASS",
+      "seconds": 11,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS 320 light 8 screens + PK\nPASS 320 dark 8 screens + PK\nPASS 390 light 8 screens + PK\nPASS 390 dark 8 screens + PK\nPASS 430 light 8 screens + PK\nPASS 430 dark 8 screens + PK\nDONE 6 screen matrix, contrast {'ivoryText': 14.03, 'ivorySecondary': 6.53, 'ivoryAccent': 5.75, 'espressoText': 16.27, 'espressoSecondary': 10.44, 'espressoAccent': 9.9, 'nativeDarkSentBubble': 4.8}"
+    },
+    {
+      "name": "Touch, typography and keyboard review",
+      "status": "PASS",
+      "seconds": 6,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS 320 light\nPASS 320 dark\nPASS 390 light\nPASS 390 dark\nPASS 430 light\nPASS 430 dark\nPASS 6 interface and keyboard checks"
+    },
+    {
+      "name": "Clutter-free navigation & OS motion preference",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS 320 light\nPASS 390 light\nPASS 390 dark\nPASS 430 dark\nPASS 4 browser declutter cases"
+    },
+    {
+      "name": "Unified Live options, report and PK menus",
+      "status": "PASS",
+      "seconds": 15,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS 320 cam dark\nPASS 390 voice light\nPASS 390 voice dark\nPASS 390 cam light\nPASS 390 cam dark\nPASS 430 voice light\nPASS 430 voice dark\nPASS 430 cam light\nPASS 430 cam dark\nPASS 12 Live/PK menu and report workflows"
+    },
+    {
+      "name": "Live UI & PK visual",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light\nPASS voice dark\nPASS cam light\nPASS cam dark\nCOMPLETED 4 PK states"
+    },
+    {
+      "name": "Standalone Voice/Cam themes",
+      "status": "PASS",
+      "seconds": 8,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light rgb(244, 234, 224)\nPASS voice dark rgb(31, 24, 25)\nPASS cam light rgb(244, 234, 224)\nPASS cam dark rgb(39, 29, 31)\nDONE 4 cases"
+    },
+    {
+      "name": "Chat under burst",
+      "status": "PASS",
+      "seconds": 4,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light 320\nPASS voice dark 390\nPASS cam light 390\nPASS cam dark 320\nTOTAL 4 burst chat scenarios"
+    }
+  ],
+  "nativeReadiness": {
+    "dependencyGate": "BLOCKED",
+    "deviceConfigGate": "NEEDS_CONFIGURATION",
+    "nativeBuild": "NOT_RUN",
+    "deviceMedia": "NOT_RUN",
+    "configAuditGate": "WARN"
+  },
+  "limitations": {
+    "cloudBrowser": "Requires a publicly accessible staging URL; cannot access local file paths",
+    "livekitSfu": "Not tested by local Chromium",
+    "twoPhysicalPhones": "Not tested",
+    "nativeBuild": "Not tested"
+  }
+}

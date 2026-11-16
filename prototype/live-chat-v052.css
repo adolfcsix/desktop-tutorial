@@ -1,0 +1,60 @@
+/* Túttt 0.5.2: three reading compositions. All keep the compose field + controls visible.
+   Glass chat never goes on top of actionable camera controls; it is a dedicated
+   translucent reading lane, NOT an opaque modal over the video. */
+.cam-page .cam-content{scrollbar-width:thin}
+.cam-display-settings{display:flex;align-items:center;gap:6px;min-height:48px;padding:7px 0 3px}
+.cam-display-settings>span{font-size:10px;font-weight:800;color:var(--muted);white-space:nowrap}
+.cam-view-switch{flex:1;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;background:var(--surface2);padding:3px;border-radius:12px}
+.cam-view-option{min-width:0;min-height:38px;background:transparent;border:0;border-radius:9px;font-size:10px;font-weight:750;line-height:1.15;color:var(--muted);padding:4px 3px;cursor:pointer}
+.cam-view-option.active{background:var(--surface);color:var(--brand-ruby);box-shadow:0 1px 4px #170B0B20}
+.cam-font-button{width:40px;height:40px;flex-shrink:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:13px;font-weight:800;color:var(--ink);cursor:pointer}
+.cam-mode-balance .cam-tile{aspect-ratio:1.8;min-height:76px}
+.cam-mode-balance .cam-chat-history{max-height:155px;min-height:80px}
+.cam-chat-entry{font-size:var(--chat-text-size,13px)!important;line-height:1.52!important}
+.cam-mode-glass .cam-tile{aspect-ratio:1.9;min-height:72px}
+.cam-mode-glass .cam-interaction{background:transparent;border:1px solid color-mix(in srgb,var(--line) 72%,transparent);box-shadow:0 8px 25px #100A0921}
+.cam-mode-glass .cam-panel-tabs{background:color-mix(in srgb,var(--surface2) 70%,transparent);backdrop-filter:blur(8px)}
+.cam-mode-glass .cam-panel-body{background:color-mix(in srgb,var(--surface) 60%,transparent);backdrop-filter:blur(12px)}
+.cam-mode-glass .cam-chat-history{max-height:170px;min-height:96px}
+.cam-mode-glass .cam-chat-entry{padding:8px 10px;border-radius:9px;background:color-mix(in srgb,var(--surface) 38%,transparent);border-bottom:0;margin-bottom:4px;color:var(--ink)}
+.cam-mode-chat .cam-content{display:flex;flex-direction:column;overflow:hidden;padding-bottom:5px}
+.cam-mode-chat .cam-stage-caption{padding:7px 1px 5px;flex:0 0 auto}
+.cam-mode-chat .cam-stage-caption strong{font-size:12px}
+.cam-mode-chat .cam-stage-caption>div>span{display:none}
+.cam-mode-chat .cam-stage-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;flex:0 0 auto}
+.cam-mode-chat .cam-tile{aspect-ratio:1.43;min-height:59px;border-radius:11px}
+.cam-mode-chat .cam-stage-avatar{height:28px;width:28px;font-size:14px}
+.cam-mode-chat .cam-tile-helper{font-size:9px;margin-top:3px}
+.cam-mode-chat .cam-name{font-size:9px;padding:3px 5px;min-height:18px}
+.cam-mode-chat .cam-name b{font-size:8px}
+.cam-mode-chat .cam-status-line{margin:6px 0;padding:5px 8px;font-size:10px;flex:0 0 auto}
+.cam-mode-chat .cam-interaction{min-height:95px;flex:1;display:flex;flex-direction:column;overflow:hidden;margin-top:5px}
+.cam-mode-chat .cam-panel-tabs{flex:0 0 auto}
+.cam-mode-chat .cam-panel-body{flex:1;min-height:0;overflow:auto}
+.cam-mode-chat .cam-chat-history{height:100%;min-height:55px;max-height:none;overflow:auto}
+.cam-mode-chat .cam-chat-entry{padding:9px 0}
+.cam-mode-chat .cam-panel-empty{font-size:13px}
+.cam-mode-chat .cam-compose{flex:0 0 auto}
+.cam-mode-chat .cam-actions{flex:0 0 auto}
+.cam-member-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.cam-invite-button{min-height:39px;border:1px solid var(--brand-ruby);border-radius:11px;padding:0 9px;background:var(--surface);color:var(--brand-ruby);font-size:11px;font-weight:800;cursor:pointer}
+.cam-sent-invites{border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--surface2);margin:12px 0}
+.cam-sent-invites>strong{font-size:12px}
+.cam-invite-notice{margin:6px 12px;padding:11px 12px;border-radius:16px;border:1px solid var(--brand-ruby);background:var(--surface);color:var(--ink);box-shadow:0 5px 22px #2c111326;display:flex;flex-direction:column;gap:10px}
+.cam-invite-notice strong{font-size:13px}
+.cam-invite-notice small{display:block;font-size:11px;line-height:1.5;color:var(--muted);margin-top:5px}
+.cam-invite-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cam-invite-choices button{min-height:44px;border-radius:11px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);font-size:12px;font-weight:800}
+.cam-invite-choices .primary{background:var(--brand-ruby);border-color:var(--brand-ruby);color:#fff}
+@media(max-width:360px){.cam-display-settings>span{display:none}.cam-view-option{font-size:10px}.cam-mode-chat .cam-tile{min-height:55px}.cam-mode-chat .cam-stage-avatar{width:25px;height:25px}}
+@media(prefers-reduced-motion:reduce){.cam-chat-entry,.cam-invite-notice{transition:none!important}}
+/* Glass mode uses a 3×2 preview stage so the translucent conversation is never
+   pushed underneath the persistent compose bar on a phone. */
+.cam-mode-glass .cam-stage-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.cam-mode-glass .cam-tile{aspect-ratio:1.36;min-height:69px;border-radius:12px}
+.cam-mode-glass .cam-stage-avatar{width:31px;height:31px;font-size:15px}
+.cam-mode-glass .cam-tile-helper{font-size:9px;margin:4px 1px 0}
+.cam-mode-glass .cam-name{padding:3px 5px;font-size:9px;min-height:18px}
+.cam-mode-glass .cam-name b{font-size:8px}
+.cam-mode-glass .cam-chat-history{min-height:120px;max-height:205px}
+.cam-mode-glass .cam-panel-body{min-height:134px}

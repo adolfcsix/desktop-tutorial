@@ -1,0 +1,18 @@
+[
+  {
+    "width": 320,
+    "fresh_before": 2,
+    "after_join": 3,
+    "reconnecting": "…",
+    "fresh_after_reconnect": 2,
+    "editor_intact": true
+  },
+  {
+    "width": 390,
+    "fresh_before": 2,
+    "after_join": 3,
+    "reconnecting": "…",
+    "fresh_after_reconnect": 2,
+    "editor_intact": true
+  }
+]

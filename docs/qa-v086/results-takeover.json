@@ -1,0 +1,42 @@
+[
+  {
+    "width": 390,
+    "mode": "voice",
+    "reduce_motion": false,
+    "animation": "tutttPkTakeoverV086",
+    "points": {
+      "A": 1320,
+      "B": 1280
+    }
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "reduce_motion": false,
+    "animation": "tutttPkTakeoverV086",
+    "points": {
+      "A": 1320,
+      "B": 1280
+    }
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "reduce_motion": false,
+    "animation": "tutttPkTakeoverV086",
+    "points": {
+      "A": 1320,
+      "B": 1280
+    }
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "reduce_motion": true,
+    "animation": "none",
+    "points": {
+      "A": 1320,
+      "B": 1280
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "singleCreate": "PASS",
+    "fauxNotificationRemoved": "PASS",
+    "motionControlRemoved": "PASS",
+    "osReducedMotion": "PASS",
+    "overflow": "none"
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "singleCreate": "PASS",
+    "fauxNotificationRemoved": "PASS",
+    "motionControlRemoved": "PASS",
+    "osReducedMotion": "PASS",
+    "overflow": "none"
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "singleCreate": "PASS",
+    "fauxNotificationRemoved": "PASS",
+    "motionControlRemoved": "PASS",
+    "osReducedMotion": "PASS",
+    "overflow": "none"
+  },
+  {
+    "width": 430,
+    "theme": "dark",
+    "singleCreate": "PASS",
+    "fauxNotificationRemoved": "PASS",
+    "motionControlRemoved": "PASS",
+    "osReducedMotion": "PASS",
+    "overflow": "none"
+  }
+]

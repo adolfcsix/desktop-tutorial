@@ -1,0 +1,90 @@
+[
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "light",
+    "shell": "rgb(244, 234, 224)",
+    "sheet": "rgb(255, 249, 241)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(173, 113, 31)",
+      ".pk-outcome-loss strong": "rgb(114, 82, 157)"
+    }
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "dark",
+    "shell": "rgb(31, 24, 25)",
+    "sheet": "rgb(43, 34, 35)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 217, 134)",
+      ".pk-outcome-loss strong": "rgb(237, 226, 255)"
+    }
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "light",
+    "shell": "rgb(244, 234, 224)",
+    "sheet": "rgb(255, 249, 241)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 215, 126)",
+      ".pk-outcome-loss strong": "rgb(243, 238, 255)"
+    }
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "dark",
+    "shell": "rgb(39, 29, 31)",
+    "sheet": "rgb(43, 34, 35)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 215, 126)",
+      ".pk-outcome-loss strong": "rgb(243, 238, 255)"
+    }
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "shell": "rgb(244, 234, 224)",
+    "sheet": "rgb(255, 249, 241)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(173, 113, 31)",
+      ".pk-outcome-loss strong": "rgb(114, 82, 157)"
+    }
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "dark",
+    "shell": "rgb(31, 24, 25)",
+    "sheet": "rgb(43, 34, 35)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 217, 134)",
+      ".pk-outcome-loss strong": "rgb(237, 226, 255)"
+    }
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "light",
+    "shell": "rgb(244, 234, 224)",
+    "sheet": "rgb(255, 249, 241)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 215, 126)",
+      ".pk-outcome-loss strong": "rgb(243, 238, 255)"
+    }
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "dark",
+    "shell": "rgb(39, 29, 31)",
+    "sheet": "rgb(43, 34, 35)",
+    "colors": {
+      ".pk-outcome-win strong": "rgb(248, 215, 126)",
+      ".pk-outcome-loss strong": "rgb(243, 238, 255)"
+    }
+  }
+]

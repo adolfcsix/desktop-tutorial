@@ -1,0 +1,13 @@
+# LAN-only media server for development, NOT a production deployment.
+# First run: npm run prepare:livekit:local -- --lan-ip YOUR_PC_LAN_IP
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /etc/livekit/livekit.yaml
+    restart: unless-stopped
+    volumes:
+      - ./.local/livekit.yaml:/etc/livekit/livekit.yaml:ro
+    ports:
+      - "7880:7880/tcp"  # API / WebSocket signaling
+      - "7881:7881/tcp"  # RTC fallback
+      - "50000-50019:50000-50019/udp"  # RTC media, LAN only

@@ -1,0 +1,70 @@
+{
+  "version": "0.8.28",
+  "startedAt": "2026-11-12T09:20:40.237Z",
+  "finishedAt": "2026-11-12T09:21:13.094Z",
+  "status": "PASS",
+  "automatedChecks": [
+    {
+      "name": "Backend/API + unit tests",
+      "status": "PASS",
+      "seconds": 4,
+      "code": 0,
+      "error": null,
+      "excerpt": "  ...\n1..310\n# tests 310\n# suites 0\n# pass 310\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3473.983113"
+    },
+    {
+      "name": "Web/Node syntax",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "> tuttt@0.8.28 check:web\n> node --check prototype/audience-presence.js && node --check prototype/pk-visual-ux.js && node --check prototype/speaker-status.js && node --check prototype/stage-layout.js && node --check prototype/app.js && node --check prototype/network.js && node --check prototype/ux-core.js && node --check prototype/voice.js && node --check server/stage.js && node --check server/voice.js && node --check server/index.js && node --check server/livekit.js && node --check server/pk.js"
+    },
+    {
+      "name": "Single-file export",
+      "status": "PASS",
+      "seconds": 1,
+      "code": 0,
+      "error": null,
+      "excerpt": "/mnt/data/TUTTT_V0_8_28_PREVIEW.html 3096539"
+    },
+    {
+      "name": "Youth design cross-screen audit",
+      "status": "PASS",
+      "seconds": 11,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS 320 light 8 screens + PK\nPASS 320 dark 8 screens + PK\nPASS 390 light 8 screens + PK\nPASS 390 dark 8 screens + PK\nPASS 430 light 8 screens + PK\nPASS 430 dark 8 screens + PK\nDONE 6 screen matrix, contrast {'ivoryText': 14.03, 'ivorySecondary': 6.53, 'ivoryAccent': 5.75, 'espressoText': 16.27, 'espressoSecondary': 10.44, 'espressoAccent': 9.9, 'nativeDarkSentBubble': 4.8}"
+    },
+    {
+      "name": "Live UI & PK visual",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light\nPASS voice dark\nPASS cam light\nPASS cam dark\nCOMPLETED 4 PK states"
+    },
+    {
+      "name": "Standalone Voice/Cam themes",
+      "status": "PASS",
+      "seconds": 8,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light rgb(244, 234, 224)\nPASS voice dark rgb(31, 24, 25)\nPASS cam light rgb(244, 234, 224)\nPASS cam dark rgb(39, 29, 31)\nDONE 4 cases"
+    },
+    {
+      "name": "Chat under burst",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "PASS voice light 320\nPASS voice dark 390\nPASS cam light 390\nPASS cam dark 320\nTOTAL 4 burst chat scenarios"
+    }
+  ],
+  "limitations": {
+    "cloudBrowser": "Requires a publicly accessible staging URL; cannot access local file paths",
+    "livekitSfu": "Not tested by local Chromium",
+    "twoPhysicalPhones": "Not tested",
+    "nativeBuild": "Not tested"
+  }
+}

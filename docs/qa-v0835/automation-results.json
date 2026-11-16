@@ -1,0 +1,46 @@
+{
+  "version": "0.8.35",
+  "startedAt": "2026-11-12T12:49:19.314Z",
+  "finishedAt": "2026-11-12T12:49:25.638Z",
+  "status": "PASS",
+  "automatedChecks": [
+    {
+      "name": "Backend/API + unit tests",
+      "status": "PASS",
+      "seconds": 5,
+      "code": 0,
+      "error": null,
+      "excerpt": "  ...\n1..351\n# tests 351\n# suites 0\n# pass 351\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4800.728478"
+    },
+    {
+      "name": "Web/Node syntax",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "> tuttt@0.8.35 check:web\n> node --check prototype/audience-presence.js && node --check prototype/pk-visual-ux.js && node --check prototype/speaker-status.js && node --check prototype/stage-layout.js && node --check prototype/app.js && node --check prototype/network.js && node --check prototype/ux-core.js && node --check prototype/voice.js && node --check server/stage.js && node --check server/voice.js && node --check server/index.js && node --check server/livekit.js && node --check server/pk.js"
+    },
+    {
+      "name": "Native config static audit (warnings reported)",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "phoneUsageDescription\nPASS dev-client: Có development client (không dùng Expo Go cho WebRTC)\nPASS eas-profile: Đã cấu hình build nội bộ cho development client\nWARN dependencies: Chưa cài node_modules mobile: cần npm install, expo-doctor và tsc trên máy phát triển\nWARN api-url: Chưa đặt EXPO_PUBLIC_TUTTT_API_URL (không có API để thử trên điện thoại)\nGiới hạn: Không tạo native build; Không kiểm tra tài khoản Apple/Expo/Android signing; Không kiểm tra SFU, âm thanh, camera hoặc kết nối hai thiết bị"
+    },
+    {
+      "name": "Single-file export",
+      "status": "PASS",
+      "seconds": 1,
+      "code": 0,
+      "error": null,
+      "excerpt": "/mnt/data/TUTTT_V0_8_35_PREVIEW.html 3089902"
+    }
+  ],
+  "limitations": {
+    "cloudBrowser": "Requires a publicly accessible staging URL; cannot access local file paths",
+    "livekitSfu": "Not tested by local Chromium",
+    "twoPhysicalPhones": "Not tested",
+    "nativeBuild": "Not tested"
+  }
+}

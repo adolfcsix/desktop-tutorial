@@ -1,0 +1,87 @@
+/* Túttt 0.6.4 · One shared, unframed PK arena. Overrides legacy box-based staging.
+   Both opponents float on a single surface. No cards, no split panels. */
+#app .pk-arena-v3{position:relative!important;isolation:isolate;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden!important;margin:0 -14px!important;padding:15px 20px 19px!important;background:linear-gradient(167deg,var(--pk-stage) 4%,var(--pk-stage-deep) 75%)!important;color:var(--pk-ink)!important;}
+#app .pk-arena-v3:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 62% 48% at 9% 43%,var(--pk-side-a-glow),transparent 83%),radial-gradient(ellipse 60% 50% at 95% 46%,var(--pk-side-b-glow),transparent 84%),linear-gradient(165deg,rgba(255,233,213,.035),transparent 53%)}
+#app .pk-arena-v3:after{content:"";position:absolute;z-index:-1;left:-15%;right:-15%;top:88px;height:205px;pointer-events:none;opacity:.4;background:repeating-radial-gradient(ellipse 75% 60% at 50% 75%,transparent 0 30px,rgba(255,236,213,.08) 31px,transparent 32px 58px);mask-image:linear-gradient(to bottom,transparent,black 38%,transparent)}
+#app .pk-arena-v3 .pk-scene-head{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;margin:0!important;min-height:45px!important;padding:0 0 7px!important;gap:8px}
+#app .pk-arena-v3 .pk-head-text{display:flex;align-items:center;gap:7px;min-width:0}
+#app .pk-arena-v3 .pk-head-text strong{color:var(--pk-ink);font-size:10px!important;letter-spacing:.11em!important;font-weight:850;white-space:nowrap}
+#app .pk-arena-v3 .pk-head-text small{font-size:9px!important;color:var(--pk-muted);white-space:nowrap}
+#app .pk-arena-v3 .pk-pulse-light{width:6px;height:6px;border-radius:50%;background:var(--pk-side-a-accent);box-shadow:0 0 0 4px rgba(228,111,87,.12)}
+#app .pk-arena-v3 .pk-head-actions{display:flex;align-items:center;gap:8px;flex:none}
+#app .pk-arena-v3 .pk-clock{border:0!important;border-radius:0!important;background:transparent!important;padding:0 2px!important;min-width:65px!important;min-height:40px;display:flex;align-items:center;justify-content:center}
+#app .pk-arena-v3 .pk-clock strong{font-size:21px!important;font-weight:900!important;font-variant-numeric:tabular-nums;color:var(--pk-ink);letter-spacing:-.065em}
+#app .pk-arena-v3 .pk-viewers{background:transparent!important;border:0!important;border-radius:50%!important;min-width:38px;min-height:38px;color:var(--pk-ink);cursor:pointer}
+#app .pk-arena-v3 .pk-duel{position:relative!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:0!important;align-items:stretch;min-height:255px!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;background:transparent!important}
+#app .pk-arena-v3 .pk-duel:after{content:"";pointer-events:none;position:absolute;width:1px;left:50%;top:30%;bottom:21%;background:linear-gradient(transparent,rgba(255,238,222,.18),transparent);opacity:.7}
+#app .pk-arena-v3 .pk-duel-side{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;text-align:center;min-width:0;min-height:250px!important;padding:16px 6px 4px!important;background:transparent!important;border:0!important;box-shadow:none!important;isolation:isolate}
+#app .pk-arena-v3 .pk-duel-side:before{content:"";position:absolute;z-index:-1;left:50%;top:50px;width:170px;height:170px;transform:translateX(-50%);border:0;border-radius:50%;background:radial-gradient(circle,var(--pk-side-a-glow),transparent 72%);pointer-events:none}
+#app .pk-arena-v3 .pk-side-champagne:before{background:radial-gradient(circle,var(--pk-side-b-glow),transparent 72%)}
+#app .pk-arena-v3 .pk-side-top{font-size:9px!important;letter-spacing:.16em;color:var(--pk-muted);font-weight:800;min-height:21px;justify-content:center}
+#app .pk-arena-v3 .pk-side-champagne .pk-side-top{color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-person{display:flex;flex-direction:column;align-items:center;gap:5px;justify-content:center;flex:0 0 auto;padding:13px 0 0;min-width:0;width:100%}
+#app .pk-arena-v3 .pk-person-ring{position:relative;display:grid;place-items:center;width:108px!important;height:108px!important;border-radius:50%!important;border:0!important;background:transparent!important;box-shadow:none!important;transition:transform .25s ease!important}
+#app .pk-arena-v3 .pk-person-ring:before{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--pk-side-a-accent);opacity:.3;box-shadow:0 0 20px var(--pk-side-a-glow)}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-ring:before{border-color:var(--pk-side-b-accent);box-shadow:0 0 20px var(--pk-side-b-glow)}
+#app .pk-arena-v3 .pk-person-avatar{display:grid;place-items:center;width:94px!important;height:94px!important;border-radius:50%!important;background:linear-gradient(155deg,#FBE7D2,var(--pk-side-a-avatar))!important;color:var(--pk-side-a-avatar-ink)!important;font-weight:900;font-size:38px!important;box-shadow:0 9px 30px rgba(0,0,0,.16)}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-avatar{background:linear-gradient(155deg,#FDF3E5,var(--pk-side-b-avatar))!important;color:var(--pk-side-b-avatar-ink)!important}
+#app .pk-arena-v3 .pk-person strong{max-width:100%;font-size:15px!important;letter-spacing:-.015em!important;line-height:1.24;font-weight:850;color:var(--pk-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}
+#app .pk-arena-v3 .pk-person small{font-size:10px!important;color:var(--pk-muted)}
+#app .pk-arena-v3 .pk-side-champagne .pk-person small{color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-side-score{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:auto;padding:11px 0 2px}
+#app .pk-arena-v3 .pk-side-score strong{font-size:29px;font-weight:900;line-height:1;letter-spacing:-.055em;color:var(--pk-side-a-accent);font-variant-numeric:tabular-nums}
+#app .pk-arena-v3 .pk-side-champagne .pk-side-score strong{color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-side-score span{font-size:8px;letter-spacing:.09em;font-weight:800;color:var(--pk-muted)}
+#app .pk-arena-v3 .pk-duel-seam{position:absolute;z-index:5;top:43%!important;left:50%!important;transform:translate(-50%,-50%)!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;pointer-events:none}
+#app .pk-arena-v3 .pk-duel-seam span{display:block;transform:none!important;color:rgba(255,244,226,.74);font-size:21px!important;letter-spacing:-.11em;font-weight:900;font-style:italic;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+#app .pk-arena-v3 .pk-scoreboard{padding:6px 2px 0!important;margin:0!important;background:transparent!important;border:0!important}
+#app .pk-arena-v3 .pk-score-line{display:none!important}
+#app .pk-arena-v3 .pk-balance-bar{height:7px!important;border-radius:999px!important;background:var(--pk-bar-b)!important;margin:0!important;position:relative}
+#app .pk-arena-v3 .pk-balance-a{display:block;height:100%;border-radius:999px 0 0 999px;background:var(--pk-bar-a)!important;transition:width .35s ease}
+#app .pk-arena-v3 .pk-balance-pin{height:13px;width:3px;border-radius:3px;background:var(--pk-ink)!important;box-shadow:0 0 0 2px var(--pk-stage-deep)}
+#app .pk-arena-v3 .pk-score-caption{display:block;margin-top:8px;text-align:center;font-size:9px!important;letter-spacing:.09em;color:var(--pk-muted);font-weight:750}
+#app .pk-arena-v3 .pk-scene-footer{margin:9px 0 0!important;padding:0!important;min-height:43px;display:flex;align-items:center;gap:10px;justify-content:space-between}
+#app .pk-arena-v3 .pk-scene-footer small{font-size:10px;line-height:1.4;color:var(--pk-muted);flex:1;max-width:unset}
+#app .pk-arena-v3 .pk-cheer-button{background:var(--pk-cheer-bg)!important;color:var(--pk-cheer-ink)!important;min-height:43px!important;min-width:122px!important;border-radius:999px!important;border:0!important;font-size:12px;font-weight:850;box-shadow:none!important;cursor:pointer}
+#app .pk-arena-v3 .pk-cheer-button span{color:var(--pk-cheer-ink)!important}
+#app .pk-arena-v3 .pk-media-label{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}
+#app .pk-arena-v3.pk-battle-cam .pk-duel{min-height:255px!important}
+#app .pk-arena-v3.pk-battle-voice .pk-duel{min-height:268px!important}
+#app .pk-arena-v3.pk-battle-cam .pk-duel-side{min-height:250px!important}
+#app .pk-arena-v3.pk-battle-voice .pk-duel-side{min-height:265px!important}
+#app .cam-page.cam-mode-unified .cam-content>.pk-arena-v3{order:3!important;margin-top:0!important}
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-arena-v3)>.cam-stage-caption,#app .cam-page.cam-mode-unified .cam-content:has(.pk-arena-v3)>.cam-stage-grid,#app .cam-page.cam-mode-unified .cam-content:has(.pk-arena-v3)>.cam-supporter-row{display:none!important}
+#app .room-top:has(.pk-arena-v3)>.seat-grid,#app .room-top:has(.pk-arena-v3)>.voice-summary{display:none!important}
+#app .pk-arena-v3 .pk-viewers:focus-visible,#app .pk-arena-v3 .pk-cheer-button:focus-visible{outline:3px solid var(--pk-focus)!important;outline-offset:3px!important}
+@media(max-width:350px){#app .pk-arena-v3{margin-inline:-11px!important;padding:10px 13px 13px!important}#app .pk-arena-v3 .pk-duel{min-height:226px!important}#app .pk-arena-v3 .pk-duel-side{min-height:223px!important;padding-inline:2px!important}#app .pk-arena-v3 .pk-person-ring{width:83px!important;height:83px!important}#app .pk-arena-v3 .pk-person-avatar{width:72px!important;height:72px!important;font-size:29px!important}#app .pk-arena-v3 .pk-side-score strong{font-size:24px}#app .pk-arena-v3 .pk-person strong{font-size:13px!important}#app .pk-arena-v3 .pk-head-text small{display:none}#app .pk-arena-v3 .pk-side-score span{font-size:7px}}
+@media(max-height:760px){#app .pk-arena-v3 .pk-duel,#app .pk-arena-v3.pk-battle-cam .pk-duel,#app .pk-arena-v3.pk-battle-voice .pk-duel{min-height:204px!important}#app .pk-arena-v3 .pk-duel-side,#app .pk-arena-v3.pk-battle-cam .pk-duel-side,#app .pk-arena-v3.pk-battle-voice .pk-duel-side{min-height:201px!important;padding-top:6px!important}#app .pk-arena-v3 .pk-person{padding-top:2px}#app .pk-arena-v3 .pk-person-ring{width:76px!important;height:76px!important}#app .pk-arena-v3 .pk-person-avatar{width:64px!important;height:64px!important;font-size:25px!important}#app .pk-arena-v3 .pk-side-score{padding-top:4px}}
+@media(prefers-reduced-motion:reduce){#app .pk-arena-v3 *,#app .pk-arena-v3 *:before{transition:none!important;animation:none!important}}
+/* The PK stage and its chat share the same light environment: no harsh rectangle ending above a cream gap. */
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-content{
+ background:linear-gradient(180deg,var(--pk-stage) 0%,var(--pk-stage-deep) 75%,var(--pk-stage) 100%)!important;
+ padding-top:0!important;
+}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-interaction.cam-chat-float{
+ background:linear-gradient(180deg,transparent,rgba(22,16,17,.12) 38%,rgba(22,16,17,.25))!important;
+ color:var(--pk-ink)!important;
+}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-label,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-panel-empty{color:var(--pk-muted)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-entry{
+ background:rgba(255,243,223,.10)!important;
+ color:var(--pk-ink)!important;border:0!important;
+ box-shadow:none!important;
+}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-entry strong{color:var(--pk-side-a-accent)!important}
+#app:has(.room-top .pk-arena-v3) .room-chatbox{
+ background:linear-gradient(180deg,var(--pk-stage-deep),var(--pk-stage))!important;
+ border:0!important;
+ color:var(--pk-ink)!important;
+ margin-top:-1px!important;
+}
+#app:has(.room-top .pk-arena-v3) .room-chatbox .room-log{
+ background:rgba(255,243,223,.10)!important;
+ border:0!important;color:var(--pk-ink)!important;
+ box-shadow:none!important;
+}
+#app .room-top:has(.pk-arena-v3){padding-bottom:0!important}

@@ -1,0 +1,76 @@
+/* Túttt v0.6.1 | PK stage system. Original visual direction: ink / coral / sage.
+   No public sample is copied; this is a new responsive dual-stage composition. */
+#app .pk-battle-scene{background:#251F23;color:#FFF7EF;border:1px solid #73544B;border-radius:25px;padding:11px 11px 12px;min-height:0;overflow:hidden;box-shadow:0 14px 25px #120C0E26;isolation:isolate;margin:5px 0 10px;flex:none}
+#app .pk-battle-scene .pk-scene-head{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:33px;margin-bottom:9px;padding:0 3px}
+#app .pk-head-text{display:flex;align-items:center;gap:6px;min-width:0}
+#app .pk-head-text strong{font-size:10px;letter-spacing:.12em;color:#FFF2E7;font-weight:850}
+#app .pk-head-text small{font-size:9px;color:#E9B7A5;letter-spacing:.035em;white-space:nowrap}
+#app .pk-pulse-light{height:7px;width:7px;border-radius:50%;background:#FF7965;box-shadow:0 0 0 3px #FF796526;flex:none}
+#app .pk-clock{display:flex;align-items:center;gap:6px;color:#F2C7B8}
+#app .pk-clock span{font-size:8px;font-weight:800;letter-spacing:.1em}
+#app .pk-clock strong{font-size:16px;color:#FFF3E5;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+#app .pk-duel{display:grid;grid-template-columns:1fr 1fr;gap:5px;position:relative;border-radius:18px;overflow:hidden;min-height:138px}
+#app .pk-duel-side{padding:9px 7px 13px;display:flex;flex-direction:column;min-width:0;position:relative}
+#app .pk-side-coral{background:radial-gradient(circle at 50% 38%,#7F423D,#532F33 74%,#44282C);}
+#app .pk-side-champagne{background:radial-gradient(circle at 50% 38%,#59483A,#40362F 72%,#342C2A);}
+#app .pk-side-top{display:flex;justify-content:space-between;gap:2px;align-items:center;white-space:nowrap;color:#FFEDE7;font-size:9px;font-weight:850;letter-spacing:.045em;}
+#app .pk-team-pill{font-size:8px;font-weight:850;letter-spacing:.02em;color:#FFF7EB;background:#FFFFFF1C;border:1px solid #FFFFFF19;border-radius:99px;padding:4px 6px;}
+#app .pk-person{display:flex;align-items:center;justify-content:flex-start;flex:1;flex-direction:column;min-width:0;gap:3px;padding-top:9px;text-align:center}
+#app .pk-person-ring{display:grid;place-items:center;height:59px;width:59px;border:2px solid #FFD5C2B0;border-radius:50%;box-shadow:0 0 0 5px #FFEBDB0E;}
+#app .pk-side-champagne .pk-person-ring{border-color:var(--pk-side-b-accent)BB;box-shadow:0 0 0 5px #E5C49E14;}
+#app .pk-person-avatar{display:grid;place-items:center;height:48px;width:48px;border-radius:50%;background:linear-gradient(145deg,#FFE9D4,#E4B39F);color:#643330;font-size:22px;font-weight:900;}
+#app .pk-side-champagne .pk-person-avatar{background:linear-gradient(145deg,#F5DFC3,#D8B58B);color:#614734;}
+#app .pk-person strong{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#FFFCF8;font-size:12px;line-height:1.3;font-weight:850;}
+#app .pk-person small{max-width:100%;font-size:9px;color:#F4DBD1;line-height:1.3;min-height:12px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+#app .pk-duel-seam{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);z-index:2;background:#261E22;border:2px solid #D3A18F;color:#FFF4E8;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900;box-shadow:0 3px 9px #120A0A6B;pointer-events:none}
+#app .pk-scoreboard{padding:11px 3px 0;min-width:0}
+#app .pk-score-line{display:flex;justify-content:space-between;align-items:end;gap:8px;min-width:0}
+#app .pk-score-line>div{display:flex;align-items:baseline;gap:6px;min-width:0}
+#app .pk-score-line strong{font-size:20px;font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.045em;color:#FFB5A4}
+#app .pk-score-line .pk-score-right{flex-direction:row-reverse}
+#app .pk-score-right strong{color:var(--pk-side-b-accent)}
+#app .pk-score-label{font-size:9px;font-weight:800;color:#D8C1B9;}
+#app .pk-score-center{font-size:9px;white-space:nowrap;text-align:center;color:#D8C5BD;font-weight:750;min-width:0}
+#app .pk-balance-bar{height:9px;background:#D8B58B;position:relative;overflow:visible;border-radius:8px;margin-top:9px}
+#app .pk-balance-a{display:block;background:linear-gradient(90deg,#E86756,#FEA084);height:100%;border-radius:8px 0 0 8px;transition:width .35s ease;}
+#app .pk-balance-pin{position:absolute;top:50%;height:15px;width:3px;background:#FFF6EC;box-shadow:0 0 0 2px #32252C;transform:translate(-50%,-50%);border-radius:4px;transition:left .35s ease}
+#app .pk-scene-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:11px;min-height:37px}
+#app .pk-scene-footer small{color:#F0C9BB;font-size:9px;line-height:1.4;max-width:63%;}
+#app .pk-scene-footer .pk-cheer-button{min-width:108px;min-height:38px;font-size:11px;background:#FFE0C2;color:#4B2529;box-shadow:none;border-radius:14px;}
+#app .pk-battle-scene .pk-cheer-button:active{transform:scale(.98)}
+#app .pk-battle-scene .pk-cheer-button:focus-visible{outline:3px solid #FFE1C6;outline-offset:2px}
+/* In PK, the duel replaces duplicated avatar-only galleries in the web preview.
+   Remote media is intentionally NOT depicted as a connected video feed. */
+#app .cam-page.cam-mode-unified .cam-content>.pk-battle-scene{order:3}
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-battle-scene)>.cam-stage-grid{display:none!important}
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-battle-scene)>.cam-stage-caption>div:first-child>strong{font-size:13px;color:var(--ink)}
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-battle-scene)>.cam-status-line{display:none}
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-battle-scene)>.cam-interaction{min-height:130px}
+#app .cam-page.cam-mode-unified .cam-content>.pk-launcher{margin-bottom:-35px;z-index:3}
+/* Voice: duel IS the hero, not a score card above a duplicated main avatar. */
+#app .room-top:has(.pk-battle-scene){flex:0 0 auto!important;}
+#app .room-top:has(.pk-battle-scene)>.seat-grid,#app .room-top:has(.pk-battle-scene)>.voice-summary{display:none!important}
+#app .room-top:has(.pk-battle-scene)>.room-subtitle{margin-bottom:1px}
+#app:has(.room-top .pk-battle-scene) .room-chatbox{flex:1 1 auto!important;min-height:125px;max-height:none;height:auto;}
+#app .pk-battle-voice .pk-duel{min-height:144px}
+#app .pk-battle-voice .pk-person-ring{width:65px;height:65px}
+#app .pk-battle-voice .pk-person-avatar{width:54px;height:54px;font-size:25px}
+@media(max-width:350px){#app .pk-head-text small{display:none}#app .pk-duel{min-height:130px}#app .pk-person-ring{width:51px;height:51px}#app .pk-person-avatar{width:42px;height:42px;font-size:19px}#app .pk-score-line strong{font-size:18px}#app .pk-score-center{font-size:8px}#app .pk-scene-footer small{font-size:9px}}
+@media(max-height:730px){#app .pk-duel{min-height:115px}#app .pk-person{padding-top:4px}#app .pk-battle-voice .pk-duel{min-height:114px}#app .pk-battle-voice .pk-person-ring{width:51px;height:51px}#app .pk-battle-voice .pk-person-avatar{width:42px;height:42px}#app .pk-battle-scene{padding-top:7px;padding-bottom:8px}#app .pk-battle-scene .pk-scene-head{margin-bottom:5px}}
+@media(prefers-reduced-motion:reduce){#app .pk-battle-scene *{transition:none!important;animation:none!important}}
+
+/* Results remain in a sheet, leaving the live stage uncluttered. */
+#app .pk-result-summary{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;margin:14px 0 4px;padding:18px 16px;border-radius:20px;background:linear-gradient(135deg,var(--pk-side-a-bg),var(--pk-side-b-bg));color:var(--pk-ink);border:1px solid var(--pk-stage-border)}
+#app .pk-result-summary>span{font-size:10px;font-weight:850;letter-spacing:.12em;color:var(--pk-side-a-accent)}
+#app .pk-result-summary>strong{font-size:16px;font-weight:900;color:var(--pk-ink)}
+#app .pk-result-summary>div{display:flex;gap:17px;align-items:center;font-size:25px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--pk-side-a-accent)}
+#app .pk-result-summary>div span:last-child{color:var(--pk-side-b-accent)}
+#app .pk-result-summary>div i{font-size:12px;color:#E9CABC;font-style:normal}
+#app .pk-result-summary>small{color:var(--pk-muted);font-size:10px}
+/* On taller phones, make Voice PK the central stage rather than leaving a dead gap. */
+@media (min-height:780px) and (min-width:370px){
+ #app .pk-battle-voice .pk-duel{min-height:188px}
+ #app .pk-battle-voice .pk-person{padding-top:16px}
+ #app .pk-battle-voice .pk-person-ring{width:81px;height:81px}
+ #app .pk-battle-voice .pk-person-avatar{width:68px;height:68px;font-size:29px}
+}

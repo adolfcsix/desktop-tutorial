@@ -1,0 +1,22 @@
+[
+  {
+    "theme": "light",
+    "width": 320,
+    "mic": true,
+    "calls": 1,
+    "chatPreserved": true,
+    "stagePreserved": true,
+    "draft": "Đang gõ khi đổi tai nghe Bluetooth",
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "mic": true,
+    "calls": 1,
+    "chatPreserved": true,
+    "stagePreserved": true,
+    "draft": "Đang gõ khi đổi tai nghe Bluetooth",
+    "overflow": false
+  }
+]

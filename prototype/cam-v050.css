@@ -1,0 +1,66 @@
+/* Túttt 0.5: Live Voice / Cam design follows the approved cream/ink/scarlet logo. */
+.live-modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:4px 0 17px}
+.mode-choice{min-height:46px;display:flex;gap:6px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--ink);font-weight:800;font-size:12px;cursor:pointer}
+.mode-choice svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+.mode-choice.selected{color:#FFF6EB;background:var(--brand-ruby);border-color:var(--brand-ruby)}
+.create-type-picker{border:0;margin:5px 0 21px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.create-type-picker legend{font-size:13px;font-weight:800;margin:0 0 11px;color:var(--ink)}
+.type-option{min-width:0;position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:5px;border:2px solid var(--line);background:var(--surface2);border-radius:17px;padding:13px 11px;cursor:pointer;color:var(--ink)}
+.type-option:has(input:checked){border-color:var(--brand-ruby);background:color-mix(in srgb,var(--surface) 70%,var(--brand-ruby) 30%)}
+.type-option input{position:absolute;right:12px;top:12px;accent-color:var(--brand-ruby)}
+.type-option strong{font-size:14px}.type-option small{font-size:11px;line-height:1.4;color:var(--muted)}
+.type-icon{font-size:23px;color:var(--brand-ruby);line-height:1.1}
+.room-category{font-size:11px;letter-spacing:.015em;color:var(--brand-ruby)}
+.cam-page{background:var(--bg);color:var(--ink);min-height:0;height:100%;display:flex;flex-direction:column;overflow:hidden}
+.cam-topbar{flex:0 0 auto;display:flex;gap:9px;align-items:center;min-height:62px;padding:7px 13px;border-bottom:1px solid var(--line)}
+.cam-topbar .back-btn{flex:0 0 43px;height:43px;min-width:43px;display:grid;place-items:center}
+.cam-topbar .icon-btn{flex-shrink:0;min-height:44px;min-width:44px}
+.cam-title{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.cam-title strong{font-size:13px;font-weight:800;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.cam-live-pill{width:max-content;border-radius:6px;background:#D64B36;color:#FFF6ED;font-size:10px;letter-spacing:.07em;font-weight:900;padding:3px 7px}
+.cam-viewers{flex-shrink:0;color:var(--muted);font-size:11px}
+.cam-content{min-height:0;flex:1;overflow-y:auto;padding:11px 14px 12px;scrollbar-width:thin}
+.cam-room-note{display:flex;flex-direction:column;gap:3px;margin:1px 2px 12px}
+.cam-room-note strong{font-size:12px;color:var(--ink)}
+.cam-room-note span{font-size:11px;color:var(--muted)}
+.cam-stage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.cam-tile{min-width:0;min-height:130px;aspect-ratio:1.23;overflow:hidden;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:17px;border:1px solid #745653;background:linear-gradient(145deg,#553b38 0%,#291e20 100%);color:#FFF5EB}
+.cam-tile.occupied{border-color:#E16D53;box-shadow:inset 0 0 0 1px #E16D5338}
+.cam-tile.empty{border:1.5px dashed color-mix(in srgb,var(--muted) 58%,transparent);background:var(--surface2);color:var(--muted)}
+.cam-avatar{height:48px;width:48px;border-radius:50%;background:linear-gradient(125deg,#E8B8A0,#B65A48);display:grid;place-items:center;color:#3B231F;font-size:23px;font-weight:900;border:2px solid #FBE5DAA6}
+.cam-tile.empty .cam-avatar{background:transparent;color:var(--muted);border:1px dashed var(--line);width:44px;height:44px}
+.cam-avatar svg{height:21px;width:21px;stroke:currentColor;fill:none;stroke-width:2}
+.cam-tile-helper{font-size:11px;margin-top:7px;color:inherit;opacity:.85}
+.cam-name{position:absolute;left:0;right:0;bottom:0;min-height:30px;background:linear-gradient(0deg,#1D1115EE,#21191ACC);display:flex;align-items:center;justify-content:space-between;padding:6px 9px;gap:5px;color:#FFF3E7;font-size:11px;font-weight:700}
+.cam-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80%}
+.cam-name b{font-size:9px;color:#FFB399}
+.cam-feature-warning{display:flex;align-items:center;gap:9px;padding:10px 11px;border:1px solid var(--line);border-radius:12px;background:var(--surface2);margin:11px 0;color:var(--ink)}
+.cam-feature-warning p{flex:1;font-size:11px;line-height:1.45;margin:0}
+.cam-status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:#E3A36E}
+.cam-section-title{font-size:13px;font-weight:900;color:var(--ink);margin:5px 0 10px;display:flex;justify-content:space-between}
+.cam-section-title b{font-size:11px;background:var(--brand-ruby);color:#FFF6EB;border-radius:20px;padding:2px 8px}
+.cam-manage{border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:12px;margin:12px 0}
+.cam-hint{font-size:11px;color:var(--muted);line-height:1.5;margin:6px 0 9px}
+.cam-member{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:9px;padding:11px 0;border-top:1px solid var(--line)}
+.cam-member-name{display:flex;flex-direction:column;gap:4px;min-width:100px}
+.cam-member-name strong{font-size:12px;color:var(--ink)}.cam-member-name small{font-size:11px;color:var(--muted)}
+.cam-compact-actions,.cam-settings{display:flex;gap:7px;flex-wrap:wrap}
+.cam-compact{min-height:38px;border-radius:10px;padding:6px 9px;font-size:11px;font-weight:800;cursor:pointer;background:var(--surface2);border:1px solid var(--line);color:var(--ink)}
+.cam-compact.primary{background:var(--brand-ruby);color:#FFF6EB;border-color:var(--brand-ruby)}
+.cam-compact.danger{color:#E96853;border-color:#D9695873}
+.cam-chat-title{display:flex;justify-content:space-between;align-items:center;margin:13px 2px 8px;gap:8px}
+.cam-chat-title strong{font-size:14px}.cam-chat-title span{font-size:10px;color:var(--muted)}
+.cam-chat-history{min-height:50px;max-height:160px;overflow-y:auto;padding:8px 10px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.cam-chat-entry{font-size:12px;color:var(--ink);padding:5px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.cam-compose{flex:0 0 auto;margin:0!important;padding:8px 13px 10px!important;display:flex;gap:9px;align-items:center;border-top:1px solid var(--line)}
+.cam-compose input{height:42px;flex:1;border:1px solid var(--line);border-radius:13px;padding:0 12px;font-size:13px;background:var(--surface);color:var(--ink)}
+.cam-compose button{width:44px;height:44px;border-radius:13px;background:var(--brand-ruby);color:#fff;border:0;display:grid;place-items:center}
+.cam-compose button svg{width:20px;height:20px}
+.cam-actions{flex:0 0 auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:3px;padding:7px 7px max(8px,env(safe-area-inset-bottom,8px));border-top:1px solid var(--line);background:var(--surface)}
+.cam-action{font-size:10px;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;color:var(--ink);background:transparent;border:0;padding:0 1px 3px;cursor:pointer;white-space:nowrap}
+.cam-action span{display:grid;place-items:center;width:40px;height:41px;border-radius:13px;border:1px solid var(--line);background:var(--surface2)}
+.cam-action svg{height:18px;width:18px;stroke:currentColor;stroke-width:2;fill:none}
+.cam-action.active span{background:#AB4A3B;color:#FFF8F1}
+.cam-action.danger{color:#D55748}
+@media(max-width:360px){.cam-stage-grid{gap:7px}.cam-tile{min-height:110px}.cam-content{padding-inline:11px}.cam-action{font-size:9px}.cam-action span{width:36px;height:39px}.cam-topbar{gap:6px;padding-inline:8px}}
+@media(prefers-reduced-motion:reduce){.cam-page *{transition:none!important;animation:none!important}}

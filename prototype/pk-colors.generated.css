@@ -1,0 +1,55 @@
+/* GENERATED — scripts/build-pk-colors.js / brand/pk-color-system.json — do not hand-edit. */
+body.light-mode{
+  --pk-stage:#E9D8CA;
+  --pk-stage-deep:#E9D8CA;
+  --pk-stage-border:#C7A999;
+  --pk-ink:#30231F;
+  --pk-muted:#684F45;
+  --pk-soft:#6E574D;
+  --pk-clock-bg:#DFCCBD;
+  --pk-side-a-bg:#E9BEB1;
+  --pk-side-b-bg:#E6D0B1;
+  --pk-side-a-glow:rgba(164,65,48,.13);
+  --pk-side-b-glow:rgba(147,97,42,.10);
+  --pk-side-a-accent:#862D24;
+  --pk-side-b-accent:#76502C;
+  --pk-side-a-avatar:#E9B5A1;
+  --pk-side-b-avatar:#EDD2AB;
+  --pk-side-a-avatar-ink:#622E2A;
+  --pk-side-b-avatar-ink:#614734;
+  --pk-bar-a:#B74836;
+  --pk-bar-b:#AF865D;
+  --pk-cheer-bg:#9B3A2D;
+  --pk-cheer-ink:#FFF6EA;
+  --pk-focus:#84291F;
+  --pk-speaking:#70C9A7;
+  --pk-launcher-bg:#9B3A2D;
+  --pk-launcher-ink:#FFF6EA;
+}
+body:not(.light-mode){
+  --pk-stage:#271D1F;
+  --pk-stage-deep:#20191B;
+  --pk-stage-border:#594440;
+  --pk-ink:#FFF2E6;
+  --pk-muted:#DFC7BA;
+  --pk-soft:#D3B8AB;
+  --pk-clock-bg:#372A2C;
+  --pk-side-a-bg:#482828;
+  --pk-side-b-bg:#3C332D;
+  --pk-side-a-glow:rgba(242,119,94,.15);
+  --pk-side-b-glow:rgba(222,169,108,.12);
+  --pk-side-a-accent:#F39B85;
+  --pk-side-b-accent:#E8C79F;
+  --pk-side-a-avatar:#F0C2A9;
+  --pk-side-b-avatar:#F4D7B4;
+  --pk-side-a-avatar-ink:#632F2A;
+  --pk-side-b-avatar-ink:#624632;
+  --pk-bar-a:#EA7F68;
+  --pk-bar-b:#D9B78E;
+  --pk-cheer-bg:#F1D0B2;
+  --pk-cheer-ink:#492823;
+  --pk-focus:#FFE1C6;
+  --pk-speaking:#70C9A7;
+  --pk-launcher-bg:#A94B3E;
+  --pk-launcher-ink:#FFF2E6;
+}

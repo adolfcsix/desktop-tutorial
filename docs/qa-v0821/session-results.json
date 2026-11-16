@@ -1,0 +1,16 @@
+[
+  {
+    "mode": "resolve",
+    "room": "room-B",
+    "roster": "room-B",
+    "liveReady": true,
+    "draftPreserved": true
+  },
+  {
+    "mode": "reject",
+    "room": "room-B",
+    "roster": "room-B",
+    "liveReady": true,
+    "draftPreserved": true
+  }
+]

@@ -1,0 +1,53 @@
+/* v0.5.7 — mic-off badge and live green activity ring, no fake ringing on connected Cam preview. */
+.cam-page .cam-avatar-wrap,.room-top .voice-avatar-wrap{display:inline-grid;place-items:center;position:relative;isolation:isolate;flex-shrink:0}
+.cam-page .cam-avatar-wrap .cam-stage-avatar{position:relative}
+.live-mic-muted{position:absolute;right:-8px;bottom:0;z-index:3;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#493234;color:#FFF4E9;border:2px solid #F8E6D8;box-shadow:0 2px 5px #1D12122A}
+.live-mic-muted svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
+.cam-page .cam-tile.is-speaking .cam-stage-avatar,.room-top .seat.is-speaking .avatar{border:3px solid #39D59C!important;box-shadow:0 0 0 4px #39D59C28,0 0 14px #20B48460!important;animation:tutttSpeakingRing .86s ease-in-out infinite}
+.cam-page .cam-tile.is-speaking .live-mic-muted,.room-top .seat.is-speaking .live-mic-muted{display:none}
+.room-top .seat .voice-avatar-wrap .avatar{border-radius:50%}
+@keyframes tutttSpeakingRing{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@media(prefers-reduced-motion:reduce){.cam-page .cam-tile.is-speaking .cam-stage-avatar,.room-top .seat.is-speaking .avatar{animation:none!important;transform:none!important}}
+
+
+/* v0.8.7: only confirmed PK microphone activity gets a gentle green halo. */
+#app .pk-broadcast-voice .pk-person-ring.pk-host-speaking{
+ animation:tutttVoiceActualSpeechV087 1.36s ease-in-out infinite;
+}
+@keyframes tutttVoiceActualSpeechV087{
+ 0%,100%{box-shadow:0 0 0 3px rgba(46,169,118,.19),0 0 0 5px rgba(46,169,118,.08)}
+ 50%{box-shadow:0 0 0 4px rgba(46,169,118,.28),0 0 0 8px rgba(46,169,118,.10)}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-broadcast-voice .pk-person-ring.pk-host-speaking{animation:none!important}
+}
+
+/* v0.8.8 — multi-speaker status, stable rows; no perpetual decorative animations. */
+#app .seat-grid .seat-speaking-caption{display:block;min-height:12px;line-height:12px;font-size:9px;font-weight:800;letter-spacing:.015em;color:#9FF2D5;opacity:0;pointer-events:none;transition:opacity 160ms ease-out}
+#app .seat-grid .seat.is-speaking .seat-speaking-caption{opacity:1;text-shadow:0 0 9px rgba(65,215,160,.23)}
+#app .seat-grid .seat{gap:5px!important}
+#app .seat-grid .seat.is-speaking .avatar{animation:tutttVoiceSpeakingV088 1.55s ease-in-out infinite!important}
+@keyframes tutttVoiceSpeakingV088{0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
+@media(prefers-reduced-motion:reduce){#app .seat-grid .seat.is-speaking .avatar{animation:none!important;transform:none!important}#app .seat-grid .seat-speaking-caption{transition:none!important}}
+/* On narrow, short displays the 4th seat's speech caption must not touch the rounded clip. */
+@media(max-width:350px) and (max-height:760px){
+ #app:has(.room-top) .room-top:not(:has(.pk-battle-scene)) .seat-grid{
+  row-gap:9px!important;padding-block:8px 10px!important;
+ }
+ #app .room-top .seat-grid .seat:first-child .voice-avatar-wrap,
+ #app .room-top .seat-grid .seat:first-child .avatar{width:74px!important;height:74px!important;}
+}
+/* Position the only PK launcher beside the audio unlock control, not over the room subtitle. */
+#app .room-top .voice-summary .voice-pk-row{display:flex!important;flex:0 0 auto;margin:0!important;padding:0!important;min-height:44px;align-items:center;justify-content:center}
+#app .room-top .voice-summary .voice-pk-row .pk-launcher{min-height:44px;min-width:58px;font-size:11px;box-shadow:none}
+#app .room-top:has(.pk-arena-v3) .voice-summary .voice-pk-row{display:none!important}
+@media(max-width:350px){
+ #app .room-top .voice-summary{gap:5px!important}
+ #app .room-top .voice-summary .voice-status{font-size:10px!important;letter-spacing:-.015em}
+ #app .room-top .voice-summary .voice-pk-row .pk-launcher{min-width:54px!important;padding-inline:5px!important}
+ #app .room-top .voice-summary .voice-unlock{padding-inline:8px!important;font-size:10px!important}
+}
+
+#app .room-top .voice-summary>span:nth-child(3){display:none!important}
+#app .room-top .voice-summary{margin:3px 0 5px!important;min-height:44px}
+#app .room-top .voice-summary .voice-unlock{min-height:44px!important}

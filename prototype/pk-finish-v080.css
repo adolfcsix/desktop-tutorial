@@ -1,0 +1,206 @@
+/* Túttt 0.8.0 — PK finish is a brief state of the same stage, not a separate page.
+   WIN / LOSS / DRAW; never hide chat/composer or add a result CTA to the room. */
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side{position:relative!important;isolation:isolate}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side .pk-person-ring{
+  transform-origin:center center!important;
+  animation:pkResultGrowV080 430ms cubic-bezier(.18,.85,.25,1.2) both!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side:has(.pk-outcome-loss) .pk-person-ring{
+  animation-name:pkResultShrinkV080!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side:has(.pk-outcome-draw) .pk-person-ring{
+  animation:none!important;transform:scale(1)!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side:has(.pk-outcome-loss){filter:saturate(.7)}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-side:has(.pk-outcome-win){
+  background-image:linear-gradient(145deg,rgba(255,236,203,.13),transparent 70%)!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-duel-seam span{opacity:.45!important}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-flag{
+  display:flex!important;align-items:center;justify-content:center;gap:7px;
+  position:absolute!important;z-index:9;top:114px;left:0;right:0;
+  width:max-content;max-width:calc(100% - 12px);margin-inline:auto;
+  color:#FFF8EF;pointer-events:none;
+  filter:drop-shadow(0 2px 7px rgba(35,19,24,.25));
+  animation:pkResultWordV080 400ms ease-out 130ms both;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-flag strong{
+  font-size:25px;line-height:1;font-weight:950;letter-spacing:.045em;
+  text-shadow:0 2px 5px rgba(29,14,16,.37);
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-loss strong,
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-loss strong{font-size:19px}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-draw strong,
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-draw strong{font-size:20px}
+#app .pk-arena-v3.pk-end-presentation .pk-win-streak{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:4px 6px;min-width:24px;height:24px;box-sizing:border-box;
+  background:rgba(255,244,219,.94);color:#6B3B30;border-radius:999px;
+  font-size:12px;font-weight:900;letter-spacing:-.02em;
+  animation:pkResultStreakV080 340ms cubic-bezier(.15,.89,.3,1.3) 540ms both;
+}
+
+/* v0.8.4 — one outcome palette, tailored to the surface: rich metallic gold,
+   purple-and-ivory LOSS, warm neutral DRAW. No extra frame or pop-up. */
+#app .pk-end-presentation{
+  --outcome-win:#F8D77E;
+  --outcome-win-edge:#78501F;
+  --outcome-loss:#F3EEFF;
+  --outcome-loss-glow:rgba(124,81,174,.72);
+}
+/* Light Voice is a pale stage: gold needs an amber edge and LOSS a violet
+   core. White-on-ivory alone would be unreadable. */
+body.light-mode #app .pk-end-presentation.pk-broadcast-voice{
+  --outcome-win:#AD711F;
+  --outcome-win-edge:#664018;
+  --outcome-loss:#72529D;
+  --outcome-loss-glow:rgba(255,255,255,.9);
+}
+body:not(.light-mode) #app .pk-end-presentation.pk-broadcast-voice{
+  --outcome-win:#F8D986;
+  --outcome-win-edge:#70512A;
+  --outcome-loss:#EDE2FF;
+  --outcome-loss-glow:rgba(135,92,186,.55);
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-win strong,
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-win strong{
+  color:var(--outcome-win)!important;
+  -webkit-text-stroke:.28px var(--outcome-win-edge);
+  text-shadow:0 1px 0 rgba(255,250,218,.46),0 2px 5px rgba(79,44,19,.28),0 0 13px rgba(238,183,75,.24)!important;
+  opacity:1!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-loss strong,
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-loss strong{
+  color:var(--outcome-loss)!important;
+  -webkit-text-stroke:.25px var(--outcome-loss-glow);
+  text-shadow:0 1px 0 rgba(255,255,255,.45),0 2px 7px var(--outcome-loss-glow)!important;
+  opacity:1!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-draw strong,
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-draw strong{
+  color:#F0DEC9!important;
+  text-shadow:0 1px 5px rgba(54,36,26,.36)!important;
+}
+body.light-mode #app .pk-end-presentation.pk-broadcast-voice .pk-outcome-draw strong{color:#795F50!important;text-shadow:none!important}
+#app .pk-arena-v3.pk-end-presentation .pk-win-streak{
+  background:linear-gradient(155deg,#FFF5CD 0%,#EFC76A 88%)!important;
+  color:#704817!important;
+  border:1px solid rgba(255,246,207,.88)!important;
+  box-shadow:0 2px 7px rgba(91,61,27,.17)!important;
+  font-variant-numeric:tabular-nums;
+}
+
+/* The cheer hit target remains laid out during the finish, but is not clickable. */
+#app .pk-end-presentation .pk-cheer-button{visibility:hidden!important;pointer-events:none!important}
+#app .pk-end-presentation .pk-camera-try,#app .pk-end-presentation .pk-camera-stop{visibility:hidden!important}
+/* Cam: place WIN / LOSS / streak in the same flow as its OWN score and label.
+   No fixed y-position: different score lengths / font rendering cannot detach it. */
+#app .pk-end-presentation.pk-broadcast-cam .pk-cam-finish-slot{
+  display:flex;justify-content:flex-start;align-items:center;max-width:100%;
+  position:static!important;margin-top:7px;min-height:25px;pointer-events:none;
+}
+#app .pk-end-presentation.pk-broadcast-cam .pk-cam-finish-slot .pk-outcome-flag{
+  position:static!important;inset:auto!important;margin:0!important;
+  display:inline-flex!important;justify-content:flex-start;align-items:center;
+  width:auto!important;max-width:100%;gap:7px!important;filter:none!important;
+}
+#app .pk-end-presentation.pk-broadcast-cam .pk-outcome-flag strong{
+  font-family:Inter,"Noto Sans",system-ui,sans-serif;
+  font-size:clamp(20px,5.8vw,25px)!important;line-height:1.02!important;
+  letter-spacing:.055em!important;font-weight:920!important;
+}
+#app .pk-end-presentation.pk-broadcast-cam .pk-outcome-loss strong{
+  font-size:clamp(16px,4.7vw,20px)!important;letter-spacing:.095em!important;
+  }
+
+#app .pk-end-presentation.pk-broadcast-cam .pk-outcome-draw strong{font-size:clamp(17px,4.9vw,21px)!important}
+#app .pk-end-presentation.pk-broadcast-cam .pk-win-streak{
+  height:23px;min-width:23px;padding:3px 7px;font-size:11px;
+}
+/* Restore Cam's original lower-third: result no longer competes with avatar. */
+#app .pk-end-presentation.pk-broadcast-cam .pk-person{bottom:155px!important}
+#app .pk-end-presentation.pk-broadcast-cam .pk-media-label{bottom:134px!important}
+#app .pk-end-presentation.pk-broadcast-cam .pk-person-ring{transform-origin:center!important}
+
+/* Voice: the TWO score values live only in the shared rivalry rail. The
+   side panels reserve one stable result line, empty during the battle, so
+   WIN/LOSS/DRAW never compete with a duplicate score or push the chat. */
+#app .pk-broadcast-voice .pk-voice-outcome-slot{
+  box-sizing:border-box;display:flex;flex:0 0 34px;align-items:center;justify-content:center;
+  width:100%;min-width:0;height:34px;min-height:34px;margin:0;padding:0 3px;
+  pointer-events:none;
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot>.pk-outcome-flag{
+  position:static!important;inset:auto!important;z-index:6;
+  width:max-content!important;max-width:100%!important;margin:0!important;padding:0!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:7px!important;white-space:nowrap;filter:none!important;
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-outcome-flag strong{
+  font-family:Inter,"Noto Sans",system-ui,sans-serif;
+  font-size:clamp(21px,5.9vw,25px)!important;font-weight:930!important;
+  letter-spacing:.035em!important;line-height:1.05!important;
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-outcome-loss strong{
+  font-size:clamp(18px,5vw,21px)!important;letter-spacing:.075em!important;
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-outcome-draw strong{
+  font-size:clamp(17px,4.8vw,20px)!important;
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-win-streak{
+  height:22px!important;min-width:22px!important;padding:2px 6px!important;
+  font-size:11px!important;line-height:1!important;
+}
+/* Voice winner gains restrained emphasis; losing avatar moves back, never hides mic. */
+#app .pk-arena-v3.pk-end-presentation.pk-broadcast-voice .pk-duel-side:has(.pk-outcome-win) .pk-person-ring{
+  animation-name:pkVoiceWinV082!important;
+}
+#app .pk-arena-v3.pk-end-presentation.pk-broadcast-voice .pk-duel-side:has(.pk-outcome-loss) .pk-person-ring{
+  animation-name:pkVoiceLossV082!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-outcome-flag{
+  animation-duration:330ms!important;animation-delay:160ms!important;
+}
+#app .pk-arena-v3.pk-end-presentation .pk-win-streak{
+  animation-duration:310ms!important;animation-delay:460ms!important;
+}
+@keyframes pkVoiceWinV082{from{transform:scale(.96)}to{transform:scale(1.12)}}
+@keyframes pkVoiceLossV082{from{transform:scale(1)}to{transform:scale(.89)}}
+#app .pk-preview-finish{
+  width:100%;min-height:44px;cursor:pointer;margin-top:9px;
+  background:transparent;color:var(--pk-ink);border:1px solid var(--pk-line);
+  border-radius:12px;font-weight:730;font-size:12px;
+}
+@keyframes pkResultGrowV080{from{transform:scale(.96)}to{transform:scale(1.19)}}
+@keyframes pkResultShrinkV080{from{transform:scale(1)}to{transform:scale(.82)}}
+@keyframes pkResultWordV080{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pkResultStreakV080{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+@media(max-width:350px){
+ #app .pk-broadcast-voice .pk-voice-outcome-slot{flex-basis:29px;height:29px;min-height:29px}
+ #app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-outcome-flag strong{font-size:21px!important}
+ #app .pk-end-presentation.pk-broadcast-voice .pk-voice-outcome-slot .pk-outcome-loss strong{font-size:17px!important}
+ #app .pk-end-presentation .pk-win-streak{height:20px;min-width:20px;font-size:10px;padding-inline:4px}
+ #app .pk-end-presentation.pk-broadcast-cam .pk-cam-finish-slot{margin-top:5px}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-arena-v3.pk-end-presentation .pk-duel-side .pk-person-ring,
+ #app .pk-arena-v3.pk-end-presentation.pk-broadcast-voice .pk-duel-side:has(.pk-outcome-win) .pk-person-ring,
+ #app .pk-arena-v3.pk-end-presentation.pk-broadcast-voice .pk-duel-side:has(.pk-outcome-loss) .pk-person-ring{
+  animation:none!important;animation-name:none!important;transform:scale(1)!important;
+ }
+ #app .pk-arena-v3.pk-end-presentation .pk-outcome-flag,#app .pk-arena-v3.pk-end-presentation .pk-win-streak{animation:none!important;opacity:1!important;transform:none!important}
+}
+
+/* v0.8.6 — WIN/LOSS takes visual priority at finish; score meter stays aligned.
+   Gold is warm and weighty; purple-white is cool and readable. */
+#app .pk-end-presentation.pk-broadcast-voice .pk-score-caption{
+ visibility:hidden!important; /* keep geometry and chat exactly where they were */
+}
+#app .pk-end-presentation.pk-broadcast-voice .pk-balance-legends{opacity:.80!important}
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-win strong{
+ letter-spacing:.09em!important;font-weight:950!important;
+}
+#app .pk-end-presentation.pk-broadcast-cam .pk-side-score .pk-outcome-loss strong{
+ letter-spacing:.10em!important;font-weight:840!important;
+}
+#app .pk-end-presentation .pk-outcome-win strong{text-rendering:geometricPrecision}

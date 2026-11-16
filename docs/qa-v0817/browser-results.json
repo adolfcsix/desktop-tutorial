@@ -1,0 +1,26 @@
+[
+  {
+    "viewport": 320,
+    "theme": "light",
+    "current_verified": true,
+    "stale_hidden": true,
+    "draft_kept": true,
+    "focus_returned": true
+  },
+  {
+    "viewport": 390,
+    "theme": "light",
+    "current_verified": true,
+    "stale_hidden": true,
+    "draft_kept": true,
+    "focus_returned": true
+  },
+  {
+    "viewport": 390,
+    "theme": "dark",
+    "current_verified": true,
+    "stale_hidden": true,
+    "draft_kept": true,
+    "focus_returned": true
+  }
+]

@@ -1,0 +1,56 @@
+/* Túttt v0.5.5 — SINGLE CURATED LIVE STAGE / no display-mode controls */
+.cam-page.cam-mode-unified .cam-content{display:flex;flex-direction:column;overflow:hidden;padding:5px 12px 8px}
+.cam-page.cam-mode-unified .cam-stage-caption{padding:8px 2px 7px}
+.cam-page.cam-mode-unified .cam-stage-caption strong{font-size:13px}
+.cam-page.cam-mode-unified .cam-stage-caption>div>span{display:none}
+.cam-page.cam-mode-unified .cam-supporter-row{margin:0 0 8px;min-height:38px}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{display:grid;gap:12px 9px;grid-template-columns:repeat(3,minmax(0,1fr));padding:8px 3px 7px;align-items:start;justify-content:center;flex:0 0 auto}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-1:not(.has-pin){grid-template-columns:1fr}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-2:not(.has-pin),
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-4:not(.has-pin){grid-template-columns:repeat(2,minmax(0,1fr))}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-3:not(.has-pin){grid-template-columns:repeat(3,minmax(0,1fr))}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-3:not(.has-pin) .cam-tile:first-child{grid-column:auto;aspect-ratio:auto;min-height:0;max-height:none}
+.cam-page.cam-mode-unified .cam-stage-grid.cam-count-5:not(.has-pin) .cam-tile:nth-child(4){grid-column:auto}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only,
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.occupied,
+body:not(.light-mode) .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.occupied{
+ display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;
+ width:100%;min-width:0;min-height:95px;max-height:none;aspect-ratio:auto;
+ padding:2px 0 3px;margin:0;background:transparent;border:0;border-radius:18px;
+ color:var(--ink);box-shadow:none;overflow:visible;position:relative;
+}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{
+ width:65px;height:65px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;
+ font-size:25px;font-weight:800;color:#442525;border:2px solid color-mix(in srgb,var(--brand-ruby) 30%,var(--surface));
+ background:linear-gradient(150deg,#FFE0C7,#D99479);box-shadow:0 4px 14px #37211C1B;
+}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.pinned .cam-stage-avatar{
+ width:93px;height:93px;font-size:34px;border:3px solid var(--brand-ruby);
+}
+.cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.pinned{
+ grid-column:1/-1;order:-1;aspect-ratio:auto;min-height:132px;max-height:none;border:0;box-shadow:none;
+}
+.cam-page.cam-mode-unified .cam-stage-adaptive.has-pin .cam-tile:not(.pinned){aspect-ratio:auto;min-height:96px}
+.cam-page.cam-mode-unified .cam-avatar-meta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:100%;min-width:0;line-height:1.15}
+.cam-page.cam-mode-unified .cam-avatar-meta strong{font-size:11px;font-weight:760;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cam-page.cam-mode-unified .cam-avatar-meta small{font-size:10px;color:var(--muted)}
+.cam-page.cam-mode-unified .cam-focus-indicator{position:static;display:block;background:color-mix(in srgb,var(--brand-ruby) 12%,var(--surface));color:var(--brand-ruby);font-size:9px;padding:3px 7px;border-radius:9px}
+.cam-page.cam-mode-unified .cam-stage-tools{min-height:21px;padding:1px 0 5px;justify-content:center;font-size:10px}
+.cam-page.cam-mode-unified .cam-stage-tools span{min-width:0;flex:0 1 auto}
+.cam-page.cam-mode-unified .cam-status-line{margin:3px 0 6px;padding:7px 9px;font-size:10px}
+.cam-page.cam-mode-unified .cam-interaction{min-height:155px;flex:1;display:flex;flex-direction:column;overflow:hidden;margin-top:3px;border-radius:19px}
+.cam-page.cam-mode-unified .cam-panel-tabs{flex:0 0 auto}
+.cam-page.cam-mode-unified .cam-panel-body{flex:1;min-height:0;overflow:auto;padding:11px 13px}
+.cam-page.cam-mode-unified .cam-chat-history{height:100%;min-height:100px;max-height:none;overflow-y:auto}
+.cam-page.cam-mode-unified .cam-chat-entry{font-size:13px!important;line-height:1.58!important;padding:9px 0!important}
+.cam-page.cam-mode-unified .cam-compose{flex:0 0 auto}
+.cam-page.cam-mode-unified .cam-actions{flex:0 0 auto}
+@media(max-width:360px){
+ .cam-page.cam-mode-unified .cam-stage-grid.cam-stage-adaptive{gap:8px 5px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only .cam-stage-avatar{width:55px;height:55px;font-size:20px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only.pinned .cam-stage-avatar{width:80px;height:80px;font-size:27px}
+ .cam-page.cam-mode-unified .cam-stage-adaptive .cam-tile.avatar-only{min-height:87px}
+ .cam-page.cam-mode-unified .cam-avatar-meta strong{font-size:10px}
+ .cam-page.cam-mode-unified .cam-avatar-meta small{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.cam-page.cam-mode-unified *, .cam-page.cam-mode-unified *::before,.cam-page.cam-mode-unified *::after{transition:none!important;animation:none!important}}

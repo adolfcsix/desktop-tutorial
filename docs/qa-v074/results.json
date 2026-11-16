@@ -1,0 +1,328 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "mode": "cam",
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gaps": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 264,
+        "right": 310
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "mode": "voice",
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 260,
+        "right": 305
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "mode": "cam",
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gaps": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 264,
+        "right": 310
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "mode": "voice",
+      "icons": [
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 260,
+        "right": 305
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "mode": "cam",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 334,
+        "right": 380
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "mode": "voice",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 330,
+        "right": 375
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "mode": "cam",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 334,
+        "right": 380
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "mode": "voice",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 330,
+        "right": 375
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "mode": "cam",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 374,
+        "right": 420
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "mode": "voice",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 370,
+        "right": 415
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "mode": "cam",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "send": {
+        "h": 46,
+        "w": 46,
+        "x": 374,
+        "right": 420
+      },
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "mode": "voice",
+      "icons": [
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "gaps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "send": {
+        "h": 45,
+        "w": 45,
+        "x": 370,
+        "right": 415
+      },
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

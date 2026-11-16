@@ -1,0 +1,41 @@
+{
+  "theme": [
+    {
+      "width": 320,
+      "mode": "voice",
+      "persisted": true,
+      "pk_stable": true,
+      "chat_draft": true,
+      "audience_stable": true
+    },
+    {
+      "width": 390,
+      "mode": "voice",
+      "persisted": true,
+      "pk_stable": true,
+      "chat_draft": true,
+      "audience_stable": true
+    },
+    {
+      "width": 390,
+      "mode": "cam",
+      "persisted": true,
+      "pk_stable": true,
+      "chat_draft": true,
+      "audience_stable": true
+    },
+    {
+      "width": 430,
+      "mode": "cam",
+      "persisted": true,
+      "pk_stable": true,
+      "chat_draft": true,
+      "audience_stable": true
+    }
+  ],
+  "stale_join": {
+    "stale_room": "room-A",
+    "active_room": "room-B",
+    "no_new_room_leave": true
+  }
+}

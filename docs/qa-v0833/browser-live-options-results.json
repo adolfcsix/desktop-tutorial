@@ -1,0 +1,22 @@
+[
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  }
+]

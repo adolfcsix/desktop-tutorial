@@ -1,0 +1,43 @@
+/* Túttt v0.6.9 | PK Fluid Interactions — avoid rerender on score changes.
+   Brand palette, stage geometry and semantic states are inherited. */
+#app .pk-battle-scene .pk-duel{
+  animation:none!important;
+  backface-visibility:hidden;
+}
+#app .pk-battle-scene [data-pk-score],
+#app .pk-finale-score strong{
+  font-variant-numeric:tabular-nums;
+  font-feature-settings:'tnum' 1;
+}
+#app .pk-battle-scene .pk-balance-a,
+#app .pk-battle-scene .pk-balance-pin{
+  transition-property:width,left!important;
+  transition-duration:480ms!important;
+  transition-timing-function:cubic-bezier(.22,1,.36,1)!important;
+}
+#app .pk-battle-scene .pk-cheer-button{
+  transform:translate3d(0,0,0);
+  transition:transform 180ms cubic-bezier(.22,1,.36,1),box-shadow 180ms ease!important;
+  touch-action:manipulation;
+}
+#app .pk-battle-scene .pk-cheer-button:active{transform:scale(.96) translateY(1px)!important}
+#app .pk-battle-scene .pk-cheer-fly-v069{
+  animation:pkHeartFluid 740ms cubic-bezier(.22,1,.36,1) both!important;
+  font-variant-numeric:tabular-nums;
+}
+@keyframes pkHeartFluid{
+  0%{opacity:0;transform:translate3d(0,5px,0) scale(.82)}
+  20%{opacity:1;transform:translate3d(0,-5px,0) scale(1)}
+  100%{opacity:0;transform:translate3d(0,-33px,0) scale(1.04)}
+}
+#app .pk-finale{
+  animation:none!important;
+}
+@media(prefers-reduced-motion:reduce){
+  #app .pk-battle-scene .pk-duel,#app .pk-finale,
+  #app .pk-battle-scene .pk-cheer-fly-v069{
+    animation:none!important;transform:none!important;
+  }
+  #app .pk-battle-scene .pk-balance-a,#app .pk-battle-scene .pk-balance-pin,
+  #app .pk-battle-scene .pk-cheer-button{transition:none!important;transform:none!important}
+}

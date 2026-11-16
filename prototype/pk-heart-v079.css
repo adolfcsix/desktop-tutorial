@@ -1,0 +1,85 @@
+/* v0.7.9 | Heart-only PK support; the tap target remains >=44 px with no visual button box.
+   Use one path-based outline for Cam/Voice, a filled white heart on tap, and readable captions.
+   Keep stage artwork and rivalry score rail unchanged. */
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-wrap,
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer{position:relative!important;overflow:visible!important}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button,
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ border-radius:0!important;padding:0 2px!important;min-width:0!important;position:relative!important;
+ min-height:44px!important;cursor:pointer;
+}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button{
+ display:inline-flex!important;align-items:center!important;gap:7px!important;
+ color:var(--voice-ink)!important;font-size:12px!important;
+}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button .pk-cheer-icon{
+ display:flex!important;width:32px!important;height:40px!important;flex:0 0 32px!important;
+ align-items:center!important;justify-content:center!important;
+ background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button .pk-cheer-copy{
+ color:var(--voice-ink)!important;font-weight:850!important;text-shadow:none!important;
+ font-size:12px!important;
+}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button .pk-cheer-arrow{display:none!important}
+#app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button .pk-cheer-icon svg,
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon svg{
+ width:27px!important;height:27px!important;stroke:#FFFDF9!important;fill:transparent!important;
+ stroke-width:2.15!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+ filter:drop-shadow(0 1px 1px rgba(57,26,27,.75)) drop-shadow(0 2px 5px rgba(40,19,22,.55));
+ transition:fill .18s ease,transform .18s cubic-bezier(.22,1,.36,1),filter .18s ease;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:42px!important;height:42px!important;min-height:42px!important;min-width:42px!important;
+ border-radius:0!important;background:transparent!important;border:0!important;box-shadow:none!important;
+}
+#app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-copy{
+ color:var(--pk-ink)!important;text-shadow:none!important;letter-spacing:0!important;
+ font-size:9px!important;font-weight:800!important;
+}
+#app .pk-broadcast-voice .pk-cheer-button .pk-cheer-icon.is-pk-heart-filled svg,
+#app .cam-page:has(.pk-broadcast-cam) .pk-rail-cheer .pk-cheer-icon.is-pk-heart-filled svg{
+ animation:pkHeartSolidV079 .54s ease-out both;
+}
+@keyframes pkHeartSolidV079{
+ 0%{fill:transparent;transform:scale(.86)}
+ 32%{fill:#FFFDF9;transform:scale(1.12)}
+ 72%{fill:#FFFDF9;transform:scale(1.02)}
+ 100%{fill:transparent;transform:scale(1)}
+}
+#app .pk-heart-particle{
+ position:absolute!important;pointer-events:none;z-index:30!important;
+ left:50%;top:7px;width:23px;height:23px;margin-left:-11px;
+ color:white!important;animation:pkHeartFloatV079 700ms ease-out both!important;
+}
+#app .pk-heart-particle svg{width:100%;height:100%;fill:#FFFDF9!important;stroke:#FFFDF9!important;stroke-width:1!important;
+ filter:drop-shadow(0 2px 5px rgba(38,18,21,.36));}
+@keyframes pkHeartFloatV079{
+ 0%{opacity:0;transform:translate3d(0,2px,0) scale(.6)}
+ 24%{opacity:1;transform:translate3d(0,-10px,0) scale(1)}
+ 100%{opacity:0;transform:translate3d(0,-45px,0) scale(.9)}
+}
+#app .pk-broadcast-voice .pk-cheer-button:focus-visible,
+#app .cam-page:has(.pk-broadcast-cam) .pk-rail-cheer:focus-visible{
+ outline:2px solid var(--pk-focus)!important;outline-offset:3px!important;border-radius:8px!important;
+}
+#app .room-controls.is-pk-active{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media(max-width:350px){
+ #app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button{gap:4px!important}
+ #app .pk-broadcast-voice .pk-scene-footer .pk-cheer-button .pk-cheer-copy{font-size:11px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-heart-particle{animation:none!important;display:none!important}
+ #app .pk-cheer-icon.is-pk-heart-filled svg{animation:none!important;fill:#FFFDF9!important}
+}
+/* Historic v0.7.3 Night selectors had body-level specificity; honor the white heart in both themes. */
+body:not(.light-mode) #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon svg,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon svg{
+ stroke:#FFFDF9!important;fill:transparent!important;
+}
+body:not(.light-mode) #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon.is-pk-heart-filled svg,
+body.light-mode #app .cam-page:has(.pk-broadcast-cam) .cam-actions .pk-rail-cheer .pk-cheer-icon.is-pk-heart-filled svg{
+ animation:pkHeartSolidV079 .54s ease-out both;
+}

@@ -1,0 +1,110 @@
+{
+  "version": "0.8.30",
+  "runs": [
+    {
+      "width": 320,
+      "theme": "light",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#F8F2EB"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#1B1719"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#F8F2EB"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#1B1719"
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#F8F2EB"
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "steps": [
+        "Discover",
+        "Live",
+        "Chat",
+        "Conversation",
+        "Profile",
+        "Settings",
+        "Create room",
+        "Voice PK"
+      ],
+      "logo": "approved",
+      "metaColor": "#1B1719"
+    }
+  ],
+  "textContrasts": {
+    "ivoryText": 14.03,
+    "ivorySecondary": 6.53,
+    "ivoryAccent": 5.75,
+    "espressoText": 16.27,
+    "espressoSecondary": 10.44,
+    "espressoAccent": 9.9,
+    "nativeDarkSentBubble": 4.8
+  }
+}

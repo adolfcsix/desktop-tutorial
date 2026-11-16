@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": "320x740",
+    "theme": "light",
+    "visualSpeakingOnly": false,
+    "passed": true
+  },
+  {
+    "viewport": "390x844",
+    "theme": "dark",
+    "visualSpeakingOnly": false,
+    "passed": true
+  },
+  {
+    "viewport": "430x932",
+    "theme": "light",
+    "visualSpeakingOnly": false,
+    "passed": true
+  }
+]

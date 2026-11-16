@@ -1,0 +1,66 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "roster": {
+      "chatStable": true,
+      "editorStable": true,
+      "hostStable": true,
+      "focusStable": true
+    },
+    "pk": {
+      "pk": true,
+      "chat": true,
+      "input": true,
+      "ringing": true
+    }
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "roster": {
+      "chatStable": true,
+      "editorStable": true,
+      "hostStable": true,
+      "focusStable": true
+    },
+    "pk": {
+      "pk": true,
+      "chat": true,
+      "input": true,
+      "ringing": true
+    }
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "roster": {
+      "chatStable": true,
+      "editorStable": true,
+      "hostStable": true,
+      "focusStable": true
+    },
+    "pk": {
+      "pk": true,
+      "chat": true,
+      "input": true,
+      "ringing": true
+    }
+  },
+  {
+    "width": 430,
+    "theme": "light",
+    "roster": {
+      "chatStable": true,
+      "editorStable": true,
+      "hostStable": true,
+      "focusStable": true
+    },
+    "pk": {
+      "pk": true,
+      "chat": true,
+      "input": true,
+      "ringing": true
+    }
+  }
+]

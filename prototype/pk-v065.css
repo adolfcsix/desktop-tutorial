@@ -1,0 +1,79 @@
+/* Túttt 0.6.5 — Same-surface PK in both themes.
+   Light = Mocha Ivory, dark = Espresso Night. ALL visible room surfaces use
+   --pk-stage in active PK; no ivory/espresso/ivory bands. No competing cards. */
+#app:has(.pk-arena-v3){background:var(--pk-stage)!important;color:var(--pk-ink)!important}
+#app .pk-arena-v3{background:var(--pk-stage)!important;color:var(--pk-ink)!important}
+#app .pk-arena-v3:before{background:radial-gradient(ellipse 64% 43% at 10% 44%,var(--pk-side-a-glow),transparent 86%),radial-gradient(ellipse 64% 43% at 90% 46%,var(--pk-side-b-glow),transparent 86%)}
+#app .pk-arena-v3:after{opacity:.25;background:repeating-radial-gradient(ellipse 75% 60% at 50% 75%,transparent 0 30px,color-mix(in srgb,var(--pk-ink) 9%,transparent) 31px,transparent 32px 58px)}
+#app .pk-arena-v3 .pk-duel:after{background:linear-gradient(transparent,color-mix(in srgb,var(--pk-ink) 15%,transparent),transparent)}
+#app .pk-arena-v3 .pk-duel-seam span{color:var(--pk-soft)!important;text-shadow:none!important}
+#app .pk-arena-v3 .pk-person-avatar{background:var(--pk-side-a-avatar)!important}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-avatar{background:var(--pk-side-b-avatar)!important}
+#app .pk-arena-v3 .pk-balance-pin{box-shadow:0 0 0 2px var(--pk-stage)!important}
+#app .pk-arena-v3 .pk-side-score span{color:var(--pk-muted)!important}
+/* CAM: the header, arena, chat overlay, composer and actions share one color. */
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3),
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-topbar,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-content,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-interaction.cam-chat-float,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-compose,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-actions{
+ background:var(--pk-stage)!important;background-image:none!important;color:var(--pk-ink)!important;
+ box-shadow:none!important;
+}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-topbar{border-bottom-color:color-mix(in srgb,var(--pk-ink) 10%,transparent)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-title strong,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-privacy,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-action small,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-label,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-panel-empty{color:var(--pk-ink)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-topbar .back-btn,
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-header-more{background:transparent!important;border:1px solid color-mix(in srgb,var(--pk-ink) 18%,transparent)!important;color:var(--pk-ink)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-interaction.cam-chat-float{margin-top:0!important;padding-top:19px!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-entry{color:var(--pk-ink)!important;background:color-mix(in srgb,var(--pk-ink) 6%,transparent)!important;border:0!important;box-shadow:none!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-chat-entry strong{color:var(--pk-side-a-accent)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-compose input{
+ background:color-mix(in srgb,var(--pk-stage) 91%,var(--pk-ink) 9%)!important;
+ color:var(--pk-ink)!important;border-color:color-mix(in srgb,var(--pk-ink) 16%,transparent)!important;
+}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-compose input::placeholder{color:var(--pk-muted)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-compose button{background:var(--pk-launcher-bg)!important;color:var(--pk-launcher-ink)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-action span{border-color:color-mix(in srgb,var(--pk-ink) 19%,transparent)!important;color:var(--pk-ink)!important}
+#app .cam-page.cam-mode-unified:has(.pk-arena-v3) .cam-action.danger span{border-color:color-mix(in srgb,var(--pk-side-a-accent) 32%,transparent)!important;color:var(--pk-side-a-accent)!important}
+/* VOICE: room header, stage, chat, input and controls share the same tone. */
+#app:has(.room-top .pk-arena-v3) .room-top,
+#app:has(.room-top .pk-arena-v3) .room-chatbox,
+#app:has(.room-top .pk-arena-v3) .room-compose,
+#app:has(.room-top .pk-arena-v3) .room-controls{
+ background:var(--pk-stage)!important;background-image:none!important;color:var(--pk-ink)!important;
+ border-color:transparent!important;box-shadow:none!important;
+}
+#app:has(.room-top .pk-arena-v3) .room-top{background:var(--pk-stage)!important;padding-bottom:0!important}
+#app:has(.room-top .pk-arena-v3) .room-top .voice-title-row .section-title,
+#app:has(.room-top .pk-arena-v3) .room-topbar .voice-audience,
+#app:has(.room-top .pk-arena-v3) .room-chatbox .room-log,
+#app:has(.room-top .pk-arena-v3) .room-controls .circle-action{color:var(--pk-ink)!important}
+#app:has(.room-top .pk-arena-v3) .room-topbar .back-btn,
+#app:has(.room-top .pk-arena-v3) .room-topbar .icon-btn,
+#app:has(.room-top .pk-arena-v3) .voice-top3-button{
+ background:transparent!important;border:1px solid color-mix(in srgb,var(--pk-ink) 18%,transparent)!important;color:var(--pk-ink)!important;
+}
+#app:has(.room-top .pk-arena-v3) .room-chatbox{margin-top:0!important}
+#app:has(.room-top .pk-arena-v3) .room-chatbox .room-log{
+ background:color-mix(in srgb,var(--pk-ink) 6%,transparent)!important;border:0!important;box-shadow:none!important;
+}
+#app:has(.room-top .pk-arena-v3) .room-compose{padding-top:8px!important;padding-bottom:9px!important}
+#app:has(.room-top .pk-arena-v3) .room-compose input{
+ background:color-mix(in srgb,var(--pk-stage) 91%,var(--pk-ink) 9%)!important;
+ color:var(--pk-ink)!important;border-color:color-mix(in srgb,var(--pk-ink) 16%,transparent)!important;
+}
+#app:has(.room-top .pk-arena-v3) .room-compose input::placeholder{color:var(--pk-muted)!important}
+#app:has(.room-top .pk-arena-v3) .room-compose button{background:var(--pk-launcher-bg)!important;color:var(--pk-launcher-ink)!important}
+#app:has(.room-top .pk-arena-v3) .room-controls .circle-icon{border-color:color-mix(in srgb,var(--pk-ink) 19%,transparent)!important;color:var(--pk-ink)!important}
+#app:has(.room-top .pk-arena-v3) .room-controls .circle-action.danger .circle-icon{color:var(--pk-side-a-accent)!important}
+/* Focus rings remain distinguishable on both surfaces. */
+#app:has(.pk-arena-v3) .room-compose input:focus-visible,
+#app:has(.pk-arena-v3) .cam-compose input:focus-visible,
+#app:has(.pk-arena-v3) .cam-action:focus-visible,
+#app:has(.pk-arena-v3) .circle-action:focus-visible{outline:2px solid var(--pk-focus)!important;outline-offset:2px!important}
+@media(prefers-reduced-motion:reduce){#app:has(.pk-arena-v3) .cam-chat-entry,#app:has(.pk-arena-v3) .room-log{backdrop-filter:none!important}}

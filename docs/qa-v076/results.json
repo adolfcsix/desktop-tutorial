@@ -1,0 +1,137 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "height": 740,
+      "mode": "voice",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mode": "voice",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mode": "cam",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "mode": "cam",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "voice",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "voice",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "cam",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "cam",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "voice",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "voice",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "cam",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "cam",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mode": "voice",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mode": "voice",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mode": "cam",
+      "theme": "light",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "mode": "cam",
+      "theme": "dark",
+      "after": 57,
+      "errors": []
+    },
+    {
+      "reduced_motion": true,
+      "passed": true
+    }
+  ],
+  "count": 17
+}

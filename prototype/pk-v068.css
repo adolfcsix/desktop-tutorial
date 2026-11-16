@@ -1,0 +1,235 @@
+/* Túttt v0.6.8 · PK live motion — visual energy without new hues, boxed cards or invented media.
+   Brand colors remain sourced from brand/pk-color-system.json. */
+#app .pk-arena-v3.pk-battle-scene{
+  padding-top:10px!important;padding-bottom:16px!important;
+  background:var(--pk-stage)!important;
+}
+#app .pk-arena-v3.pk-battle-scene::before{
+  background:
+   radial-gradient(ellipse 54% 46% at 19% 39%,var(--pk-side-a-glow),transparent 88%),
+   radial-gradient(ellipse 55% 42% at 82% 42%,var(--pk-side-b-glow),transparent 88%)!important;
+  opacity:1!important;
+}
+#app .pk-arena-v3.pk-battle-scene::after{
+  opacity:.14!important;
+  background:repeating-linear-gradient(108deg,transparent 0 44px,color-mix(in srgb,var(--pk-ink) 12%,transparent) 45px,transparent 46px 95px)!important;
+  mask-image:linear-gradient(to bottom,transparent,#000 45%,transparent)!important;
+}
+/* Top status reads as an active event rather than a dashboard heading. */
+#app .pk-arena-v3 .pk-scene-head{border-bottom:0!important;margin-bottom:0!important;padding-bottom:4px!important}
+#app .pk-arena-v3 .pk-head-text{gap:7px!important}
+#app .pk-arena-v3 .pk-head-text strong{font-size:14px!important;font-weight:860!important;letter-spacing:-.035em!important}
+#app .pk-arena-v3 .pk-head-text small{letter-spacing:.04em!important;font-size:9px!important;opacity:.8}
+#app .pk-arena-v3 .pk-pulse-light{
+  width:8px!important;height:8px!important;background:var(--pk-bar-a)!important;
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--pk-bar-a) 13%,transparent)!important;
+  animation:none;
+}
+#app .pk-arena-v3 .pk-clock{
+  background:color-mix(in srgb,var(--pk-ink) 5%,transparent)!important;
+  border-radius:14px!important;min-height:40px!important;min-width:77px!important;
+}
+#app .pk-arena-v3 .pk-clock strong{font-weight:870!important;font-size:23px!important;letter-spacing:-.05em!important}
+
+/* One connected stage, not two rectangular profile cards. */
+#app .pk-arena-v3 .pk-duel{
+  overflow:visible!important;isolation:isolate;position:relative;
+  animation:none;
+}
+#app .pk-arena-v3 .pk-field-art{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+}
+#app .pk-arena-v3 .pk-field-art span{position:absolute;color:var(--pk-side-a-accent);opacity:.17;font-size:25px;line-height:1;transform:rotate(-17deg)}
+#app .pk-arena-v3 .pk-field-art span:nth-child(1){top:22%;left:1%;font-size:34px}
+#app .pk-arena-v3 .pk-field-art span:nth-child(2){top:9%;right:3%;font-size:27px;color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-field-art span:nth-child(3){bottom:20%;right:7%;font-size:13px;color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-duel::after{top:20%!important;bottom:25%!important;opacity:.24!important}
+#app .pk-arena-v3 .pk-duel-side{position:relative}
+#app .pk-arena-v3 .pk-side-top{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:10px!important;font-weight:750!important;letter-spacing:0!important;
+  padding:5px 9px!important;min-height:25px!important;
+  border-radius:999px;background:color-mix(in srgb,var(--pk-side-a-accent) 10%,transparent)!important;
+  max-width:100%;width:auto!important;
+}
+#app .pk-arena-v3 .pk-side-champagne .pk-side-top{background:color-mix(in srgb,var(--pk-side-b-accent) 12%,transparent)!important}
+#app .pk-arena-v3 .pk-person{padding-top:12px!important}
+#app .pk-arena-v3 .pk-person-ring{filter:drop-shadow(0 10px 16px color-mix(in srgb,var(--pk-side-a-accent) 12%,transparent))}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-ring{filter:drop-shadow(0 10px 16px color-mix(in srgb,var(--pk-side-b-accent) 13%,transparent))}
+#app .pk-arena-v3 .pk-person-ring::before{
+  inset:-5px!important;opacity:1!important;border:2px solid color-mix(in srgb,var(--pk-side-a-accent) 41%,transparent)!important;
+  box-shadow:none!important;
+}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-ring::before{border-color:color-mix(in srgb,var(--pk-side-b-accent) 47%,transparent)!important}
+#app .pk-arena-v3 .pk-person-ring::after{
+  content:"✦";position:absolute;top:1px;right:0;z-index:2;
+  font-size:15px;line-height:1;color:var(--pk-side-a-accent);
+  animation:none;
+}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-ring::after{color:var(--pk-side-b-accent)}
+#app .pk-arena-v3 .pk-person-avatar{
+  background:linear-gradient(145deg,color-mix(in srgb,var(--pk-side-a-avatar) 65%,#FFFFFF),var(--pk-side-a-avatar))!important;
+  box-shadow:0 13px 24px color-mix(in srgb,var(--pk-side-a-accent) 16%,transparent)!important;
+  font-weight:850!important;
+}
+#app .pk-arena-v3 .pk-side-champagne .pk-person-avatar{
+  background:linear-gradient(145deg,color-mix(in srgb,var(--pk-side-b-avatar) 67%,#FFFFFF),var(--pk-side-b-avatar))!important;
+  box-shadow:0 13px 24px color-mix(in srgb,var(--pk-side-b-accent) 16%,transparent)!important;
+}
+#app .pk-arena-v3 .pk-person strong{font-size:17px!important;font-weight:860!important;letter-spacing:-.045em!important}
+#app .pk-arena-v3 .pk-person small{font-size:10.5px!important;opacity:.8}
+#app .pk-arena-v3 .pk-duel-seam{top:41%!important;isolation:isolate}
+#app .pk-arena-v3 .pk-duel-seam span{
+  font-size:32px!important;font-weight:930!important;font-style:italic!important;
+  letter-spacing:-.13em!important;transform:rotate(-9deg)!important;
+  text-shadow:2px 2px 0 color-mix(in srgb,var(--pk-stage) 85%,transparent)!important;
+}
+#app .pk-arena-v3 .pk-side-score{padding-top:7px!important}
+#app .pk-arena-v3 .pk-side-score strong{
+  font-size:36px!important;font-weight:880!important;line-height:1.02!important;
+  letter-spacing:-.075em!important;
+}
+#app .pk-arena-v3 .pk-side-score span{font-size:10.5px!important;opacity:.88}
+#app .pk-arena-v3 .pk-scoreboard{padding-top:9px!important}
+#app .pk-arena-v3 .pk-balance-bar{height:9px!important;background:var(--pk-bar-b)!important;border-radius:999px!important;overflow:visible}
+#app .pk-arena-v3 .pk-balance-a{transition:width .5s cubic-bezier(.18,.85,.27,1.2)!important}
+#app .pk-arena-v3 .pk-balance-pin{height:17px!important;width:3px!important;top:-4px!important;transition:left .5s cubic-bezier(.18,.85,.27,1.2)}
+#app .pk-arena-v3 .pk-score-caption{font-size:10.5px!important;margin-top:9px!important}
+#app .pk-arena-v3 .pk-score-caption strong{font-weight:780!important}
+#app .pk-arena-v3 .pk-scene-footer{margin-top:13px!important}
+#app .pk-arena-v3 .pk-cheer-wrap{display:inline-flex;position:relative;flex:0 0 auto;align-items:center}
+#app .pk-arena-v3 .pk-cheer-button{
+  min-height:46px!important;border-radius:15px!important;padding:0 18px!important;
+  box-shadow:0 7px 15px color-mix(in srgb,var(--pk-cheer-bg) 19%,transparent)!important;
+  transition:transform .16s ease,box-shadow .16s ease!important;
+}
+#app .pk-arena-v3 .pk-cheer-button:active{transform:scale(.955)}
+#app .pk-arena-v3 .pk-cheer-button span{font-size:19px;vertical-align:-1px}
+#app .pk-arena-v3 .pk-cheer-fly{
+  position:absolute;z-index:8;top:-17px;right:13px;color:var(--pk-side-a-accent);
+  font-weight:900;font-size:16px;white-space:nowrap;pointer-events:none;
+  text-shadow:0 2px 8px var(--pk-stage);
+  animation:pkHeartRise .83s ease-out both;
+}
+#app .pk-arena-v3.pk-final-seconds .pk-clock{
+  outline:2px solid var(--pk-side-a-accent);outline-offset:0;
+  animation:none;
+}
+/* Modern result: floating badge, expressive type, score race, no opaque result card. */
+#app .pk-finale{position:relative;isolation:isolate;min-height:384px!important;padding:27px 17px 22px!important;animation:none}
+#app .pk-finale::before{
+  opacity:1!important;background:
+   radial-gradient(ellipse 52% 44% at 28% 41%,var(--pk-side-a-glow),transparent 92%),
+   radial-gradient(ellipse 50% 45% at 79% 52%,var(--pk-side-b-glow),transparent 92%)!important;
+}
+#app .pk-finale-art{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+#app .pk-finale-art span{position:absolute;color:var(--pk-side-a-accent);font-size:19px;opacity:.44;animation:none}
+#app .pk-finale-art span:nth-child(1){top:18%;left:10%;font-size:22px;transform:rotate(-12deg)}
+#app .pk-finale-art span:nth-child(2){top:14%;right:11%;font-size:27px;color:var(--pk-side-b-accent)}
+#app .pk-finale-art span:nth-child(3){bottom:25%;left:3%;font-size:14px}
+#app .pk-finale-art span:nth-child(4){bottom:22%;right:5%;font-size:15px;color:var(--pk-side-b-accent)}
+#app .pk-finale-eyebrow{letter-spacing:.045em!important;font-size:10px!important;font-weight:780!important}
+#app .pk-finale-mark{
+  display:grid;place-items:center;width:55px;height:55px;border-radius:50%;margin-top:10px;
+  background:var(--pk-cheer-bg);color:var(--pk-cheer-ink);font-size:27px;
+  box-shadow:0 10px 26px color-mix(in srgb,var(--pk-cheer-bg) 27%,transparent);
+  animation:pkBadgeEnter .65s cubic-bezier(.17,.85,.2,1.25) both;
+}
+#app .pk-finale-title{
+  font-size:clamp(27px,7.5vw,33px)!important;line-height:1.12!important;
+  font-weight:900!important;letter-spacing:-.065em!important;margin:12px 0 6px!important;
+  max-width:330px;
+}
+#app .pk-finale-sub{font-size:11px!important;margin:0 0 14px!important;max-width:320px}
+#app .pk-finale-score{max-width:315px!important;gap:7px!important;grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr)!important}
+#app .pk-finale-score>div{gap:4px!important;position:relative}
+#app .pk-finale-score .pk-finale-avatar{
+  display:grid;place-items:center;width:40px;height:40px;border-radius:50%;
+  background:var(--pk-side-a-avatar);color:var(--pk-side-a-avatar-ink);font-size:18px;font-weight:900;
+  box-shadow:0 0 0 2px color-mix(in srgb,var(--pk-side-a-accent) 33%,transparent);
+}
+#app .pk-finale-score>div:last-child .pk-finale-avatar{background:var(--pk-side-b-avatar);color:var(--pk-side-b-avatar-ink);box-shadow:0 0 0 2px color-mix(in srgb,var(--pk-side-b-accent) 33%,transparent)}
+#app .pk-finale-score .is-winner::before{content:"★";position:absolute;top:-6px;right:23%;font-size:14px;color:var(--pk-side-a-accent)}
+#app .pk-finale-score>div:last-child.is-winner::before{color:var(--pk-side-b-accent)}
+#app .pk-finale-score small{font-size:12px!important;color:var(--pk-ink)!important;font-weight:800!important}
+#app .pk-finale-score strong{font-size:33px!important;font-weight:890!important;letter-spacing:-.065em!important}
+#app .pk-finale-divider{font-size:28px!important;font-weight:800;align-self:end;margin-bottom:9px;color:var(--pk-muted)}
+#app .pk-finale-note{font-size:10.5px!important;line-height:1.4!important;margin:13px 0!important}
+#app .pk-finale-actions{width:100%;flex-wrap:nowrap!important;gap:8px!important}
+#app .pk-finale-actions button{border-radius:14px!important;min-width:0;flex:1;min-height:47px;font-size:11.5px!important;padding:9px 8px!important;font-weight:790!important}
+#app .pk-finale-main{box-shadow:0 7px 15px color-mix(in srgb,var(--pk-cheer-bg) 19%,transparent)}
+#app .pk-finale-main span{font-size:15px;margin-left:3px}
+#app .pk-finale-actions button:active{transform:scale(.98)}
+/* Better tactile buttons and focus, but do not invent speaking/video activity. */
+#app .pk-arena-v3 .pk-cheer-button:focus-visible,#app .pk-finale-actions button:focus-visible{
+  outline:3px solid var(--pk-focus)!important;outline-offset:3px!important;
+}
+}
+}
+@keyframes pkBadgeEnter{0%{opacity:0;transform:translateY(13px) scale(.65) rotate(-18deg)}70%{transform:translateY(-3px) scale(1.06)}100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@keyframes pkHeartRise{0%{opacity:0;transform:translateY(6px) scale(.8)}15%{opacity:1}100%{opacity:0;transform:translateY(-35px) scale(1.1)}}
+}
+}
+@media(max-width:350px){
+ #app .pk-arena-v3 .pk-head-text strong{font-size:12px!important}
+ #app .pk-arena-v3 .pk-duel-seam span{font-size:27px!important}
+ #app .pk-arena-v3 .pk-side-score strong{font-size:29px!important}
+ #app .pk-finale{padding-inline:10px!important}
+ #app .pk-finale-title{font-size:26px!important}
+ #app .pk-finale-score strong{font-size:29px!important}
+ #app .pk-finale-actions button{font-size:11px!important}
+}
+@media(max-height:740px){
+ #app .pk-finale{min-height:325px!important;padding-block:16px!important}
+ #app .pk-finale-mark{width:44px;height:44px;font-size:21px;margin-top:6px}
+ #app .pk-finale-title{font-size:27px!important;margin-top:8px!important}
+ #app .pk-finale-sub{margin-bottom:8px!important}
+ #app .pk-finale-note{margin:9px 0!important}
+ #app .pk-arena-v3 .pk-person{padding-top:6px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-arena-v3 .pk-duel,#app .pk-finale,#app .pk-arena-v3 .pk-pulse-light,
+ #app .pk-finale-art span,#app .pk-finale-mark,#app .pk-arena-v3 .pk-cheer-fly,
+ #app .pk-arena-v3 .pk-person-ring::after,#app .pk-arena-v3.pk-final-seconds .pk-clock{
+  animation:none!important;transition:none!important;
+ }
+}
+
+#app .pk-finale-detail{display:block;margin-top:3px;color:var(--pk-muted);font-size:11px;opacity:.85}
+
+/* Compact PK header on phones: no status pills colliding with the countdown. */
+#app .pk-arena-v3 .pk-demo-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#app .pk-arena-v3 .pk-head-text{flex:1 1 auto!important;min-width:0}
+#app .pk-arena-v3 .pk-head-text strong{white-space:nowrap;font-size:13px!important}
+#app .pk-arena-v3 .pk-head-actions{gap:3px!important;margin-left:auto;flex:0 0 auto}
+#app .pk-arena-v3 .pk-viewers{min-width:43px!important;padding:0 2px!important;font-size:10px!important}
+
+@media(max-width:430px){#app .pk-arena-v3 .pk-intro-label{display:none!important}}
+
+/* Empty PK chat can start a conversation rather than leaving a dead blank pane. */
+#app:has(.pk-arena-v3) .pk-chat-starter{
+ display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;
+ padding:8px 10px;color:var(--pk-muted);font-size:12px;line-height:1.35;
+}
+#app:has(.pk-arena-v3) .pk-chat-starter>span{font-weight:700}
+#app:has(.pk-arena-v3) .pk-chat-starter button{
+ appearance:none;min-height:37px;border:1px solid color-mix(in srgb,var(--pk-ink) 22%,transparent);
+ background:transparent;color:var(--pk-ink);font-size:12px;font-weight:780;
+ border-radius:999px;padding:7px 12px;cursor:pointer;
+}
+#app:has(.pk-arena-v3) .pk-chat-starter button:focus-visible{outline:3px solid var(--pk-focus);outline-offset:2px}
+/* Compact finale for short 320px devices. Preserve clickable replay action above chat. */
+@media(max-width:350px) and (max-height:800px){
+ #app .room-top .pk-finale{min-height:0!important;padding:8px 10px 11px!important}
+ #app .room-top .pk-finale-eyebrow{font-size:9px!important}
+ #app .room-top .pk-finale-mark{width:34px;height:34px;margin-top:4px;font-size:17px}
+ #app .room-top .pk-finale-title{font-size:23px!important;line-height:1.1!important;margin:5px 0 2px!important}
+ #app .room-top .pk-finale-sub{font-size:10px!important;line-height:1.3!important;margin:0 0 7px!important}
+ #app .room-top .pk-finale-detail{display:none!important}
+ #app .room-top .pk-finale-score .pk-finale-avatar{width:29px;height:29px;font-size:14px}
+ #app .room-top .pk-finale-score>div{gap:2px!important}
+ #app .room-top .pk-finale-score strong{font-size:26px!important}
+ #app .room-top .pk-finale-score small{font-size:10px!important}
+ #app .room-top .pk-finale-note{font-size:9.5px!important;line-height:1.25!important;margin:6px 0 7px!important}
+ #app .room-top .pk-finale-actions button{min-height:44px!important;padding:6px!important;font-size:10px!important}
+}

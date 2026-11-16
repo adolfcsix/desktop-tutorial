@@ -1,0 +1,110 @@
+{
+  "version": "0.8.41",
+  "dependencyGate": "BLOCKED",
+  "technicalGate": "BLOCKED",
+  "deviceConfigGate": "FAIL",
+  "configAuditGate": "FAIL",
+  "deviceGateEnforced": false,
+  "deviceChecks": [
+    {
+      "id": "android-id",
+      "status": "PASS",
+      "message": "android đã đặt application identifier"
+    },
+    {
+      "id": "ios-id",
+      "status": "PASS",
+      "message": "ios đã đặt application identifier"
+    },
+    {
+      "id": "permission:android.permission.RECORD_AUDIO",
+      "status": "PASS",
+      "message": "Android khai báo android.permission.RECORD_AUDIO"
+    },
+    {
+      "id": "permission:android.permission.CAMERA",
+      "status": "PASS",
+      "message": "Android khai báo android.permission.CAMERA"
+    },
+    {
+      "id": "ios-privacy:NSCameraUsageDescription",
+      "status": "PASS",
+      "message": "iOS khai báo NSCameraUsageDescription"
+    },
+    {
+      "id": "ios-privacy:NSMicrophoneUsageDescription",
+      "status": "PASS",
+      "message": "iOS khai báo NSMicrophoneUsageDescription"
+    },
+    {
+      "id": "dev-client",
+      "status": "PASS",
+      "message": "Có development client (không dùng Expo Go cho WebRTC)"
+    },
+    {
+      "id": "eas-profile",
+      "status": "PASS",
+      "message": "Đã cấu hình build nội bộ cho development client"
+    },
+    {
+      "id": "api-url",
+      "status": "FAIL",
+      "message": "HTTP công khai không phù hợp với phiên có token; dùng HTTPS"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Node SDK prerequisite",
+      "status": "PASS",
+      "detail": "Node 22.16.0 đáp ứng SDK 58"
+    },
+    {
+      "name": "Resolved npm lockfile",
+      "status": "BLOCKED",
+      "detail": "Chưa có package-lock.json do npm tạo"
+    },
+    {
+      "name": "Installed dependency tree",
+      "status": "BLOCKED",
+      "detail": "Thiếu node_modules/expo"
+    },
+    {
+      "name": "npm ls direct dependencies",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Expo SDK dependency check",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Expo config prebuild resolution",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Expo Doctor",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "TypeScript semantic check",
+      "status": "NOT_RUN",
+      "detail": "Dependency installation hoặc lockfile chưa được xác minh đầy đủ"
+    },
+    {
+      "name": "Native config declaration",
+      "status": "FAIL",
+      "detail": "lockfile: Chưa có mobile/package-lock.json: build giữa các máy chưa tái lập được; tạo bằng npm install sau khi giải quyết dependency | dependencies: Chưa cài node_modules mobile: cần npm install, expo-doctor và tsc trên máy phát triển | api-url: HTTP công khai không phù hợp với phiên có token; dùng HTTPS | lock-integrity: Chưa có lockfile hợp lệ; cần npm install --strict-peer-deps trên máy có registry | resolved-lock: Chưa có package-lock.json do npm tạo | installed-tree: Thiếu node_modules/expo"
+    },
+    {
+      "name": "Device declarations only",
+      "status": "FAIL",
+      "detail": "api-url: HTTP công khai không phù hợp với phiên có token; dùng HTTPS"
+    }
+  ],
+  "deviceMedia": "NOT_RUN",
+  "nativeBuild": "NOT_RUN",
+  "caveat": "dependencyGate=PASS cần npm ci strict, npm ls, expo install --check, expo config --type prebuild, Expo Doctor và TypeScript. deviceConfigGate là kiểm tra khai báo, không chứng nhận thiết bị/đường truyền."
+}

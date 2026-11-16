@@ -1,0 +1,74 @@
+[
+  {
+    "mode": "voice",
+    "theme": "light",
+    "width": 320,
+    "count": 80,
+    "scrollBefore": 1742,
+    "anchor": {
+      "id": "m-36",
+      "top": 415.40625
+    },
+    "stable": {
+      "inputSame": true,
+      "boxSame": true,
+      "focusSame": true,
+      "rows": 80,
+      "image": false
+    }
+  },
+  {
+    "mode": "voice",
+    "theme": "dark",
+    "width": 390,
+    "count": 80,
+    "scrollBefore": 1205,
+    "anchor": {
+      "id": "m-36",
+      "top": 510.140625
+    },
+    "stable": {
+      "inputSame": true,
+      "boxSame": true,
+      "focusSame": true,
+      "rows": 80,
+      "image": false
+    }
+  },
+  {
+    "mode": "cam",
+    "theme": "light",
+    "width": 390,
+    "count": 45,
+    "scrollBefore": 700,
+    "anchor": {
+      "id": "m-60",
+      "top": 395.390625
+    },
+    "stable": {
+      "inputSame": true,
+      "boxSame": true,
+      "focusSame": true,
+      "rows": 45,
+      "image": false
+    }
+  },
+  {
+    "mode": "cam",
+    "theme": "dark",
+    "width": 320,
+    "count": 45,
+    "scrollBefore": 1036,
+    "anchor": {
+      "id": "m-60",
+      "top": 359.984375
+    },
+    "stable": {
+      "inputSame": true,
+      "boxSame": true,
+      "focusSame": true,
+      "rows": 45,
+      "image": false
+    }
+  }
+]

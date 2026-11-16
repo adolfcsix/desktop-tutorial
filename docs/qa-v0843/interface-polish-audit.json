@@ -1,0 +1,197 @@
+{
+  "version": "0.8.43",
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "typography": {
+        "title": "13px",
+        "subtitle": "11px"
+      },
+      "tabTargets": [
+        {
+          "w": 61.1875,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "typography": {
+        "title": "13px",
+        "subtitle": "11px"
+      },
+      "tabTargets": [
+        {
+          "w": 61.1875,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        },
+        {
+          "w": 61.203125,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "typography": {
+        "title": "14px",
+        "subtitle": "12px"
+      },
+      "tabTargets": [
+        {
+          "w": 75.1875,
+          "h": 54
+        },
+        {
+          "w": 75.203125,
+          "h": 54
+        },
+        {
+          "w": 75.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 75.203125,
+          "h": 54
+        },
+        {
+          "w": 75.1875,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "typography": {
+        "title": "14px",
+        "subtitle": "12px"
+      },
+      "tabTargets": [
+        {
+          "w": 75.1875,
+          "h": 54
+        },
+        {
+          "w": 75.203125,
+          "h": 54
+        },
+        {
+          "w": 75.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 75.203125,
+          "h": 54
+        },
+        {
+          "w": 75.1875,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "typography": {
+        "title": "14px",
+        "subtitle": "12px"
+      },
+      "tabTargets": [
+        {
+          "w": 83.1875,
+          "h": 54
+        },
+        {
+          "w": 83.203125,
+          "h": 54
+        },
+        {
+          "w": 83.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 83.203125,
+          "h": 54
+        },
+        {
+          "w": 83.1875,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "typography": {
+        "title": "14px",
+        "subtitle": "12px"
+      },
+      "tabTargets": [
+        {
+          "w": 83.1875,
+          "h": 54
+        },
+        {
+          "w": 83.203125,
+          "h": 54
+        },
+        {
+          "w": 83.203125,
+          "h": 56.1875
+        },
+        {
+          "w": 83.203125,
+          "h": 54
+        },
+        {
+          "w": 83.1875,
+          "h": 54
+        }
+      ],
+      "actionTargets": [],
+      "keyboardHero": "pass"
+    }
+  ]
+}

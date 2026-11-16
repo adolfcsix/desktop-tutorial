@@ -1,0 +1,111 @@
+/* Túttt v0.4.8 — BRAND SYSTEM v1.  Single brand layer atop the legacy prototype CSS. */
+:root{
+  --bg:#F4EAE0; --surface:#FFF9F2; --surface2:#EDE0D2; --elev:#E7D5C7;
+  --ink:#241B1C; --muted:#6B5753; --line:rgba(80,49,41,.18);
+  --purple:#B23B2D; --purple2:#D14A36; --peach:#C04835; --mint:#277B5D;
+  --brand-accent:#C74735; --brand-ruby:#912D26; --brand-paper:#F4EAE0;
+  --brand-shell:#F1E4D7; --brand-hero-a:#6D2928; --brand-hero-b:#302021;
+  --focus:#9F2B24; color-scheme:light;
+}
+body{background:radial-gradient(ellipse at 12% 8%,#fff7ee 0,transparent 43%),#EAE0D7;color:#241B1C}
+.scene-glow.a{background:radial-gradient(circle,rgba(209,111,83,.14),transparent 67%)}
+.scene-glow.b{background:radial-gradient(circle,rgba(170,85,69,.11),transparent 65%)}
+.desktop-copy h1{color:#2D2020}
+.desktop-copy h1 em,.hero-kicker{color:#B94335}
+.desktop-copy p{color:#6F5751}
+.brand-approved{display:block;object-fit:contain;object-position:left center;background:transparent;box-shadow:none;border:0;filter:none;flex-shrink:0}
+.brand-approved-header{width:133px;height:77px;max-width:36vw}
+.brand-approved-desktop{width:275px;height:194px}
+.brandline{align-items:center;gap:4px}
+.brandline-tag{color:#9B4437;background:#FAEEE4;border:1px solid #CBAEA1;margin-left:2px}
+.app-header{height:81px;min-height:81px;padding:3px 20px;background:var(--bg);border-bottom:1px solid var(--line)}
+.app-header .brand-lockup{min-width:0;flex-shrink:0}
+.app-header .icon-btn{background:var(--surface);color:var(--ink);border:1px solid var(--line);width:44px;height:44px;border-radius:14px;box-shadow:none}
+.app-header .header-actions{gap:8px}
+.statusbar,.home-indicator{background:var(--bg);color:var(--ink)}
+.home-indicator::after{background:var(--muted)}
+#app,.mobile-device{background:var(--bg)}
+.mobile-device{border-color:#44312E;box-shadow:0 32px 85px #3C292A44}
+.nav{background:var(--surface);border-color:var(--line);box-shadow:0 -6px 24px #3B292012}
+.nav-item{color:var(--muted);font-size:11px}
+.nav-item.active{color:var(--brand-ruby)}
+.nav-item.create .create-icon{background:linear-gradient(145deg,#E95F47,#B6362B);color:#fff;box-shadow:0 5px 16px #BE433047}
+.page-title,.section-title{color:var(--ink);letter-spacing:-.035em}
+.page-sub{color:var(--muted);font-size:13px}
+.eyebrow{color:var(--brand-ruby)}
+.text-btn{color:var(--brand-ruby);font-size:12px}
+.searchbar{background:var(--surface);border:1px solid var(--line);color:var(--muted);box-shadow:0 3px 8px #4D302306;border-radius:17px;min-height:52px}
+.searchbar input{font-size:16px;color:var(--ink)}
+.searchbar input::placeholder{color:var(--muted)}
+.chip{background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:12px;min-height:42px;border-radius:12px}
+.chip.active{background:var(--brand-ruby);border-color:var(--brand-ruby);color:#FFF6ED}
+.hero-room,.room-live-hero{background:radial-gradient(circle at 85% 5%,#884639 0,transparent 38%),linear-gradient(130deg,var(--brand-hero-a),var(--brand-hero-b));border:1px solid #9B5548;color:#FFF4E9;box-shadow:0 16px 30px #54362B29}
+.hero-room h2,.hero-room .section-title{color:#FFF4E9}
+.hero-room p{color:#F0D7CC}.hero-room .eyebrow{color:#FFD4C2}
+.hero-room .live-tag{background:#FF8068;color:#35181B}
+.hero-room .count-tag{color:#F1D2C7}
+.hero-room .mini-circle-btn{background:#FFF0E0;color:#713027}
+.vibe-banner{background:linear-gradient(130deg,#714137,#3B2424);border-color:#9A6257;color:#FFF0E4}
+.vibe-banner .vibe-title,.vibe-banner p,.vibe-banner .eyebrow{color:#FFF3E9}
+.vibe-banner .orb{background:radial-gradient(circle at 35% 25%,#FDE0C5 0,#F68F73 40%,#AA3A31 78%);box-shadow:0 0 26px #EFAC8566}
+.room-card,.club-card,.conversation,.chat-row,.preferences,.settings-row{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.room-card .section-title,.club-card .section-title{color:var(--ink)}
+.room-art.violet,.club-art.violet{background:linear-gradient(135deg,#AF725E,#583934);color:#FFEAD8}
+.room-art.coral,.club-art.coral{background:linear-gradient(135deg,#C27367,#563137);color:#FFE4D0}
+.room-art.blue,.club-art.blue{background:linear-gradient(135deg,#8E9188,#4B5255);color:#E8F1E8}
+.room-art.mint,.club-art.mint{background:linear-gradient(135deg,#9BBBA0,#426F59);color:#F0FAE7}
+.room-controls,.room-compose,.room-chatbox,.room-top{background:var(--bg)!important;color:var(--ink)}
+.room-controls .circle-icon{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.room-controls .circle-action.active .circle-icon{background:#E9C0B3;color:#A53B2D;border-color:#B85B4B}
+.room-compose input,.chat-compose input,.form-input,.form-area,.form-select{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+.sheet{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.close-btn{background:var(--surface2);color:var(--ink)}
+.bubble.me{background:var(--brand-ruby);color:#fff}
+.toast{background:#382527;color:#FFF5E9}
+.icon-btn:focus-visible,.nav-item:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--brand-accent);outline-offset:2px}
+@media(max-width:360px){.app-header{padding:2px 14px}.brand-approved-header{width:118px;height:72px}.app-header .header-actions{gap:6px}}
+/* Dark is ESPRESSO, not flat black. Artwork is transparent and has no card/matte. */
+body:not(.light-mode){
+ --bg:#1F1819;--surface:#2B2223;--surface2:#392C2D;--elev:#493533;
+ --ink:#FFF2E6;--muted:#D4BDB1;--line:rgba(255,227,207,.18);
+ --purple:#FF9E86;--purple2:#F47761;--peach:#FFB299;--mint:#92DAB7;
+ --brand-accent:#FF806C;--brand-ruby:#FF947E;--brand-paper:#1F1819;
+ --brand-shell:#322627;--brand-hero-a:#75332D;--brand-hero-b:#291E20;
+ --focus:#FFC1A9;background:#151011;color:var(--ink);color-scheme:dark;
+}
+body:not(.light-mode) .desktop-copy h1{color:#FFF0E5}
+body:not(.light-mode) .desktop-copy p{color:#D2BEB2}
+body:not(.light-mode) .desktop-copy h1 em,body:not(.light-mode) .hero-kicker{color:#FF9B80}
+body:not(.light-mode) .brandline-tag{background:#3A2B2A;border-color:#6D4D43;color:#FFD1B6}
+body:not(.light-mode) .mobile-device{border-color:#58443E}
+body:not(.light-mode) .mobile-device::before{background:#3B2E2D}
+body:not(.light-mode) .statusbar,body:not(.light-mode) .app-header,body:not(.light-mode) .home-indicator{background:var(--bg);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .app-header .icon-btn{background:var(--surface);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .nav{background:var(--surface);border-color:var(--line)}
+body:not(.light-mode) .nav-item{color:var(--muted)}
+body:not(.light-mode) .nav-item.active{color:var(--brand-accent)}
+body:not(.light-mode) .nav-item.create .create-icon{color:#FFF2E9}
+body:not(.light-mode) .page-title,body:not(.light-mode) .section-title{color:var(--ink)}
+body:not(.light-mode) .page-sub{color:var(--muted)}
+body:not(.light-mode) .eyebrow,body:not(.light-mode) .text-btn{color:var(--brand-accent)}
+body:not(.light-mode) .searchbar,body:not(.light-mode) .form-input,body:not(.light-mode) .form-area,body:not(.light-mode) .form-select{background:var(--surface);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .searchbar input,body:not(.light-mode) .searchbar input::placeholder{color:var(--muted)}
+body:not(.light-mode) .chip{background:var(--surface);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .chip.active{background:#963D32;border-color:#DC735C;color:#FFF6ED}
+body:not(.light-mode) .room-card,body:not(.light-mode) .club-card,body:not(.light-mode) .conversation,body:not(.light-mode) .chat-row,body:not(.light-mode) .preferences,body:not(.light-mode) .settings-row{background:var(--surface);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .room-card .section-title,body:not(.light-mode) .club-card .section-title{color:var(--ink)}
+body:not(.light-mode) .room-controls,body:not(.light-mode) .room-compose,body:not(.light-mode) .room-chatbox,body:not(.light-mode) .room-top{background:var(--bg)!important;color:var(--ink)}
+body:not(.light-mode) .room-compose input,body:not(.light-mode) .chat-compose input{background:var(--surface);border-color:var(--line);color:var(--ink)}
+body:not(.light-mode) .room-controls .circle-icon{background:var(--surface);border-color:var(--line);color:var(--ink)}
+body:not(.light-mode) .room-controls .circle-action.active .circle-icon{background:#724339;color:#FFD8C5;border-color:#C17A67}
+body:not(.light-mode) .room-controls .circle-action.danger .circle-icon{background:#5D3030;color:#FFB3A0;border-color:#8D4842}
+body:not(.light-mode) .seat-name,body:not(.light-mode) .circle-action,body:not(.light-mode) .room-chatbox .room-log{color:var(--ink)}
+body:not(.light-mode) .voice-summary,body:not(.light-mode) .notice{background:var(--surface2);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .voice-status{color:var(--brand-accent)}
+body:not(.light-mode) .voice-status.on{color:#9BDFBD}
+body:not(.light-mode) .voice-unlock{background:#614136;color:#FFD8C5}
+body:not(.light-mode) .sheet{background:var(--surface);color:var(--ink);border-color:var(--line)}
+body:not(.light-mode) .close-btn{background:var(--surface2);color:var(--ink)}
+body:not(.light-mode) .toast{background:#FFE1CC;color:#372124}
+body:not(.light-mode) .vibe-banner .eyebrow,body:not(.light-mode) .vibe-banner .vibe-title,body:not(.light-mode) .vibe-banner p{color:#FFF5EA}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

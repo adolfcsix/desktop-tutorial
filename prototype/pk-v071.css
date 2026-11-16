@@ -1,0 +1,122 @@
+/* Túttt v0.7.1 · Live Touch Language.
+   One primary gesture, secondary tactile chips and quiet tertiary links.
+   All colors inherited from the PK brand tokens; no new accent family. */
+#app:has(.pk-arena-v3) button{font-family:Inter,"Noto Sans",system-ui,sans-serif;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+
+#app .pk-arena-v3 .pk-viewers{
+  min-width:44px!important;min-height:44px!important;
+  border-radius:17px!important;
+  display:inline-flex;align-items:center;justify-content:center;
+  color:var(--pk-ink)!important;
+  background:color-mix(in srgb,var(--pk-ink) 7%,transparent)!important;
+  border:1px solid color-mix(in srgb,var(--pk-ink) 7%,transparent)!important;
+  transition:transform .18s cubic-bezier(.22,1,.36,1),background .18s ease!important;
+}
+
+#app .pk-arena-v3 .pk-viewers{gap:4px;font-size:12px;font-weight:750}
+#app .pk-arena-v3 .pk-viewers:hover{
+ background:color-mix(in srgb,var(--pk-ink) 13%,transparent)!important;
+}
+#app .pk-arena-v3 .pk-viewers:active{transform:scale(.93)}
+#app .pk-arena-v3 .pk-cheer-button{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:9px!important;padding:4px 11px 4px 5px!important;
+ min-height:48px!important;min-width:134px!important;
+ border-radius:27px 20px 20px 27px!important;
+ background:var(--pk-cheer-bg)!important;color:var(--pk-cheer-ink)!important;
+ font-size:12px!important;font-weight:780!important;letter-spacing:-.015em!important;
+ border:1px solid color-mix(in srgb,var(--pk-cheer-ink) 10%,transparent)!important;
+ box-shadow:0 3px 0 color-mix(in srgb,var(--pk-cheer-bg) 28%,transparent),0 8px 22px color-mix(in srgb,var(--pk-cheer-bg) 19%,transparent)!important;
+ transition:transform 210ms cubic-bezier(.22,1,.36,1),box-shadow 210ms cubic-bezier(.22,1,.36,1),filter 210ms ease!important;
+}
+#app .pk-arena-v3 .pk-cheer-button .pk-cheer-icon{
+ display:grid!important;place-items:center!important;width:37px;height:37px;flex:0 0 37px;
+ border-radius:50%;background:color-mix(in srgb,var(--pk-cheer-ink) 13%,transparent)!important;
+ font-size:18px!important;line-height:1!important;color:var(--pk-cheer-ink)!important;
+ transition:transform 240ms cubic-bezier(.2,1.6,.3,1);
+}
+#app .pk-arena-v3 .pk-cheer-copy{white-space:nowrap;font-size:12px!important;font-weight:790!important;color:var(--pk-cheer-ink)!important}
+#app .pk-arena-v3 .pk-cheer-arrow{font-size:13px!important;opacity:.7;align-self:center;color:var(--pk-cheer-ink)!important;transition:transform .2s ease}
+#app .pk-arena-v3 .pk-cheer-button:hover{filter:brightness(1.045);box-shadow:0 3px 0 color-mix(in srgb,var(--pk-cheer-bg) 32%,transparent),0 12px 25px color-mix(in srgb,var(--pk-cheer-bg) 23%,transparent)!important}
+#app .pk-arena-v3 .pk-cheer-button:hover .pk-cheer-icon{transform:rotate(-9deg) scale(1.06)}
+#app .pk-arena-v3 .pk-cheer-button:active{transform:translateY(2px) scale(.97)!important;box-shadow:0 1px 0 transparent!important}
+#app .pk-arena-v3 .pk-cheer-button:disabled{filter:saturate(.5);box-shadow:none!important;cursor:not-allowed!important}
+/* Secondary: warm text-gesture, never competing with cheering. */
+#app .pk-arena-v3 .pk-demo-end{
+ min-height:44px;display:inline-flex;align-items:center;
+ text-decoration:none!important;color:var(--pk-ink)!important;
+ font-size:11px!important;font-weight:720!important;
+ padding:4px 3px!important;border-bottom:1px solid color-mix(in srgb,var(--pk-ink) 30%,transparent)!important;
+ border-radius:0!important;
+}
+#app .pk-arena-v3 .pk-demo-end:hover{border-bottom-color:var(--pk-ink)!important}
+#app .pk-finale-actions{width:min(100%,320px);gap:10px!important;flex-wrap:nowrap!important}
+#app .pk-finale-actions button{
+ display:inline-flex;align-items:center;justify-content:center;gap:7px;
+ min-height:48px!important;border-radius:23px!important;
+ padding:8px 11px!important;font-size:12px!important;
+ font-weight:760!important;letter-spacing:-.01em!important;
+ transition:transform .2s cubic-bezier(.22,1,.36,1),background .2s ease!important;
+}
+#app .pk-finale-actions button:active{transform:scale(.965)}
+#app .pk-finale-actions .pk-finale-main{white-space:nowrap!important;flex:1.22!important;justify-content:space-between!important;padding-left:15px!important;padding-right:6px!important}
+#app .pk-finale-actions .pk-finale-secondary{
+ flex:1!important;border-color:color-mix(in srgb,var(--pk-ink) 22%,transparent)!important;
+ background:color-mix(in srgb,var(--pk-ink) 5%,transparent)!important;color:var(--pk-ink)!important;
+}
+#app .pk-finale-actions .pk-finale-secondary small{display:block;opacity:.75;font-size:9px;font-weight:600;line-height:1.05}
+#app .pk-finale-actions .pk-soft-icon{font-size:19px}
+#app .pk-finale-actions .pk-forward-icon{
+ display:grid;place-items:center;flex:0 0 33px;height:33px;width:33px;
+ background:color-mix(in srgb,var(--pk-cheer-ink) 14%,transparent);
+ border-radius:50%;font-size:18px;line-height:1;
+}
+/* Voice / Cam bottom controls: ring controls and strong feedback only where active. */
+#app:has(.pk-arena-v3) .cam-action span,
+#app:has(.pk-arena-v3) .circle-action .circle-icon{
+ border-radius:19px!important;
+ background:color-mix(in srgb,var(--pk-ink) 6%,transparent)!important;
+ border:1px solid color-mix(in srgb,var(--pk-ink) 12%,transparent)!important;
+ box-shadow:none!important;
+ transition:transform .2s cubic-bezier(.22,1,.36,1),background .18s ease,border-color .18s ease!important;
+}
+#app:has(.pk-arena-v3) .cam-action.active span,
+#app:has(.pk-arena-v3) .circle-action.active .circle-icon{
+ background:color-mix(in srgb,var(--pk-side-a-accent) 15%,transparent)!important;
+ border-color:color-mix(in srgb,var(--pk-side-a-accent) 46%,transparent)!important;
+ color:var(--pk-ink)!important;
+}
+#app:has(.pk-arena-v3) .cam-action:active span,
+#app:has(.pk-arena-v3) .circle-action:active .circle-icon{transform:scale(.9)}
+#app:has(.pk-arena-v3) .cam-action.danger span,
+#app:has(.pk-arena-v3) .circle-action.danger .circle-icon{
+ border-color:color-mix(in srgb,var(--pk-side-a-accent) 33%,transparent)!important;
+ background:transparent!important;color:var(--pk-side-a-accent)!important;
+}
+#app:has(.pk-arena-v3) .cam-compose button,
+#app:has(.pk-arena-v3) .room-compose button{
+ min-height:45px!important;min-width:45px!important;width:45px!important;height:45px!important;
+ border:0!important;border-radius:18px!important;
+ background:var(--pk-cheer-bg)!important;color:var(--pk-cheer-ink)!important;
+ transition:transform .16s cubic-bezier(.22,1,.36,1),filter .16s ease!important;
+}
+#app:has(.pk-arena-v3) .cam-compose button:active,#app:has(.pk-arena-v3) .room-compose button:active{transform:scale(.9)}
+#app:has(.pk-arena-v3) .pk-chat-starter button{border:0!important;border-radius:999px!important;background:color-mix(in srgb,var(--pk-ink) 8%,transparent)!important;}
+#app .pk-arena-v3 button:focus-visible,#app:has(.pk-arena-v3) .pk-chat-starter button:focus-visible,
+#app .pk-finale-actions button:focus-visible{outline:3px solid var(--pk-focus)!important;outline-offset:3px!important}
+@media(max-width:350px){
+ #app .pk-arena-v3 .pk-cheer-button{min-width:116px!important;gap:5px!important;padding-right:8px!important}
+ #app .pk-arena-v3 .pk-cheer-button .pk-cheer-icon{width:32px;height:32px;flex-basis:32px}
+ #app .pk-arena-v3 .pk-cheer-copy{font-size:11px!important}
+ #app .pk-arena-v3 .pk-scene-footer{gap:5px!important}
+ #app .pk-finale-actions{gap:5px!important}
+ #app .pk-finale-actions button{font-size:10px!important;padding-inline:7px!important}
+ #app .pk-finale-actions .pk-finale-main{padding-left:10px!important;padding-right:4px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .pk-arena-v3 .pk-cheer-button,#app .pk-arena-v3 .pk-viewers,
+ #app .pk-arena-v3 button,#app .pk-arena-v3 button *,#app .pk-finale-actions button,
+ #app:has(.pk-arena-v3) .cam-action span,#app:has(.pk-arena-v3) .circle-icon{
+ transition:none!important;animation:none!important;transform:none!important;
+ }
+}

@@ -1,0 +1,46 @@
+{
+  "version": "0.8.37",
+  "startedAt": "2026-11-12T15:33:06.430Z",
+  "finishedAt": "2026-11-12T15:33:13.670Z",
+  "status": "PASS",
+  "automatedChecks": [
+    {
+      "name": "Backend/API + unit tests",
+      "status": "PASS",
+      "seconds": 6,
+      "code": 0,
+      "error": null,
+      "excerpt": "  ...\n1..366\n# tests 366\n# suites 0\n# pass 366\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 5309.826274"
+    },
+    {
+      "name": "Web/Node syntax",
+      "status": "PASS",
+      "seconds": 1,
+      "code": 0,
+      "error": null,
+      "excerpt": "> tuttt@0.8.37 check:web\n> node --check prototype/audience-presence.js && node --check prototype/pk-visual-ux.js && node --check prototype/speaker-status.js && node --check prototype/stage-layout.js && node --check prototype/app.js && node --check prototype/network.js && node --check prototype/ux-core.js && node --check prototype/voice.js && node --check server/stage.js && node --check server/voice.js && node --check server/index.js && node --check server/livekit.js && node --check server/pk.js"
+    },
+    {
+      "name": "Native config static audit (warnings reported)",
+      "status": "PASS",
+      "seconds": 0,
+      "code": 0,
+      "error": null,
+      "excerpt": "58-source:App.tsx: Không thấy API React Native bị xóa trong các nguồn đã quét\nPASS sdk58-source:src/screens/Screens.tsx: Không thấy API React Native bị xóa trong các nguồn đã quét\nPASS sdk58-source:src/components/Primitives.tsx: Không thấy API React Native bị xóa trong các nguồn đã quét\nGiới hạn: Không chạy npm peer resolution hoặc TypeScript semantic check; Không tạo native build; Không kiểm tra tài khoản Apple/Expo/Android signing; Không kiểm tra SFU, âm thanh, camera hoặc kết nối hai thiết bị"
+    },
+    {
+      "name": "Single-file export",
+      "status": "PASS",
+      "seconds": 1,
+      "code": 0,
+      "error": null,
+      "excerpt": "/mnt/data/TUTTT_V0_8_37_PREVIEW.html 3089902"
+    }
+  ],
+  "limitations": {
+    "cloudBrowser": "Requires a publicly accessible staging URL; cannot access local file paths",
+    "livekitSfu": "Not tested by local Chromium",
+    "twoPhysicalPhones": "Not tested",
+    "nativeBuild": "Not tested"
+  }
+}

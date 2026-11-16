@@ -1,0 +1,50 @@
+[
+  {
+    "mode": "voice",
+    "theme": "light",
+    "noFauxRanking": true,
+    "viewerButton": true,
+    "speakingAndPkControls": true,
+    "idleAnimations": {
+      "pulse": "none",
+      "duel": "none",
+      "overflow": false
+    }
+  },
+  {
+    "mode": "voice",
+    "theme": "dark",
+    "noFauxRanking": true,
+    "viewerButton": true,
+    "speakingAndPkControls": true,
+    "idleAnimations": {
+      "pulse": "none",
+      "duel": "none",
+      "overflow": false
+    }
+  },
+  {
+    "mode": "cam",
+    "theme": "light",
+    "noFauxRanking": true,
+    "viewerButton": true,
+    "speakingAndPkControls": true,
+    "idleAnimations": {
+      "pulse": "none",
+      "duel": "none",
+      "overflow": false
+    }
+  },
+  {
+    "mode": "cam",
+    "theme": "dark",
+    "noFauxRanking": true,
+    "viewerButton": true,
+    "speakingAndPkControls": true,
+    "idleAnimations": {
+      "pulse": "none",
+      "duel": "none",
+      "overflow": false
+    }
+  }
+]

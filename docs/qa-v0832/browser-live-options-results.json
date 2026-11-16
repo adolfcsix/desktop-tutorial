@@ -1,0 +1,122 @@
+[
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "mode": "cam",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "light",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  },
+  {
+    "width": 430,
+    "mode": "cam",
+    "theme": "dark",
+    "singleMenu": true,
+    "reportedForm": true,
+    "roles": true,
+    "pkReachable": true,
+    "overflow": false
+  }
+]

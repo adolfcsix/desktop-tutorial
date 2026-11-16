@@ -1,0 +1,102 @@
+[
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "light",
+    "colors": {
+      "win": "rgb(173, 113, 31)",
+      "loss": "rgb(114, 82, 157)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 320,
+    "mode": "voice",
+    "theme": "dark",
+    "colors": {
+      "win": "rgb(248, 217, 134)",
+      "loss": "rgb(237, 226, 255)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 360,
+    "mode": "voice",
+    "theme": "light",
+    "colors": {
+      "win": "rgb(173, 113, 31)",
+      "loss": "rgb(114, 82, 157)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 360,
+    "mode": "voice",
+    "theme": "dark",
+    "colors": {
+      "win": "rgb(248, 217, 134)",
+      "loss": "rgb(237, 226, 255)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "light",
+    "colors": {
+      "win": "rgb(173, 113, 31)",
+      "loss": "rgb(114, 82, 157)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 390,
+    "mode": "voice",
+    "theme": "dark",
+    "colors": {
+      "win": "rgb(248, 217, 134)",
+      "loss": "rgb(237, 226, 255)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "light",
+    "colors": {
+      "win": "rgb(173, 113, 31)",
+      "loss": "rgb(114, 82, 157)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 430,
+    "mode": "voice",
+    "theme": "dark",
+    "colors": {
+      "win": "rgb(248, 217, 134)",
+      "loss": "rgb(237, 226, 255)"
+    },
+    "composer_shift": 0
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "light",
+    "colors": {
+      "win": "rgb(248, 215, 126)",
+      "loss": "rgb(243, 238, 255)"
+    },
+    "composer_shift": 0.0
+  },
+  {
+    "width": 390,
+    "mode": "cam",
+    "theme": "dark",
+    "colors": {
+      "win": "rgb(248, 215, 126)",
+      "loss": "rgb(243, 238, 255)"
+    },
+    "composer_shift": 0.0
+  }
+]

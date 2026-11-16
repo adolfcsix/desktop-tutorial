@@ -1,0 +1,12 @@
+node_modules/
+.expo/
+.env
+.env.local
+server/data/
+*.log
+.DS_Store
+.local/
+__pycache__/
+*.pyc
+core
+core.*

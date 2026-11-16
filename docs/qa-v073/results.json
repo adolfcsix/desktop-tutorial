@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "kind": "cam",
+      "primary": {
+        "height": 61,
+        "width": 50.65625,
+        "radius": "16px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "icon": true,
+        "text": "Tiếp sức"
+      },
+      "finale": {
+        "restart": {
+          "w": 133.5625,
+          "h": 48,
+          "x": 12,
+          "right": 145.5625,
+          "b": 436.90625
+        },
+        "dismiss": {
+          "w": 157.4375,
+          "h": 49,
+          "x": 150.5625,
+          "right": 308,
+          "b": 437.40625
+        },
+        "overflow": false,
+        "buttonCount": 2
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "kind": "voice",
+      "primary": {
+        "height": 48,
+        "width": 132.84375,
+        "radius": "27px 20px 20px 27px",
+        "bg": "rgb(155, 58, 45)",
+        "icon": true,
+        "text": "♥\nTiếp sức thử\n↗"
+      },
+      "finale": {
+        "restart": {
+          "w": 129.765625,
+          "h": 44,
+          "x": 16,
+          "right": 145.765625,
+          "b": 406.03125
+        },
+        "dismiss": {
+          "w": 153.234375,
+          "h": 45,
+          "x": 150.765625,
+          "right": 304,
+          "b": 406.53125
+        },
+        "overflow": false,
+        "buttonCount": 2
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "kind": "cam",
+      "primary": {
+        "height": 61,
+        "width": 50.65625,
+        "radius": "16px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "icon": true,
+        "text": "Tiếp sức"
+      },
+      "finale": {
+        "restart": {
+          "w": 133.5625,
+          "h": 48,
+          "x": 12,
+          "right": 145.5625,
+          "b": 436.90625
+        },
+        "dismiss": {
+          "w": 157.4375,
+          "h": 49,
+          "x": 150.5625,
+          "right": 308,
+          "b": 437.40625
+        },
+        "overflow": false,
+        "buttonCount": 2
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "kind": "voice",
+      "primary": {
+        "height": 48,
+        "width": 132.84375,
+        "radius": "27px 20px 20px 27px",
+        "bg": "rgb(241, 208, 178)",
+        "icon": true,
+        "text": "♥\nTiếp sức thử\n↗"
+      },
+      "finale": {
+        "restart": {
+          "w": 129.765625,
+          "h": 44,
+          "x": 16,
+          "right": 145.765625,
+          "b": 406.03125
+        },
+        "dismiss": {
+          "w": 153.234375,
+          "h": 45,
+          "x": 150.765625,
+          "right": 304,
+          "b": 406.53125
+        },
+        "overflow": false,
+        "buttonCount": 2
+      },
+      "jsErrors": []
+    }
+  ],
+  "reducedMotion": "PASS"
+}

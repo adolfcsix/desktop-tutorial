@@ -1,0 +1,22 @@
+[
+  {
+    "mode": "voice",
+    "theme": "light",
+    "pkPoints": "PHE A\n1.240\n980\nPHE B"
+  },
+  {
+    "mode": "voice",
+    "theme": "dark",
+    "pkPoints": "PHE A\n1.240\n980\nPHE B"
+  },
+  {
+    "mode": "cam",
+    "theme": "light",
+    "pkPoints": "PHE A 1.240980 PHE B"
+  },
+  {
+    "mode": "cam",
+    "theme": "dark",
+    "pkPoints": "PHE A 1.240980 PHE B"
+  }
+]

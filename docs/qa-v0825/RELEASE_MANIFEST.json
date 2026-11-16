@@ -1,0 +1,14 @@
+{
+  "version": "0.8.25",
+  "created_utc": "2026-11-12T08:35:48.156480+00:00",
+  "files": 585,
+  "logo_sha256": "9212c3eaa8f83bbd095f07be93ee8c695977c869bf8c410971f1bb0090082647",
+  "key_files": {
+    "mobile/src/services/api.ts": "43e6e3fcd74a496e400641553b99885672bb8b9120db19022a5667b0ec788ff1",
+    "prototype/app.js": "af3f9c3626b343e084a0786a38e46be6e5a170cdbef4bd10f4e35a7fab8ab9bd",
+    "server/index.js": "72231f39e9d56f6d687f518eb5d5ee67084dc6f0a846beab5be9385261eab80f",
+    "server/stage.js": "1d925aa9b00f5fff926accdf0b559d03b9c6fb07363eb2530d96c8fc569f2f58",
+    "tests/live_leave_resilience_v0825.test.js": "5ea05cd5f3c9ce002b3b7f90cfa43f0a09389dfef0a8989dc96b7a91e00d5c46"
+  },
+  "local_secrets_included": false
+}

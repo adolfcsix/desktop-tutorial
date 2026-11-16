@@ -1,0 +1,21 @@
+'use strict';
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {pathToFileURL}=require('node:url');
+const {join}=require('node:path');
+const address=pathToFileURL(join(__dirname,'../scripts/preflight_livekit.mjs')).href;
+test('live preflight validates API health and LiveKit readiness without exposing secrets',async()=>{
+ const {preflight,interpretHealth}=await import(address);
+ assert.equal(interpretHealth({status:'ok',features:['livekit-sfu-gateway'],livekitConfigured:false}).ok,true);
+ assert.equal(interpretHealth({status:'ok',features:['livekit-sfu-gateway'],livekitConfigured:false},true).ok,false);
+ assert.equal(interpretHealth({status:'ok',features:['livekit-sfu-gateway'],livekitConfigured:true},true).ok,true);
+ assert.equal(interpretHealth({status:'bad',features:['livekit-sfu-gateway'],livekitConfigured:true},true).ok,false);
+ assert.equal(interpretHealth({status:'ok',livekitConfigured:true},true).ok,false,'generic health endpoint cannot masquerade as Túttt');
+ const targets=[];
+ const fake=async(url,options)=>{targets.push(url);assert.equal(options.headers.Accept,'application/json');return {ok:true,json:async()=>({status:'ok',features:['livekit-sfu-gateway'],livekitConfigured:true})};};
+ const result=await preflight('http://192.168.1.12:3001',true,fake);
+ assert.equal(result.ok,true);assert.equal(result.url,'http://192.168.1.12:3001');
+ assert.deepEqual(targets,['http://192.168.1.12:3001/api/health']);
+ await assert.rejects(()=>preflight('ftp://example.com',true,fake),/URL chỉ hỗ trợ/);
+ await assert.rejects(()=>preflight('http://example.com/other',true,fake),/URL gốc/);
+});

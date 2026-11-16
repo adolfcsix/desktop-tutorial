@@ -1,0 +1,28 @@
+/* Túttt 0.6.7 · Result reveal sits on the same continuous arena surface. */
+#app .pk-arena-v3 .pk-intro-label{font-size:10px;font-weight:700;color:var(--pk-side-a-accent);letter-spacing:0;text-transform:none;white-space:nowrap;animation:pkIntroGentle .55s ease-out both}
+#app .pk-arena-v3 .pk-demo-end{background:none;border:0;color:var(--pk-muted);font:inherit;font-size:11px;min-height:44px;padding:0 2px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+#app .pk-finale{min-height:355px!important;padding:30px 18px 24px!important;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+#app .pk-finale:before{opacity:.65}
+#app .pk-finale-eyebrow{font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--pk-side-a-accent)}
+#app .pk-finale-title{margin:13px 0 5px;color:var(--pk-ink);font-size:clamp(22px,6vw,28px);line-height:1.23;letter-spacing:-.045em;font-weight:790}
+#app .pk-finale-sub{margin:0 0 20px;max-width:95%;color:var(--pk-muted);font-size:12px;line-height:1.5}
+#app .pk-finale-score{width:100%;max-width:315px;display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);align-items:center;gap:8px}
+#app .pk-finale-score>div{min-width:0;display:flex;align-items:center;flex-direction:column;gap:6px}
+#app .pk-finale-score>div:first-child strong{color:var(--pk-side-a-accent)}
+#app .pk-finale-score>div:last-child strong{color:var(--pk-side-b-accent)}
+#app .pk-finale-score small{font-size:12px;color:var(--pk-muted);font-weight:640;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+#app .pk-finale-score strong{font-size:34px;letter-spacing:-.05em;font-variant-numeric:tabular-nums;line-height:1.2}
+#app .pk-finale-divider{color:var(--pk-muted);font-size:22px}
+#app .pk-finale-note{margin:17px 0 18px;max-width:290px;color:var(--pk-muted);line-height:1.5;font-size:11px}
+#app .pk-finale-actions{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:9px}
+#app .pk-finale-actions button{border-radius:999px;min-height:44px;padding:10px 17px;font-size:12px;font-weight:760;cursor:pointer}
+#app .pk-finale-main{background:var(--pk-cheer-bg);color:var(--pk-cheer-ink);border:0}
+#app .pk-finale-secondary{background:transparent;color:var(--pk-ink);border:1px solid var(--pk-ink)}
+#app .pk-finale-actions button:focus-visible,#app .pk-demo-end:focus-visible{outline:3px solid var(--pk-focus);outline-offset:3px}
+@media(max-width:360px){#app .pk-finale{min-height:315px!important;padding-inline:12px!important}#app .pk-finale-title{font-size:22px}#app .pk-finale-score strong{font-size:29px}#app .pk-arena-v3 .pk-intro-label{display:none}}
+@media(max-height:760px){#app .pk-finale{min-height:295px!important;padding-block:17px!important}#app .pk-finale-sub{margin-bottom:12px}#app .pk-finale-note{margin-block:12px}}
+@keyframes pkIntroGentle{from{opacity:.35;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#app .pk-intro-label{animation:none!important}}
+/* When the arena or its result is visible, the stage's own actions replace the redundant launcher. */
+#app .cam-page.cam-mode-unified .cam-content:has(.pk-arena-v3)>.pk-launcher,
+#app .room-top:has(.pk-arena-v3)>.voice-pk-row{display:none!important}

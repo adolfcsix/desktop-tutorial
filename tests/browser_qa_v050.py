@@ -1,0 +1,57 @@
+from pathlib import Path
+import asyncio,json,re,base64
+from playwright.async_api import async_playwright
+root=Path(__file__).resolve().parents[1];screens=root/'docs'/'qa-v050';screens.mkdir(parents=True,exist_ok=True)
+async def run():
+ data=[]
+ async with async_playwright() as p:
+  b=await p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-web-security'])
+  for width,height in [(320,740),(390,844),(430,932)]:
+   page=await b.new_page(viewport={'width':width,'height':height},device_scale_factor=1)
+   errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+   html=(root/'prototype/index.html').read_text(encoding='utf-8')
+   html=re.sub(r'<link rel="stylesheet" href="[^"]+"\s*/?>','',html)
+   html=re.sub(r'<script src="[^"]+"></script>','',html)
+   logo=base64.b64encode((root/'prototype/assets/tuttt-logo.png').read_bytes()).decode()
+   html=html.replace('src="assets/tuttt-logo.png"','src="data:image/png;base64,'+logo+'"')
+   await page.set_content(html,wait_until='domcontentloaded')
+   for name in ['styles.css','brand-v048.css','cam-v050.css']:
+    css=(root/'prototype'/name).read_text(encoding='utf-8')
+    css=re.sub(r'^@import[^;]+;', '', css, flags=re.M)
+    await page.add_style_tag(content=css)
+   for name in ['data.js','network.js','voice.js','ux-core.js','app.js']:
+    await page.add_script_tag(content=(root/'prototype'/name).read_text(encoding='utf-8'))
+   await page.wait_for_timeout(350)
+   print('load',width,'cards',await page.locator('.room-card').count(),'logo',await page.locator('.brand-approved-header').count(),'errors',errors)
+   await page.locator('.nav-item[data-id="live"]').click()
+   await page.locator('[data-action="liveMode"][data-id="cam"]').click()
+   await page.screenshot(path=str(screens/f'cam-list-light-{width}.png'))
+   cards=await page.locator('.room-card').count();print('filtered cam cards',cards)
+   await page.locator('.room-card').first.click();await page.wait_for_timeout(100)
+   print('cam tiles',await page.locator('.cam-tile').count(),'overflow',await page.evaluate('document.documentElement.scrollWidth > innerWidth'),'errors',errors)
+   await page.screenshot(path=str(screens/f'cam-room-light-{width}.png'))
+   if width==390:
+    await page.locator('[data-action="back"]').first.click()
+    await page.locator('.nav-item[data-id="create"]').click()
+    print('type chooser',await page.locator('.type-option').count())
+    await page.locator('input[name="type"][value="cam"]').check()
+    await page.screenshot(path=str(screens/'create-cam-light-390.png'))
+    await page.locator('#room-name').fill('Phòng mới trò chuyện bằng camera')
+    await page.locator('#create-room button[type="submit"]').click()
+    await page.wait_for_timeout(100)
+    print('new cam room',await page.locator('.cam-tile').count(), 'errors',errors)
+    await page.locator('[data-action="back"]').first.click()
+    await page.locator('.nav-item[data-id="profile"]').click()
+    await page.locator('[data-action="settings"]').first.click()
+    await page.locator('[data-action="theme"]').click()
+    await page.locator('[data-action="back"]').first.click()
+    await page.locator('.nav-item[data-id="live"]').click()
+    await page.locator('[data-action="liveMode"][data-id="cam"]').click()
+    await page.locator('.room-card').first.click()
+    await page.screenshot(path=str(screens/'cam-room-dark-390.png'))
+    print('dark',await page.evaluate('document.body.className'),'tiles',await page.locator('.cam-tile').count())
+   data.append({'width':width,'height':height,'cards':cards,'errors':errors,'camTiles':6})
+   await page.close()
+  await b.close()
+ (screens/'results.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
+asyncio.run(run())
